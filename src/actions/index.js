@@ -1,4 +1,4 @@
-// export const loadMovies = movies => ({
-//   type: "LOAD_MOVIES",
-//   movies
-// });
+export const  updateCategory = category => ({
+  type: "UPDATE_CATEGORY",
+  category
+})

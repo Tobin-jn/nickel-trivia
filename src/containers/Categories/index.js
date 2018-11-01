@@ -3,54 +3,57 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import './Categories.css';
 
-export const Categories = props => {
+export class Categories extends Component {
 
   handleClick = (e) => {
     e.preventDefault()
-    props.handleCategory(event.target.name)
+    props.handleCategory(e.target.name)
   }
 
-  return (
-    <div>
-      <h1>Categories</h1>
-      <button 
-        className="category"
-        name='general-knowledge'
-        onClick={this.handleClick()}
-        >General Knowledge
-      </button>
-      <button 
-        className="category"
-        name='geography'
-        onClick={this.handleClick()}
-        >Geography
-      </button>
-      <button 
-        className="category"
-        name='history'
-        onClick={this.handleClick()}
-        >History
-      </button>
-      <button 
-        className="category"
-        name='animals'
-        onClick={this.handleClick()}
-        >Animals
-      </button>
-      <button 
-        className="category"
-        name='vehicles'
-        onClick={this.handleClick()}
-        >Vehicles
-      </button>
-      <button 
-        className="category"
-        name='cartoons'
-        onClick={this.handleClick()}
-        >Cartoons and Animations
-      </button>
-    </div>
-  );
+  render() {
+    return (
+      <div className='categories-container'>
+
+        <h1>Categories</h1>
+        <button 
+          className="category"
+          name='general-knowledge'
+          onClick={this.handleClick()}
+          >General Knowledge
+        </button>
+        <button 
+          className="category"
+          name='geography'
+          onClick={this.handleClick()}
+          >Geography
+        </button>
+        <button 
+          className="category"
+          name='history'
+          onClick={this.handleClick()}
+          >History
+        </button>
+        <button 
+          className="category"
+          name='animals'
+          onClick={this.handleClick()}
+          >Animals
+        </button>
+        <button 
+          className="category"
+          name='vehicles'
+          onClick={this.handleClick()}
+          >Vehicles
+        </button>
+        <button 
+          className="category"
+          name='cartoons'
+          onClick={this.handleClick()}
+          >Cartoons and Animations
+        </button>
+      </div>
+    );
+  }
 }
 
 export const mapStateToProps = state => ({
@@ -58,7 +61,7 @@ export const mapStateToProps = state => ({
 });
 
 export const mapDispatchToProps = dispatch => ({
-  // saveUserData: (username, id) => dispatch(saveUserData(username, id)),
+  handleCategory: (category) => dispatch(updateCategory(category)),
 
 });
 
