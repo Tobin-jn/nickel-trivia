@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import './App.css';
-import Categories from '../containers/Categories';
-import DailyQuestion from '../containers/DailyQuestion';
-import TriviaGame from '../containers/TriviaGame';
+import Categories from '../../containers/Categories';
+import DailyQuestion from '../../containers/DailyQuestion';
+import TriviaGame from '../../containers/TriviaGame';
 
 class App extends Component {
   render() {

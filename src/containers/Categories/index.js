@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
+import PropTypes from "prop-types";
 import './Categories.css';
 
-class Categories extends React.Component {
+class Categories extends Component {
   constructor() {
     super();
   }
@@ -16,3 +17,7 @@ class Categories extends React.Component {
 }
 
 export default Categories;
+
+Categories.propTypes = {
+  // saveUserData: PropTypes.func.isRequired,
+};

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from "prop-types";
 import './TriviaGame.css';
 
 class TriviaGame extends Component {
@@ -16,3 +17,7 @@ class TriviaGame extends Component {
 }
 
 export default TriviaGame;
+
+TriviaGame.propTypes = {
+  // saveUserData: PropTypes.func.isRequired,
+};

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from "prop-types";
 import './DailyQuestion.css';
 
 class DailyQuestion extends Component {
@@ -16,3 +17,7 @@ class DailyQuestion extends Component {
 }
 
 export default DailyQuestion;
+
+DailyQuestion.propTypes = {
+  // saveUserData: PropTypes.func.isRequired,
+};
