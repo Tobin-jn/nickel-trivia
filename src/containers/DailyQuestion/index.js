@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from "prop-types";
+import { connect } from "react-redux";
 import './DailyQuestion.css';
 
-class DailyQuestion extends Component {
+export class DailyQuestion extends Component {
   constructor() {
     super();
   }
@@ -16,7 +17,19 @@ class DailyQuestion extends Component {
   }
 }
 
-export default DailyQuestion;
+export const mapStateToProps = state => ({
+  // loggedIn: state.loggedIn,
+});
+
+export const mapDispatchToProps = dispatch => ({
+  // saveUserData: (username, id) => dispatch(saveUserData(username, id)),
+
+});
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(DailyQuestion);
 
 DailyQuestion.propTypes = {
   // saveUserData: PropTypes.func.isRequired,

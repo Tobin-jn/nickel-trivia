@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from "prop-types";
+import { connect } from "react-redux";
 import './Categories.css';
 
-class Categories extends Component {
+export class Categories extends Component {
   constructor() {
     super();
   }
@@ -16,7 +17,19 @@ class Categories extends Component {
   }
 }
 
-export default Categories;
+export const mapStateToProps = state => ({
+  // loggedIn: state.loggedIn,
+});
+
+export const mapDispatchToProps = dispatch => ({
+  // saveUserData: (username, id) => dispatch(saveUserData(username, id)),
+
+});
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Categories);
 
 Categories.propTypes = {
   // saveUserData: PropTypes.func.isRequired,
