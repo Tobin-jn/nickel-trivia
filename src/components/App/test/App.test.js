@@ -1,7 +1,9 @@
 /* eslint-disable */
 
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from "react";
+import { shallow } from "enzyme";
 import App from './App';
+
+
 
 
