@@ -12,6 +12,42 @@ export class Categories extends Component {
     return (
       <div>
         <h1>Categories</h1>
+        <button 
+          className="category"
+          name='general-knowledge'
+          onClick={this.handleClick()}
+          >General Knowledge
+        </button>
+        <button 
+          className="category"
+          name='geography'
+          onClick={this.handleClick()}
+          >Geography
+        </button>
+        <button 
+          className="category"
+          name='history'
+          onClick={this.handleClick()}
+          >History
+        </button>
+        <button 
+          className="category"
+          name='animals'
+          onClick={this.handleClick()}
+          >Animals
+        </button>
+        <button 
+          className="category"
+          name='vehicles'
+          onClick={this.handleClick()}
+          >Vehicles
+        </button>
+        <button 
+          className="category"
+          name='cartoons'
+          onClick={this.handleClick()}
+          >Cartoons and Animations
+        </button>
       </div>
     );
   }

@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import './TriviaGame.css';
 
-class TriviaGame extends Component {
+export class TriviaGame extends Component {
   constructor() {
     super();
   }
