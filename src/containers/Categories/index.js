@@ -13,8 +13,7 @@ export class Categories extends Component {
   }
 
   getTriviaQuestions = async (category) => {
-    const check = this.checkState(category)
-    if(!check) {
+    if(!this.checkState(category)) {
       return
     }
 
@@ -29,9 +28,11 @@ export class Categories extends Component {
   }
 
   checkState = (category) => {
-    const { questions } = this.props
-
-    questions[category].length ? return true : return false
+    if (this.props.questions[category].length === 0) {
+      return true
+    } else {
+      return false
+    }
   }
 
   render() {
@@ -39,6 +40,7 @@ export class Categories extends Component {
       <div className='categories-container'>
 
         <h1>Categories</h1>
+
 
         <button 
           className="category"
