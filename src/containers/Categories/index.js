@@ -4,6 +4,9 @@ import { connect } from "react-redux";
 import { updateCategory, updateQuestions } from '../../actions'
 import './Categories.css';
 import { getQuestions } from '../../apiCalls/apiCalls'
+import DailyQuestion from '../DailyQuestion'
+import { Route, NavLink, Redirect } from 'react-router-dom';
+
 
 export class Categories extends Component {
 
@@ -36,12 +39,10 @@ export class Categories extends Component {
   }
 
   render() {
+    // if(this.props.category === '') {
     return (
       <div className='categories-container'>
-
         <h1>Categories</h1>
-
-
         <button 
           className="category"
           name='generalKnowledge'
@@ -79,13 +80,18 @@ export class Categories extends Component {
           >Cartoons and Animations
         </button>
 
+        <NavLink className='category-seleted-btn' to='/dailyquestion'>Get Question</NavLink>
+        
       </div>
     );
   }
 }
+        // <NavLink className='daily-trivia-btn' to='/categories'>Trivia of the Day</NavLink>
+
 
 export const mapStateToProps = state => ({
   questions: state.questions,
+  category: state.category
 });
 
 export const mapDispatchToProps = dispatch => ({
