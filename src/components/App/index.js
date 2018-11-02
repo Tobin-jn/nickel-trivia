@@ -5,20 +5,17 @@ import Categories from '../../containers/Categories';
 import DailyQuestion from '../../containers/DailyQuestion';
 import TriviaGame from '../../containers/TriviaGame';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <h1 className="title">Nickle Trivia</h1>
-        <button className="daily-trivia-btn">Trivia of the Day</button>
-        <button className="trivia-game">Trivia Game</button>
-        <Categories />
-        <DailyQuestion />
-        <TriviaGame />
-
-      </div>
-    );
-  }
+const App = props => {
+  return (
+    <div className="App">
+      <h1 className="title">Nickle Trivia</h1>
+      <button className="daily-trivia-btn">Trivia of the Day</button>
+      <button className="trivia-game">Trivia Game</button>
+      <Categories />
+      <DailyQuestion />
+      <TriviaGame />
+    </div>
+  );
 }
 
 export default App;
@@ -32,3 +29,10 @@ export default App;
         // </NavLink>
 
 // <NavLink to='/about'>About</NavLink>
+
+// export default withRouter(
+//   connect(
+//     null,
+//     mapDispatchToProps
+//   )(App)
+// );

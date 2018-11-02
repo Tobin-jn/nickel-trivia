@@ -1,9 +1,10 @@
 import { combineReducers } from "redux";
-// import { moviesReducer } from "./moviesReducer";
-
+import { categoryReducer } from "./categoryReducer";
+import { questionsReducer } from "./questionsReducer";
 
 const rootReducer = combineReducers({
-  // movies: moviesReducer,
-}):
+  category: categoryReducer,
+  questions: questionsReducer
+});
 
 export default rootReducer;

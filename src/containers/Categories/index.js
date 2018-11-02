@@ -1,29 +1,96 @@
 import React, { Component } from 'react';
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
+import { updateCategory, updateQuestions } from '../../actions'
 import './Categories.css';
+import { getQuestions } from '../../apiCalls/apiCalls'
 
 export class Categories extends Component {
-  constructor() {
-    super();
+
+  handleClick = (category) => {
+    this.props.handleCategory(category)
+    this.getTriviaQuestions(category)
+  }
+
+  getTriviaQuestions = async (category) => {
+    if(!this.checkState(category)) {
+      return
+    }
+
+    try {
+      const triviaQuestions = await getQuestions(category)
+
+      this.props.handleFetchQuestions(category, triviaQuestions)
+    } 
+    catch(error) {
+      console.log('we have a problem...')
+    }
+  }
+
+  checkState = (category) => {
+    if (this.props.questions[category].length === 0) {
+      return true
+    } else {
+      return false
+    }
   }
 
   render() {
     return (
-      <div>
+      <div className='categories-container'>
+
         <h1>Categories</h1>
+
+
+        <button 
+          className="category"
+          name='generalKnowledge'
+          onClick={()=> {this.handleClick('generalKnowledge')}}
+          >General Knowledge
+        </button>
+        <button 
+          className="category"
+          name='geography'
+          onClick={()=> {this.handleClick('geography')}}
+          >Geography
+        </button>
+        <button 
+          className="category"
+          name='history'
+          onClick={()=> {this.handleClick('history')}}
+          >History
+        </button>
+        <button 
+          className="category"
+          name='animals'
+          onClick={()=> {this.handleClick('animals')}}
+          >Animals
+        </button>
+        <button 
+          className="category"
+          name='vehicles'
+          onClick={()=> {this.handleClick('vehicles')}}
+          >Vehicles
+        </button>
+        <button 
+          className="category"
+          name='cartoons'
+          onClick={()=> {this.handleClick('cartoons')}}
+          >Cartoons and Animations
+        </button>
+
       </div>
     );
   }
 }
 
 export const mapStateToProps = state => ({
-  // loggedIn: state.loggedIn,
+  questions: state.questions,
 });
 
 export const mapDispatchToProps = dispatch => ({
-  // saveUserData: (username, id) => dispatch(saveUserData(username, id)),
-
+  handleCategory: (category) => dispatch(updateCategory(category)),
+  handleFetchQuestions: (category, questions) => dispatch(updateQuestions(category, questions))
 });
 
 export default connect(
@@ -31,6 +98,14 @@ export default connect(
   mapDispatchToProps
 )(Categories);
 
-Categories.propTypes = {
-  // saveUserData: PropTypes.func.isRequired,
-};
+
+// Categories.propTypes = {
+//   handleCategory: PropTypes.func.isRequired,
+// };
+
+
+
+
+
+
+

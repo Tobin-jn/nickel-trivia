@@ -3,18 +3,13 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import './DailyQuestion.css';
 
-export class DailyQuestion extends Component {
-  constructor() {
-    super();
-  }
+export const DailyQuestion = props => {
 
-  render() {
-    return (
-      <div>
-        <h1>DailyQuestion</h1>
-      </div>
-    );
-  }
+  return (
+    <div>
+      <h1>DailyQuestion</h1>
+    </div>
+  );
 }
 
 export const mapStateToProps = state => ({

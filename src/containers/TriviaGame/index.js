@@ -3,18 +3,13 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import './TriviaGame.css';
 
-class TriviaGame extends Component {
-  constructor() {
-    super();
-  }
+export const TriviaGame = props => {
 
-  render() {
-    return (
-      <div>
-        <h1>Game!</h1>
-      </div>
-    );
-  }
+  return (
+    <div>
+      <h1>Game!</h1>
+    </div>
+  );
 }
 
 export const mapStateToProps = state => ({
