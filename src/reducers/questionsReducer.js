@@ -8,7 +8,9 @@ export const questionsReducer = (state = {
   }, action) => {
   switch (action.type) {
     case "UPDATE_QUESTIONS":
-      return state[action.category] = action.questions
+      state[action.category] = action.questions
+      return state
+
     default:
       return state
   }
