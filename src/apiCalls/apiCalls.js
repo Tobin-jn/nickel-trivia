@@ -7,7 +7,11 @@ export const getQuestions =  async (currentCategory) => {
 
   let url = `https://opentdb.com/api.php?amount=${amount}&category=${categoryId}&difficulty=easy&type=multiple`
 
-  const response = await fetch(url)
-  const data = await response.json()
-  return category.cleanQuestions(data)
+  try {
+    const response = await fetch(url)
+    const data = await response.json()
+    return category.cleanQuestions(data)
+  } catch(error) {
+    return 'No questions'
+  }
 }

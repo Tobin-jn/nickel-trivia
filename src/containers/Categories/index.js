@@ -15,6 +15,13 @@ export class Categories extends Component {
   getTriviaQuestions = async (category) => {
     try {
       const triviaQuestions = await getQuestions(category)
+
+      if( triviaQuestions = 'No questions'){
+        console.log(error)
+      }
+
+      localStorage.setItem("questions",JSON.stringify({ this.props.questions }));
+
       this.props.handleFetchQuestions(category, triviaQuestions)
     } catch(error) {
       console.log('we have a problem...')
@@ -71,7 +78,7 @@ export class Categories extends Component {
 }
 
 export const mapStateToProps = state => ({
-  // loggedIn: state.loggedIn,
+  questions: state.questions,
 });
 
 export const mapDispatchToProps = dispatch => ({
