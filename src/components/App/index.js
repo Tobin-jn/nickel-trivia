@@ -4,6 +4,7 @@ import './App.css';
 import Categories from '../../containers/Categories';
 import DailyQuestion from '../../containers/DailyQuestion';
 import TriviaGame from '../../containers/TriviaGame';
+import Home from '../Home'
 
 const App = props => {
   return (

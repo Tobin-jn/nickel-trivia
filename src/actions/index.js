@@ -8,3 +8,7 @@ export const updateQuestions = (category, questions) => ({
   category,
   questions
 })
+
+export const clearCategory = () => ({
+  type: "CLEAR_CATEGORY",
+})

@@ -39,58 +39,55 @@ export class Categories extends Component {
   }
 
   render() {
-    if(this.props.category === '') {
-      return (
-        <div className='categories-container'>
-          <h1>Categories</h1>
-          <button 
-            className="category"
-            name='generalKnowledge'
-            onClick={()=> {this.handleClick('generalKnowledge')}}
-            >General Knowledge
-          </button>
-          <button 
-            className="category"
-            name='geography'
-            onClick={()=> {this.handleClick('geography')}}
-            >Geography
-          </button>
-          <button 
-            className="category"
-            name='history'
-            onClick={()=> {this.handleClick('history')}}
-            >History
-          </button>
-          <button 
-            className="category"
-            name='animals'
-            onClick={()=> {this.handleClick('animals')}}
-            >Animals
-          </button>
-          <button 
-            className="category"
-            name='vehicles'
-            onClick={()=> {this.handleClick('vehicles')}}
-            >Vehicles
-          </button>
-          <button 
-            className="category"
-            name='cartoons'
-            onClick={()=> {this.handleClick('cartoons')}}
-            >Cartoons and Animations
-          </button>
-        </div>
-      );
-    } else {
-      return(
-        <div>
-          <Redirect to='/dailyquestion' />
-        </div>
-      )
-    }
+    // if(this.props.category === '') {
+    return (
+      <div className='categories-container'>
+        <h1>Categories</h1>
+        <button 
+          className="category"
+          name='generalKnowledge'
+          onClick={()=> {this.handleClick('generalKnowledge')}}
+          >General Knowledge
+        </button>
+        <button 
+          className="category"
+          name='geography'
+          onClick={()=> {this.handleClick('geography')}}
+          >Geography
+        </button>
+        <button 
+          className="category"
+          name='history'
+          onClick={()=> {this.handleClick('history')}}
+          >History
+        </button>
+        <button 
+          className="category"
+          name='animals'
+          onClick={()=> {this.handleClick('animals')}}
+          >Animals
+        </button>
+        <button 
+          className="category"
+          name='vehicles'
+          onClick={()=> {this.handleClick('vehicles')}}
+          >Vehicles
+        </button>
+        <button 
+          className="category"
+          name='cartoons'
+          onClick={()=> {this.handleClick('cartoons')}}
+          >Cartoons and Animations
+        </button>
 
+        <NavLink className='category-seleted-btn' to='/dailyquestion'>Get Question</NavLink>
+        
+      </div>
+    );
   }
 }
+        // <NavLink className='daily-trivia-btn' to='/categories'>Trivia of the Day</NavLink>
+
 
 export const mapStateToProps = state => ({
   questions: state.questions,
