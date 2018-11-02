@@ -4,6 +4,9 @@ import { connect } from "react-redux";
 import { updateCategory, updateQuestions } from '../../actions'
 import './Categories.css';
 import { getQuestions } from '../../apiCalls/apiCalls'
+import DailyQuestion from '../DailyQuestion'
+import { Route, NavLink, Redirect } from 'react-router-dom';
+
 
 export class Categories extends Component {
 
@@ -36,56 +39,62 @@ export class Categories extends Component {
   }
 
   render() {
-    return (
-      <div className='categories-container'>
+    if(this.props.category === '') {
+      return (
+        <div className='categories-container'>
+          <h1>Categories</h1>
+          <button 
+            className="category"
+            name='generalKnowledge'
+            onClick={()=> {this.handleClick('generalKnowledge')}}
+            >General Knowledge
+          </button>
+          <button 
+            className="category"
+            name='geography'
+            onClick={()=> {this.handleClick('geography')}}
+            >Geography
+          </button>
+          <button 
+            className="category"
+            name='history'
+            onClick={()=> {this.handleClick('history')}}
+            >History
+          </button>
+          <button 
+            className="category"
+            name='animals'
+            onClick={()=> {this.handleClick('animals')}}
+            >Animals
+          </button>
+          <button 
+            className="category"
+            name='vehicles'
+            onClick={()=> {this.handleClick('vehicles')}}
+            >Vehicles
+          </button>
+          <button 
+            className="category"
+            name='cartoons'
+            onClick={()=> {this.handleClick('cartoons')}}
+            >Cartoons and Animations
+          </button>
+        </div>
+      );
+    } else {
+      return(
+        <div>
+          <Redirect to='/dailyquestion' />
+        </div>
+      )
+    }
 
-        <h1>Categories</h1>
-
-
-        <button 
-          className="category"
-          name='generalKnowledge'
-          onClick={()=> {this.handleClick('generalKnowledge')}}
-          >General Knowledge
-        </button>
-        <button 
-          className="category"
-          name='geography'
-          onClick={()=> {this.handleClick('geography')}}
-          >Geography
-        </button>
-        <button 
-          className="category"
-          name='history'
-          onClick={()=> {this.handleClick('history')}}
-          >History
-        </button>
-        <button 
-          className="category"
-          name='animals'
-          onClick={()=> {this.handleClick('animals')}}
-          >Animals
-        </button>
-        <button 
-          className="category"
-          name='vehicles'
-          onClick={()=> {this.handleClick('vehicles')}}
-          >Vehicles
-        </button>
-        <button 
-          className="category"
-          name='cartoons'
-          onClick={()=> {this.handleClick('cartoons')}}
-          >Cartoons and Animations
-        </button>
-
-      </div>
-    );
   }
 }
 
 export const mapStateToProps = state => ({
   questions: state.questions,
+  category: state.category
 });
 
 export const mapDispatchToProps = dispatch => ({

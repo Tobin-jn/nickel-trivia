@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Route } from 'react-router-dom';
 import './App.css';
 import Categories from '../../containers/Categories';
 import DailyQuestion from '../../containers/DailyQuestion';
@@ -9,8 +9,8 @@ const App = props => {
   return (
     <div className="App">
       <h1 className="title">Nickle Trivia</h1>
-      
-      <NavLink className='trivia-of-day-btn' to='/dailyquestion'>
+
+      <NavLink className='trivia-of-day-btn' to='/categories'>
         <button className="daily-trivia-btn">Trivia of the Day</button>
       </NavLink>
       <NavLink className='question-generator-btn' to='/categories'>
@@ -26,6 +26,8 @@ const App = props => {
 }
 
 export default App;
+
+      // <Route exact path='/' component={ App } />
 
 
         //   Trivia Question Generator
