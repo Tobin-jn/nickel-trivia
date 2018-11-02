@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { NavLink, Route } from 'react-router-dom';
+import { Redirect, Route, Switch } from 'react-router-dom';
 import './App.css';
 import Categories from '../../containers/Categories';
 import DailyQuestion from '../../containers/DailyQuestion';
@@ -8,26 +8,19 @@ import TriviaGame from '../../containers/TriviaGame';
 const App = props => {
   return (
     <div className="App">
-      <h1 className="title">Nickle Trivia</h1>
-
-      <NavLink className='trivia-of-day-btn' to='/categories'>
-        <button className="daily-trivia-btn">Trivia of the Day</button>
-      </NavLink>
-      <NavLink className='question-generator-btn' to='/categories'>
-        <button className="trivia-game">Trivia Game</button>
-      </NavLink>
-      
-      <Route exact path='/categories' component={ Categories } />
-      <Route exact path='/dailyquestion' component={ DailyQuestion } />
-      <Route exact path='/triviagame' component={ TriviaGame } />
-
+      <Switch>
+        <Route exact path='/' component={ Home } />
+        <Route exact path='/categories' component={ Categories } />
+        <Route exact path='/dailyquestion' component={ DailyQuestion } />
+        <Route exact path='/triviagame' component={ TriviaGame } />
+        <Redirect to='/' />
+      </Switch>
     </div>
   );
 }
 
 export default App;
 
-      // <Route exact path='/' component={ App } />
 
 
         //   Trivia Question Generator
