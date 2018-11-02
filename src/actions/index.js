@@ -12,3 +12,8 @@ export const updateQuestions = (category, questions) => ({
 export const clearCategory = () => ({
   type: "CLEAR_CATEGORY",
 })
+
+export const updateCurrentQuestion = (question) => ({
+  type: "UPDATE_CURRENT_QUESTION",
+  question
+})

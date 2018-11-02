@@ -3,17 +3,42 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import './DailyQuestion.css';
 
-export const DailyQuestion = props => {
+export class DailyQuestion extends Component {
 
-  return (
-    <div>
-      <h1>DailyQuestion</h1>
-    </div>
-  );
+componentDidMount = () => {
+
+}
+
+
+  // generateQuestion = () => {
+  //   const { category, questions } = this.props
+  //   console.log(questions[category])
+  //   const questionBank = questions[category]
+  //   // const length = questionBank.length
+
+  //   console.log(questionBank[0])
+
+  //   // const randomInt = Math.random() * (length - 0);
+  //   // console.log(randomInt)
+
+
+
+  // }
+
+
+  render() {
+    return (
+      <div>
+        <h1>DailyQuestion</h1>
+      </div>
+    );
+  }
+
 }
 
 export const mapStateToProps = state => ({
-  // loggedIn: state.loggedIn,
+  category: state.category,
+  questions: state.questions
 });
 
 export const mapDispatchToProps = dispatch => ({

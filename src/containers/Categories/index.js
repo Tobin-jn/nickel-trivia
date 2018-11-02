@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import { updateCategory, updateQuestions } from '../../actions'
+import { updateCategory, updateQuestions, updateCurrentQuestion } from '../../actions'
 import './Categories.css';
 import { getQuestions } from '../../apiCalls/apiCalls'
 import DailyQuestion from '../DailyQuestion'
@@ -17,6 +17,7 @@ export class Categories extends Component {
 
   getTriviaQuestions = async (category) => {
     if(!this.checkState(category)) {
+      this.generateQuestion(category, this.props.questions[category])
       return
     }
 
@@ -24,6 +25,7 @@ export class Categories extends Component {
       const triviaQuestions = await getQuestions(category)
 
       this.props.handleFetchQuestions(category, triviaQuestions)
+      this.generateQuestion(category, triviaQuestions)
     } 
     catch(error) {
       console.log('we have a problem...')
@@ -36,6 +38,13 @@ export class Categories extends Component {
     } else {
       return false
     }
+  }
+
+  generateQuestion = (category, questions) => {
+    const length = questions.length
+    const randomInt = Math.round(Math.random() * (length - 0));
+    const newQuestion = questions[randomInt]
+    this.props.generateNewQuestion(newQuestion)
   }
 
   render() {
@@ -96,7 +105,8 @@ export const mapStateToProps = state => ({
 
 export const mapDispatchToProps = dispatch => ({
   handleCategory: (category) => dispatch(updateCategory(category)),
-  handleFetchQuestions: (category, questions) => dispatch(updateQuestions(category, questions))
+  handleFetchQuestions: (category, questions) => dispatch(updateQuestions(category, questions)),
+  generateNewQuestion: (question) => dispatch(updateCurrentQuestion(question))
 });
 
 export default connect(
