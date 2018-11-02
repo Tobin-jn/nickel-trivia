@@ -44,6 +44,7 @@ export class Categories extends Component {
     const length = questions.length
     const randomInt = Math.round(Math.random() * (length - 0));
     const newQuestion = questions[randomInt]
+    console.log(newQuestion)
     this.props.generateNewQuestion(newQuestion)
   }
 

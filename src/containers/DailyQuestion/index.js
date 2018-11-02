@@ -5,26 +5,6 @@ import './DailyQuestion.css';
 
 export class DailyQuestion extends Component {
 
-componentDidMount = () => {
-
-}
-
-
-  // generateQuestion = () => {
-  //   const { category, questions } = this.props
-  //   console.log(questions[category])
-  //   const questionBank = questions[category]
-  //   // const length = questionBank.length
-
-  //   console.log(questionBank[0])
-
-  //   // const randomInt = Math.random() * (length - 0);
-  //   // console.log(randomInt)
-
-
-
-  // }
-
 
   render() {
     return (
