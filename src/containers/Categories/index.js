@@ -1,19 +1,18 @@
 import React, { Component } from 'react';
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import { updateCategory } from '../../actions'
+import { updateCategory, updateQuestions } from '../../actions'
 import './Categories.css';
-import { getQuestions } from '../../apiCalls'
+import { getQuestions } from '../../apiCalls/apiCalls'
 
 export class Categories extends Component {
 
   handleClick = (category) => {
     this.props.handleCategory(category)
-    this.getQuestions(category)
-    //does this need to be async?
+    this.getTriviaQuestions(category)
   }
 
-  getQuestions = async (category) => {
+  getTriviaQuestions = async (category) => {
     try {
       const triviaQuestions = await getQuestions(category)
       this.props.handleFetchQuestions(category, triviaQuestions)

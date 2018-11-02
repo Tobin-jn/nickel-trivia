@@ -1,16 +1,16 @@
-const generalKnowledge = { amount: 50, category: 9}
+export const generalKnowledge = { amount: 50, category: 9}
   
-const geography = { amount: 50, category: 22}
+export const geography = { amount: 50, category: 22}
 
-const history = { amount: 40, category: 23}
+export const history = { amount: 40, category: 23}
   
-const cartoons = amount: 18, category: 32}
+export const cartoons = { amount: 18, category: 32 }
 
-const animals = { amount: 9, category: 27}
+export const animals = { amount: 9, category: 27}
 
-const vehicles = { amount: 17, category: 26}
+export const vehicles = { amount: 17, category: 26}
 
-const cleanQuestions = (questions) => {
+export const cleanQuestions = (questions) => {
   return questions
 }
 

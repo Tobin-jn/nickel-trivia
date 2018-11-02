@@ -2,10 +2,12 @@ import * as category from './helper';
 import { cleanQuestions } from './helper';
 
 export const getQuestions =  async (currentCategory) => {
+  let amount = category[currentCategory].amount
+  let categoryId =  category[currentCategory].category
 
-  let url = `https://opentdb.com/api.php?amount=${category.currentCategory.amount}&category=${category.currentCategory.category}&difficulty=easy&type=multiple`
+  let url = `https://opentdb.com/api.php?amount=${amount}&category=${categoryId}&difficulty=easy&type=multiple`
 
   const response = await fetch(url)
   const data = await response.json()
-  return cleanQuestions(data)
+  return category.cleanQuestions(data)
 }

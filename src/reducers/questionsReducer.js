@@ -1,4 +1,4 @@
-export const questions = (state = {
+export const questionsReducer = (state = {
     generalKnowledge: {},
     geography: {},
     history: {},
@@ -9,7 +9,17 @@ export const questions = (state = {
   switch (action.type) {
     case "UPDATE_QUESTIONS":
       return state[action.category] = action.questions
-    default
+    default:
       return state
   }
 }
+
+
+// export const categoryReducer = (state = '', action) => {
+//   switch(action.type) {
+//     case 'UPDATE_CATEGORY':
+//       return action.category;
+//     default:
+//       return state;
+//   }
+// };
