@@ -9,24 +9,27 @@ const App = props => {
   return (
     <div className="App">
       <h1 className="title">Nickle Trivia</h1>
-      <button className="daily-trivia-btn">Trivia of the Day</button>
-      <button className="trivia-game">Trivia Game</button>
-      <Categories />
-      <DailyQuestion />
-      <TriviaGame />
+      
+      <NavLink className='trivia-of-day-btn' to='/dailyquestion'>
+        <button className="daily-trivia-btn">Trivia of the Day</button>
+      </NavLink>
+      <NavLink className='question-generator-btn' to='/categories'>
+        <button className="trivia-game">Trivia Game</button>
+      </NavLink>
+      
+      <Route exact path='/categories' component={ Categories } />
+      <Route exact path='/dailyquestion' component={ DailyQuestion } />
+      <Route exact path='/triviagame' component={ TriviaGame } />
+
     </div>
   );
 }
 
 export default App;
 
-        // <NavLink className='trivia-of-day-btn' to='/dailycategory'>
-        //   Daily Trivia Question
-        // </NavLink>
-        // <NavLink className='question-generator-btn' to='/categories'>
+
         //   Trivia Question Generator
           
-        // </NavLink>
 
 // <NavLink to='/about'>About</NavLink>
 
