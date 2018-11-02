@@ -27,17 +27,31 @@ const shuffleAnswers = (questionChoices) => {
 }
 
 export const cleanQuestions = (questions) => {
+  let counter = 0
   return questions.results.map( question => {
     const answers = [...question.incorrect_answers, question.correct_answer]
     const shuffled = shuffleAnswers(answers)
+    counter++
     return  {
       category: question.category,
       question: question.question,
       answers: shuffled,
-      correct_answer: question.correct_answer
+      correct_answer: question.correct_answer,
+      id: counter,
+      asked: false,
     }
   })
 }
+
+// const addProperties = (array) => {
+//   let counter = 1
+//   const withId = data.results.map( question => {
+//     let updatedQuestion = {...question, id: counter, asked: false}
+//     counter++
+//     return updatedQuestion
+//   })
+// return withId
+// }
 
 
 // general https://opentdb.com/api.php?amount=50&category=9&difficulty=easy&type=multiple      9     50
