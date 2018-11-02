@@ -1,10 +1,10 @@
 export const questionsReducer = (state = {
-    generalKnowledge: {},
-    geography: {},
-    history: {},
-    animals: {},
-    vehicles: {},
-    cartoons: {}
+    generalKnowledge: [],
+    geography: [],
+    history: [],
+    animals: [],
+    vehicles: [],
+    cartoons: []
   }, action) => {
   switch (action.type) {
     case "UPDATE_QUESTIONS":

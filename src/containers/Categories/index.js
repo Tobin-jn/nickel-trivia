@@ -13,19 +13,33 @@ export class Categories extends Component {
   }
 
   getTriviaQuestions = async (category) => {
+    const check = this.checkState(category)
+    console.log(check)
+    if(!check) {
+      return
+    }
+
     try {
       const triviaQuestions = await getQuestions(category)
 
-      if( triviaQuestions = 'No questions'){
-        console.log(error)
-      }
-
-      localStorage.setItem("questions",JSON.stringify({ this.props.questions }));
-
       this.props.handleFetchQuestions(category, triviaQuestions)
-    } catch(error) {
+      // this.setLocalStorage(triviaQuestions)
+
+    } 
+    catch(error) {
       console.log('we have a problem...')
     }
+  }
+
+  checkState = (category) => {
+    const { questions } = this.props
+    console.log(questions)
+    if(questions[category].length === 0) {
+      return true
+    } else {
+      return false
+    }
+
   }
 
   render() {
