@@ -90,15 +90,15 @@ export class Categories extends Component {
           >Cartoons and Animations
         </button>
 
-        <NavLink className='category-seleted-btn' to='/triviagame'>Get Question</NavLink>
         
       </div>
     );
   }
 }
+        // <NavLink className='category-seleted-btn' to='/triviagame'>Get Question</NavLink>
+
+
         // <NavLink className='daily-trivia-btn' to='/categories'>Trivia of the Day</NavLink>
-
-
 export const mapStateToProps = state => ({
   questions: state.questions,
   category: state.category
