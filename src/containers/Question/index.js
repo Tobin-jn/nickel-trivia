@@ -16,12 +16,17 @@ export class Question extends Component {
       )
     } else {
       return (
-        <div className='question-container'>
-          <h3 className="question">Question: {currentQuestion.question} </h3>
-          <p className="answer-choice choice-a">{currentQuestion.answers[0]}</p>
-          <p className="answer-choice choice-b">{currentQuestion.answers[1]}</p>
-          <p className="answer-choice choice-c">{currentQuestion.answers[2]}</p>
-          <p className="answer-choice choice-d">{currentQuestion.answers[3]}</p>
+        <div>
+          <div className='question-container'>
+            <div className='question-container-after'></div>
+            <h3 className="question">{currentQuestion.question} </h3>
+          </div>
+          <div className="answer-container">
+            <div><p className="answer-choice choice-a">{currentQuestion.answers[0]}</p></div>
+            <div><p className="answer-choice choice-b">{currentQuestion.answers[1]}</p></div>
+            <div><p className="answer-choice choice-c">{currentQuestion.answers[2]}</p></div>
+            <div><p className="answer-choice choice-d">{currentQuestion.answers[3]}</p></div>
+          </div>
         </div>
       );
     }

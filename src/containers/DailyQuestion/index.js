@@ -51,7 +51,7 @@ export class DailyQuestion extends Component {
     return (
       <div className='daily-question-container'>
         <img className='jar-logo' src={ require('../../images/NickelTriviaJar.png') } alt="Trivia Jar Logo"/>
-        <h1 className='daily-header'>DailyQuestion</h1>
+        <h1 className='daily-header'>Question of the Day</h1>
         <Question />
         <NavLink  to='/triviagame'>
           <button className='play-game-btn btn'>Play a game with Grandkids!</button>
