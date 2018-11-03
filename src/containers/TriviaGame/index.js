@@ -3,6 +3,8 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import './TriviaGame.css';
 import Question from '../Question'
+import { NavLink } from 'react-router-dom';
+
 
 export const TriviaGame = props => {
 
@@ -10,6 +12,7 @@ export const TriviaGame = props => {
     <div>
       <h1>Game!</h1>
       <Question />
+      <NavLink className='next-question-btn' to='/categories'>Next Question</NavLink>
     </div>
   );
 }

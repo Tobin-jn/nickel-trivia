@@ -90,7 +90,7 @@ export class Categories extends Component {
           >Cartoons and Animations
         </button>
 
-        <NavLink className='category-seleted-btn' to='/dailyquestion'>Get Question</NavLink>
+        <NavLink className='category-seleted-btn' to='/triviagame'>Get Question</NavLink>
         
       </div>
     );
