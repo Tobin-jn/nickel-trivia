@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import { updateCategory, updateQuestions, updateCurrentQuestion } from '../../actions'
+import { 
+  updateCategory, 
+  updateQuestions, 
+  updateCurrentQuestion, 
+  addQuestionCount 
+} from '../../actions'
 import './Categories.css';
 import { getQuestions } from '../../apiCalls/apiCalls'
 import DailyQuestion from '../DailyQuestion'
@@ -13,6 +18,7 @@ export class Categories extends Component {
   handleClick = (category) => {
     this.props.handleCategory(category)
     this.getTriviaQuestions(category)
+    this.props.addQuestion()
   }
 
   getTriviaQuestions = async (category) => {
@@ -107,7 +113,8 @@ export const mapStateToProps = state => ({
 export const mapDispatchToProps = dispatch => ({
   handleCategory: (category) => dispatch(updateCategory(category)),
   handleFetchQuestions: (category, questions) => dispatch(updateQuestions(category, questions)),
-  generateNewQuestion: (question) => dispatch(updateCurrentQuestion(question))
+  generateNewQuestion: (question) => dispatch(updateCurrentQuestion(question)),
+  addQuestion: () => dispatch(addQuestionCount())
 });
 
 export default connect(

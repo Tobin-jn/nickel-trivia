@@ -9,18 +9,18 @@ import Home from '../Home'
 const App = props => {
   return (
     <div className="App">
+      <Switch>
         <Route exact path='/' component={ Home } />
         <Route exact path='/dailyquestion' component={ DailyQuestion } />
         <Route exact path='/triviagame' component={ TriviaGame } />
         <Redirect to='/' />
-
+      </Switch>
     </div>
   );
 }
 
 export default App;
 
-      // <Switch>
 
 
         //   Trivia Question Generator

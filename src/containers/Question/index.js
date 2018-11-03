@@ -3,23 +3,29 @@ import './Question.css';
 import PropTypes from "prop-types";
 import { connect } from 'react-redux'
 
-
-
 export class Question extends Component {
 
   render() {
     const { currentQuestion } = this.props
-    return (
-      <div className='question-container'>
-        <h3 className="question">Question: {currentQuestion.question} </h3>
-        <p className="answer-choice choice-a">{currentQuestion.answers[0]}</p>
-        <p className="answer-choice choice-b">{currentQuestion.answers[1]}</p>
-        <p className="answer-choice choice-c">{currentQuestion.answers[2]}</p>
-        <p className="answer-choice choice-d">{currentQuestion.answers[3]}</p>
-      </div>
-    );
-  }
 
+    if(!this.props.currentQuestion){
+      return (
+        <div className="eror-question">
+          <h1 className="error-question-message">Oops, choose another category</h1>
+        </div>
+      )
+    } else {
+      return (
+        <div className='question-container'>
+          <h3 className="question">Question: {currentQuestion.question} </h3>
+          <p className="answer-choice choice-a">{currentQuestion.answers[0]}</p>
+          <p className="answer-choice choice-b">{currentQuestion.answers[1]}</p>
+          <p className="answer-choice choice-c">{currentQuestion.answers[2]}</p>
+          <p className="answer-choice choice-d">{currentQuestion.answers[3]}</p>
+        </div>
+      );
+    }
+  }
 }
 
 export const mapStateToProps = state => ({
