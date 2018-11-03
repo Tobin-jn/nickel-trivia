@@ -7,8 +7,6 @@ import { updateQuestions, updateCurrentQuestion } from '../../actions'
 import { getQuestions } from '../../apiCalls/apiCalls'
 import { NavLink } from 'react-router-dom'
 
-
-
 export class DailyQuestion extends Component {
 
   componentDidMount() {
@@ -52,9 +50,12 @@ export class DailyQuestion extends Component {
     const { currentQuestion } = this.props
     return (
       <div className='daily-question-container'>
-        <h1>DailyQuestion</h1>
+        <img className='jar-logo' src={ require('../../images/NickelTriviaJar.png') } alt="Trivia Jar Logo"/>
+        <h1 className='daily-header'>Question of the Day</h1>
         <Question />
-        <NavLink className='play-game-btn' to='/triviagame'>Play a game with Grandkids!</NavLink>
+        <NavLink  to='/triviagame'>
+          <button className='play-game-btn btn'>Play a game with Grandkids!</button>
+        </NavLink>
       </div>
     );
   }

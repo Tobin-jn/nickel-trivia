@@ -1,0 +1,25 @@
+.daily-question-container {
+  height: 100vh;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)), url(../../images/blanket.jpg) center center no-repeat;
+  background-size: cover;
+}
+
+.daily-header {
+  text-align: center;
+  color: #d24572;
+  font-family: 'Spicy Rice', cursive;
+  margin-top: 30px;
+  font-size: 4em;
+}
+
+.jar-logo {
+  width: 150px;
+  top: 20px;
+  left: 20px;
+  position: absolute;
+}
+
+
+/*.play-game-btn {
+
+}*/

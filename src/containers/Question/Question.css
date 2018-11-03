@@ -1,0 +1,49 @@
+.question-container {
+  padding: 4rem 8rem;
+  display: inline-block;
+  border: 3px solid #333333;
+  font-size: 2.5rem;
+  border-radius: 2% 6% 5% 4% / 1% 1% 2% 4%;
+  background: #ffffff;
+  position: relative;
+  margin: 20px;
+  text-align: center;
+
+}
+      
+.question  {
+
+}
+
+.answer-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.answer-choice {
+  text-align: center;
+  font-size: 2em;
+  border: solid black;
+  height: 100px;
+  padding: 20px;
+}
+
+.choice-a {
+  background-color: red;
+  margin-left: 20px;
+}
+
+.choice-b {
+  background-color: green;
+    margin-right: 20px;
+}
+
+.choice-c {
+  background-color: blue;
+    margin-left: 20px;
+}
+
+.choice-d {
+  background-color: yellow;
+    margin-right: 20px;
+}
