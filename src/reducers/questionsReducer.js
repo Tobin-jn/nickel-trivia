@@ -15,13 +15,3 @@ export const questionsReducer = (state = {
       return state
   }
 }
-
-
-// export const categoryReducer = (state = '', action) => {
-//   switch(action.type) {
-//     case 'UPDATE_CATEGORY':
-//       return action.category;
-//     default:
-//       return state;
-//   }
-// };

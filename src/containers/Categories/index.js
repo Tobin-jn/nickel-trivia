@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import { updateCategory, updateQuestions } from '../../actions'
+import { 
+  updateCategory, 
+  updateQuestions, 
+  updateCurrentQuestion, 
+  addQuestionCount 
+} from '../../actions'
 import './Categories.css';
 import { getQuestions } from '../../apiCalls/apiCalls'
 import DailyQuestion from '../DailyQuestion'
@@ -13,10 +18,12 @@ export class Categories extends Component {
   handleClick = (category) => {
     this.props.handleCategory(category)
     this.getTriviaQuestions(category)
+    this.props.addQuestion()
   }
 
   getTriviaQuestions = async (category) => {
     if(!this.checkState(category)) {
+      this.generateQuestion(category, this.props.questions[category])
       return
     }
 
@@ -24,6 +31,7 @@ export class Categories extends Component {
       const triviaQuestions = await getQuestions(category)
 
       this.props.handleFetchQuestions(category, triviaQuestions)
+      this.generateQuestion(category, triviaQuestions)
     } 
     catch(error) {
       console.log('we have a problem...')
@@ -36,6 +44,14 @@ export class Categories extends Component {
     } else {
       return false
     }
+  }
+
+  generateQuestion = (category, questions) => {
+    const length = questions.length
+    const randomInt = Math.round(Math.random() * (length - 0));
+    const newQuestion = questions[randomInt]
+    console.log(newQuestion)
+    this.props.generateNewQuestion(newQuestion)
   }
 
   render() {
@@ -80,15 +96,15 @@ export class Categories extends Component {
           >Cartoons and Animations
         </button>
 
-        <NavLink className='category-seleted-btn' to='/dailyquestion'>Get Question</NavLink>
         
       </div>
     );
   }
 }
+        // <NavLink className='category-seleted-btn' to='/triviagame'>Get Question</NavLink>
+
+
         // <NavLink className='daily-trivia-btn' to='/categories'>Trivia of the Day</NavLink>
-
-
 export const mapStateToProps = state => ({
   questions: state.questions,
   category: state.category
@@ -96,7 +112,9 @@ export const mapStateToProps = state => ({
 
 export const mapDispatchToProps = dispatch => ({
   handleCategory: (category) => dispatch(updateCategory(category)),
-  handleFetchQuestions: (category, questions) => dispatch(updateQuestions(category, questions))
+  handleFetchQuestions: (category, questions) => dispatch(updateQuestions(category, questions)),
+  generateNewQuestion: (question) => dispatch(updateCurrentQuestion(question)),
+  addQuestion: () => dispatch(addQuestionCount())
 });
 
 export default connect(

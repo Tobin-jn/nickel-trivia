@@ -11,7 +11,6 @@ const App = props => {
     <div className="App">
       <Switch>
         <Route exact path='/' component={ Home } />
-        <Route exact path='/categories' component={ Categories } />
         <Route exact path='/dailyquestion' component={ DailyQuestion } />
         <Route exact path='/triviagame' component={ TriviaGame } />
         <Redirect to='/' />

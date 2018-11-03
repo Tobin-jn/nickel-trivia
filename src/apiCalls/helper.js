@@ -8,7 +8,7 @@ export const cartoons = { amount: 18, category: 32 }
 
 export const animals = { amount: 9, category: 27}
 
-export const vehicles = { amount: 17, category: 26}
+export const vehicles = { amount: 17, category: 28}
 
 
 const shuffleAnswers = (questionChoices) => {
