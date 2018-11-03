@@ -18,7 +18,6 @@ export const TriviaGame = props => {
         <h1 className="score-text">Score:</h1>
         <h4 className="score-number">20cents</h4>
       </div>
-      <NavLink className='next-question-btn' to='/categories'>Next Question</NavLink>
     </div>
   );
 }

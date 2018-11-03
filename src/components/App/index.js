@@ -10,9 +10,8 @@ const App = props => {
   return (
     <div className="App">
         <Route exact path='/' component={ Home } />
-        <Route path='/categories' component={ Categories } />
         <Route exact path='/dailyquestion' component={ DailyQuestion } />
-        <Route path='/triviagame' component={ TriviaGame } />
+        <Route exact path='/triviagame' component={ TriviaGame } />
         <Redirect to='/' />
 
     </div>

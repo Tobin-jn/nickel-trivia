@@ -5,6 +5,7 @@ import './DailyQuestion.css';
 import Question from '../Question'
 import { updateQuestions, updateCurrentQuestion } from '../../actions'
 import { getQuestions } from '../../apiCalls/apiCalls'
+import { NavLink } from 'react-router-dom'
 
 
 
@@ -53,6 +54,7 @@ export class DailyQuestion extends Component {
       <div className='daily-question-container'>
         <h1>DailyQuestion</h1>
         <Question />
+        <NavLink className='play-game-btn' to='/triviagame'>Play a game with Grandkids!</NavLink>
       </div>
     );
   }
