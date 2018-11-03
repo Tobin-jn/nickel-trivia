@@ -10,10 +10,16 @@ html, body {
 }
 
 .title {
-  text-align: center;
-  color: red;
+  /*text-align: center;*/
+  color: #d24572;
+  font-family: 'Spicy Rice', cursive;
   position: absolute;
-  top: 200px;
+  top: 60px;
+  left: 25%;
+}
+
+.trivia-text {
+  font-size: 3em;
 }
 
 .nickel-logo {
@@ -54,13 +60,4 @@ html, body {
   background: #fff;
 }
 
-.daily-trivia-btn {
-
-
-}
-
-.trivia-game-btn {
-
-
-}
 
