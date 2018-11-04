@@ -22,7 +22,7 @@ export class DailyQuestion extends Component {
     try {
       const triviaQuestions = await getQuestions('generalKnowledge')
 
-      this.props.handleFetchQuestions('generalKnowledge', triviaQuestions)
+      this.props.updateQuestions('generalKnowledge', triviaQuestions)
       this.generateQuestion('generalKnowledge', triviaQuestions)
     } 
     catch(error) {
@@ -43,7 +43,8 @@ export class DailyQuestion extends Component {
     const randomInt = Math.round(Math.random() * (length - 0));
     const newQuestion = questions[randomInt]
     console.log(newQuestion)
-    this.props.generateNewQuestion(newQuestion)
+    this.props.generateNewQuestion(category, newQuestion)
+    this.props.updateQuestions(category, questions)
   }
 
   render() {
@@ -69,8 +70,8 @@ export const mapStateToProps = state => ({
 });
 
 export const mapDispatchToProps = dispatch => ({
-  handleFetchQuestions: (category, questions) => dispatch(updateQuestions(category, questions)),
-  generateNewQuestion: (question) => dispatch(updateCurrentQuestion(question))
+  updateQuestions: (category, questions) => dispatch(updateQuestions(category, questions)),
+  generateNewQuestion: (category, question) => dispatch(updateCurrentQuestion(category, question))
 });
 
 export default connect(
