@@ -39,7 +39,6 @@ export const cleanQuestions = (questions) => {
       correct_answer: question.correct_answer,
       id: counter,
       asked: false,
-      currentQuestion: false
     }
   })
 }
