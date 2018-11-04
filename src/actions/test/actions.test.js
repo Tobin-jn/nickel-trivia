@@ -63,15 +63,15 @@ describe('actions', () => {
     expect(result).toEqual(expectedAction)
   })
 
-  it('should have a type of CLEAR_CURRENT_QUESTION', () => {
-    const expectedAction = {
-      type: 'CLEAR_CURRENT_QUESTION',
-    }
+  // it('should have a type of CLEAR_CURRENT_QUESTION', () => {
+  //   const expectedAction = {
+  //     type: 'CLEAR_CURRENT_QUESTION',
+  //   }
 
-    const result = actions.clearCurrentQuestion()
+  //   const result = actions.clearCurrentQuestion()
 
-    expect(result).toEqual(expectedAction)
-  })
+  //   expect(result).toEqual(expectedAction)
+  // })
 
   it('should have a type of ADD_QUESTION_COUNT', () => {
     const expectedAction = {

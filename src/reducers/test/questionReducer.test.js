@@ -1,7 +1,7 @@
 /* eslint-disable */
 
 import { questionReducer } from "../questionReducer";
-import { mockState } from './mocks';
+import { mockState, mockQuestion, mockCurrentQuestion, mockClearQuestion } from './mocks';
 
 
 describe('questionReducer', () => {
@@ -13,20 +13,23 @@ describe('questionReducer', () => {
     }
 
     const result = questionReducer(undefined, {})
+    expect(result).toEqual(expected)
+  })
+
+  it('should update the current question in state', () => {
+    const action = {
+      type: 'UPDATE_CURRENT_QUESTION',
+      question: mockQuestion
+    }
+
+    const expected = mockCurrentQuestion
+
+    const result = questionReducer(mockState, action)
 
     expect(result).toEqual(expected)
   })
+
+  // it('should clear out the current state to the default', () => {
+  // })
 })
 
-
-  // it('should return a cleared out state', () => {
-  //   const action = {
-  //     type: ,
-  //   }
-
-  //   const expected = ''
-
-  //   const result = categoryReducer(mockState, action)
-
-  //   expect(result).toEqual(expected)
-  // })

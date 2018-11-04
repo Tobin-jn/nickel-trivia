@@ -5,7 +5,7 @@ import './TriviaGame.css';
 import Question from '../Question'
 import Categories from '../Categories'
 import { NavLink } from 'react-router-dom';
-import { clearCurrentQuestion } from '../../actions'
+// import { clearCurrentQuestion } from '../../actions'
 
 export class TriviaGame extends Component{
 
@@ -44,7 +44,7 @@ export const mapStateToProps = state => ({
 });
 
 export const mapDispatchToProps = dispatch => ({
-  clearCurrentQuestion: () => dispatch(clearCurrentQuestion())
+  // clearCurrentQuestion: () => dispatch(clearCurrentQuestion())
 
 });
 
