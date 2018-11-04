@@ -20,7 +20,6 @@ export class Question extends Component {
     } else {
       this.setState({ answerMessage: `Sorry, the correct answer was ${currentQuestion.correct_answer}` })
     }
-
   }
 
   render() {

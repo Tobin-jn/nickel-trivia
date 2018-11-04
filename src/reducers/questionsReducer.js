@@ -8,7 +8,7 @@ export const questionsReducer = (state = {
   }, action) => {
   switch (action.type) {
     case "UPDATE_QUESTIONS":
-      state[action.category] = action.questions
+      state[action.category] = action.questions.filter( question => !question.asked)
       return state
 
     default:
