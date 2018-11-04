@@ -17,22 +17,98 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": <h1>
-        DailyQuestion
-      </h1>,
+      "children": Array [
+        <img
+          alt="Trivia Jar Logo"
+          className="jar-logo"
+          src="NickelTriviaJar.png"
+        />,
+        <h1
+          className="daily-header"
+        >
+          Question of the Day
+        </h1>,
+        <Connect(Question) />,
+        <NavLink
+          activeClassName="active"
+          aria-current="page"
+          to="/triviagame"
+        >
+          <button
+            className="play-game-btn btn"
+          >
+            Play a game with Grandkids!
+          </button>
+        </NavLink>,
+      ],
+      "className": "daily-question-container",
     },
     "ref": null,
-    "rendered": Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": "DailyQuestion",
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "alt": "Trivia Jar Logo",
+          "className": "jar-logo",
+          "src": "NickelTriviaJar.png",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "img",
       },
-      "ref": null,
-      "rendered": "DailyQuestion",
-      "type": "h1",
-    },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Question of the Day",
+          "className": "daily-header",
+        },
+        "ref": null,
+        "rendered": "Question of the Day",
+        "type": "h1",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "activeClassName": "active",
+          "aria-current": "page",
+          "children": <button
+            className="play-game-btn btn"
+          >
+            Play a game with Grandkids!
+          </button>,
+          "to": "/triviagame",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Play a game with Grandkids!",
+            "className": "play-game-btn btn",
+          },
+          "ref": null,
+          "rendered": "Play a game with Grandkids!",
+          "type": "button",
+        },
+        "type": [Function],
+      },
+    ],
     "type": "div",
   },
   Symbol(enzyme.__nodes__): Array [
@@ -41,22 +117,98 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "children": <h1>
-          DailyQuestion
-        </h1>,
+        "children": Array [
+          <img
+            alt="Trivia Jar Logo"
+            className="jar-logo"
+            src="NickelTriviaJar.png"
+          />,
+          <h1
+            className="daily-header"
+          >
+            Question of the Day
+          </h1>,
+          <Connect(Question) />,
+          <NavLink
+            activeClassName="active"
+            aria-current="page"
+            to="/triviagame"
+          >
+            <button
+              className="play-game-btn btn"
+            >
+              Play a game with Grandkids!
+            </button>
+          </NavLink>,
+        ],
+        "className": "daily-question-container",
       },
       "ref": null,
-      "rendered": Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "DailyQuestion",
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "alt": "Trivia Jar Logo",
+            "className": "jar-logo",
+            "src": "NickelTriviaJar.png",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "img",
         },
-        "ref": null,
-        "rendered": "DailyQuestion",
-        "type": "h1",
-      },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Question of the Day",
+            "className": "daily-header",
+          },
+          "ref": null,
+          "rendered": "Question of the Day",
+          "type": "h1",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "activeClassName": "active",
+            "aria-current": "page",
+            "children": <button
+              className="play-game-btn btn"
+            >
+              Play a game with Grandkids!
+            </button>,
+            "to": "/triviagame",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Play a game with Grandkids!",
+              "className": "play-game-btn btn",
+            },
+            "ref": null,
+            "rendered": "Play a game with Grandkids!",
+            "type": "button",
+          },
+          "type": [Function],
+        },
+      ],
       "type": "div",
     },
   ],

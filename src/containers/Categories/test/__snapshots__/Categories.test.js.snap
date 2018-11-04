@@ -17,36 +17,58 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": <h1>
-        Categories
-      </h1>,
-    },
-    "ref": null,
-    "rendered": Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": "Categories",
-      },
-      "ref": null,
-      "rendered": "Categories",
-      "type": "h1",
-    },
-    "type": "div",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": <h1>
+      "children": Array [
+        <h1>
           Categories
         </h1>,
-      },
-      "ref": null,
-      "rendered": Object {
+        <button
+          className="category"
+          name="generalKnowledge"
+          onClick={[Function]}
+        >
+          General Knowledge
+        </button>,
+        <button
+          className="category"
+          name="geography"
+          onClick={[Function]}
+        >
+          Geography
+        </button>,
+        <button
+          className="category"
+          name="history"
+          onClick={[Function]}
+        >
+          History
+        </button>,
+        <button
+          className="category"
+          name="animals"
+          onClick={[Function]}
+        >
+          Animals
+        </button>,
+        <button
+          className="category"
+          name="vehicles"
+          onClick={[Function]}
+        >
+          Vehicles
+        </button>,
+        <button
+          className="category"
+          name="cartoons"
+          onClick={[Function]}
+        >
+          Cartoons and Animations
+        </button>,
+      ],
+      "className": "categories-container",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
         "instance": null,
         "key": undefined,
         "nodeType": "host",
@@ -57,6 +79,246 @@ ShallowWrapper {
         "rendered": "Categories",
         "type": "h1",
       },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "General Knowledge",
+          "className": "category",
+          "name": "generalKnowledge",
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": "General Knowledge",
+        "type": "button",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Geography",
+          "className": "category",
+          "name": "geography",
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": "Geography",
+        "type": "button",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "History",
+          "className": "category",
+          "name": "history",
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": "History",
+        "type": "button",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Animals",
+          "className": "category",
+          "name": "animals",
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": "Animals",
+        "type": "button",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Vehicles",
+          "className": "category",
+          "name": "vehicles",
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": "Vehicles",
+        "type": "button",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Cartoons and Animations",
+          "className": "category",
+          "name": "cartoons",
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": "Cartoons and Animations",
+        "type": "button",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h1>
+            Categories
+          </h1>,
+          <button
+            className="category"
+            name="generalKnowledge"
+            onClick={[Function]}
+          >
+            General Knowledge
+          </button>,
+          <button
+            className="category"
+            name="geography"
+            onClick={[Function]}
+          >
+            Geography
+          </button>,
+          <button
+            className="category"
+            name="history"
+            onClick={[Function]}
+          >
+            History
+          </button>,
+          <button
+            className="category"
+            name="animals"
+            onClick={[Function]}
+          >
+            Animals
+          </button>,
+          <button
+            className="category"
+            name="vehicles"
+            onClick={[Function]}
+          >
+            Vehicles
+          </button>,
+          <button
+            className="category"
+            name="cartoons"
+            onClick={[Function]}
+          >
+            Cartoons and Animations
+          </button>,
+        ],
+        "className": "categories-container",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Categories",
+          },
+          "ref": null,
+          "rendered": "Categories",
+          "type": "h1",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "General Knowledge",
+            "className": "category",
+            "name": "generalKnowledge",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": "General Knowledge",
+          "type": "button",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Geography",
+            "className": "category",
+            "name": "geography",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": "Geography",
+          "type": "button",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "History",
+            "className": "category",
+            "name": "history",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": "History",
+          "type": "button",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Animals",
+            "className": "category",
+            "name": "animals",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": "Animals",
+          "type": "button",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Vehicles",
+            "className": "category",
+            "name": "vehicles",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": "Vehicles",
+          "type": "button",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Cartoons and Animations",
+            "className": "category",
+            "name": "cartoons",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": "Cartoons and Animations",
+          "type": "button",
+        },
+      ],
       "type": "div",
     },
   ],

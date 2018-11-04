@@ -17,36 +17,29 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": <h1>
-        Game!
-      </h1>,
-    },
-    "ref": null,
-    "rendered": Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": "Game!",
-      },
-      "ref": null,
-      "rendered": "Game!",
-      "type": "h1",
-    },
-    "type": "div",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": <h1>
+      "children": Array [
+        <h1>
           Game!
         </h1>,
-      },
-      "ref": null,
-      "rendered": Object {
+        <Connect(Categories) />,
+        <Connect(Question) />,
+        <div
+          className="score"
+        >
+          <h1
+            className="score-text"
+          >
+            Score:
+          </h1>
+          <h4
+            className="score-number"
+          />
+        </div>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
         "instance": null,
         "key": undefined,
         "nodeType": "host",
@@ -57,6 +50,177 @@ ShallowWrapper {
         "rendered": "Game!",
         "type": "h1",
       },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <h1
+              className="score-text"
+            >
+              Score:
+            </h1>,
+            <h4
+              className="score-number"
+            />,
+          ],
+          "className": "score",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Score:",
+              "className": "score-text",
+            },
+            "ref": null,
+            "rendered": "Score:",
+            "type": "h1",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": undefined,
+              "className": "score-number",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "h4",
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h1>
+            Game!
+          </h1>,
+          <Connect(Categories) />,
+          <Connect(Question) />,
+          <div
+            className="score"
+          >
+            <h1
+              className="score-text"
+            >
+              Score:
+            </h1>
+            <h4
+              className="score-number"
+            />
+          </div>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Game!",
+          },
+          "ref": null,
+          "rendered": "Game!",
+          "type": "h1",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <h1
+                className="score-text"
+              >
+                Score:
+              </h1>,
+              <h4
+                className="score-number"
+              />,
+            ],
+            "className": "score",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Score:",
+                "className": "score-text",
+              },
+              "ref": null,
+              "rendered": "Score:",
+              "type": "h1",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": undefined,
+                "className": "score-number",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "h4",
+            },
+          ],
+          "type": "div",
+        },
+      ],
       "type": "div",
     },
   ],
