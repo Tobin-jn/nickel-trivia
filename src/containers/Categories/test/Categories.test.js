@@ -46,7 +46,7 @@ describe("Categories", () => {
 });
 
 describe('mapStateToProps', () => {
-  it("should return a questions array in the props object", () => {
+  it("should return an array of questions in the props object", () => {
     const expected = {
       geography:[
         {        
