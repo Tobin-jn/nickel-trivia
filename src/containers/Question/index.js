@@ -45,6 +45,9 @@ export class Question extends Component {
             <div onClick={()=>{this.checkAnswer(2)}} ><p className="answer-choice choice-c">{currentQuestion.answers[2]}</p></div>
             <div onClick={()=>{this.checkAnswer(3)}} ><p className="answer-choice choice-d">{currentQuestion.answers[3]}</p></div>
           </div>
+          <div className="answer-response">
+            <p>{this.state.answerMessage}</p>
+          </div>
         </div>
       );
     }
