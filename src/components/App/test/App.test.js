@@ -2,7 +2,7 @@
 
 import React from "react";
 import { shallow } from "enzyme";
-import App from '../App';
+import App from '../index';
 
 describe("App", () => {
   let wrapper;
@@ -19,15 +19,3 @@ describe("App", () => {
     expect(wrapper).toMatchSnapshot();
   });
 });
-
-// describe('mapStateToProps', () => {
-//   it("should return a props object", () => {
-
-//   })
-// })
-
-// describe('mapDispatchToProps', () => {
-//   it('should call dispatch with...', () => {
-
-//   })
-// })
