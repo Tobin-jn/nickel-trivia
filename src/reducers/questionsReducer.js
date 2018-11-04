@@ -11,17 +11,21 @@ export const questionsReducer = (state = {
     case "UPDATE_QUESTIONS":
       state[action.category] = action.questions.filter( question => !question.asked)
       return state
-    case 'UPDATE_CURRENT_QUESTION':
-      const findCurrent = state[action.category].filter( question => {
-        return action.question.id === question.id 
-      })
-      return state.currentQuestion = { ...findCurrent, asked: true }
+
+    // case 'UPDATE_CURRENT_QUESTION':
+    //   // action.question.asked = true
+    //   state.currentQuestion = { question: action.question }
+    //   return state 
+
     case "TOGGLE_ASKED":
-      return state[action.category].map( question => {
+      const updatedCategory = state[action.category].map( question => {
         return question.id === action.question.id
           ? {...question, asked: !question.asked }
           : question
       })
+      state[action.category] = updatedCategory
+      return state
+
     default:
       return state
   }

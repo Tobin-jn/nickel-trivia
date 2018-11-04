@@ -5,7 +5,8 @@ import {
   updateCategory, 
   updateQuestions, 
   updateCurrentQuestion, 
-  addQuestionCount 
+  addQuestionCount,
+  toggleAsked,
 } from '../../actions'
 import './Categories.css';
 import { getQuestions } from '../../apiCalls/apiCalls'
@@ -113,11 +114,16 @@ export const mapStateToProps = state => ({
 });
 
 export const mapDispatchToProps = dispatch => ({
-  handleCategory: (category) => dispatch(updateCategory(category)),
-  updateQuestions: (category, questions) => dispatch(updateQuestions(category, questions)),
-  generateNewQuestion: (question) => dispatch(updateCurrentQuestion(question)),
-  addQuestionCount: () => dispatch(addQuestionCount())
-  toggleAsked: (category, question) => dispatch(toggleAsked(category, question))
+  handleCategory: (category) => 
+    dispatch(updateCategory(category)),
+  updateQuestions: (category, questions) => 
+    dispatch(updateQuestions(category, questions)),
+  generateNewQuestion: (question) => 
+    dispatch(updateCurrentQuestion(question)),
+  addQuestionCount: () => 
+    dispatch(addQuestionCount()),
+  toggleAsked: (category, question) => 
+    dispatch(toggleAsked(category, question)),
 });
 
 

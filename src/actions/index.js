@@ -26,9 +26,8 @@ export const addPoints = () => ({
   type: "ADD_POINTS",
 })
 
-export const updateCurrentQuestion = (category, question) => ({
+export const updateCurrentQuestion = (question) => ({
   type: "UPDATE_CURRENT_QUESTION",
-  category,
   question
 })
 
