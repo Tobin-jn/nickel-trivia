@@ -12,20 +12,35 @@ describe('gameReducer', () => {
     }
 
     const result = gameReducer(undefined, {})
+    expect(result).toEqual(expected)
+  })
 
+  it('should add one to the question count', () => {
+    const action = {
+      type: 'ADD_QUESTION_COUNT',
+    }
+
+    const expected = {
+      questionCount: 2,
+      score: 0
+    }
+
+    const result = gameReducer(mockState.game, action)
+    expect(result).toEqual(expected)
+  })
+
+  it('should add five to the score', () => {
+    const action = {
+      type: 'ADD_POINTS',
+    }
+
+    const expected = {
+      questionCount: 2,
+      score: 5
+    }
+
+    const result = gameReducer(mockState.game, action)
     expect(result).toEqual(expected)
   })
 })
 
-
-  // it('should return a cleared out state', () => {
-  //   const action = {
-  //     type: ,
-  //   }
-
-  //   const expected = ''
-
-  //   const result = categoryReducer(mockState, action)
-
-  //   expect(result).toEqual(expected)
-  // })
