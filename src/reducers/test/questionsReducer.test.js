@@ -1,7 +1,7 @@
 /* eslint-disable */
 
 import { questionsReducer } from "../questionsReducer";
-import { mockState } from './mocks';
+import { mockState, mockUpdatedQuestions, mockGeneralQuestion } from './mocks';
 
 
 describe('questionsReducer', () => {
@@ -19,17 +19,33 @@ describe('questionsReducer', () => {
 
     expect(result).toEqual(expected)
   })
-})
 
+  it('should update questions in state', () => {
+    const action = {
+      type: 'UPDATE_QUESTIONS',
+      category: 'generalKnowledge',
+      questions: mockGeneralQuestion
+    }
 
-  // it('should return a cleared out state', () => {
+    const expected = mockUpdatedQuestions
+
+    const result = questionsReducer(mockState.questions, action)
+
+    expect(result).toEqual(expected)
+  })
+
+  // it('should toggle asked for an asked question in state', () => {
   //   const action = {
-  //     type: ,
+  //     type: 'TOGGLE_ASKED',
+  //     category: ,
+  //     question:
   //   }
 
   //   const expected = ''
 
-  //   const result = categoryReducer(mockState, action)
+  //   const result = questionsReducer(mockState, action)
 
   //   expect(result).toEqual(expected)
   // })
+})
+

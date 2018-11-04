@@ -1,6 +1,8 @@
 export const mockState = {
   category: 'Animals',
   questions: {
+    animals:[],
+    cartoons:[],
     generalKnowledge:[],
     geography:[
       {        
@@ -21,9 +23,7 @@ export const mockState = {
       }
     ],
     history:[],
-    animals:[],
     vehicles: [],
-    cartoons:[],
   },
   currentQuestion: {
     category: "Geography",
@@ -55,3 +55,49 @@ export const mockCurrentQuestion = {
   id: 2,
   asked: true,
 }
+
+export const mockGeneralQuestion = [{
+  category: "General Knowledge",
+  answers: [],
+  question: "What is the most common surname Wales?",
+  correct_answer: "Jones",
+  id: 4,
+  asked: false,
+}]
+
+export const mockUpdatedQuestions = {
+    animals:[],
+    cartoons:[],
+    generalKnowledge:[
+      {
+        category: "General Knowledge",
+        answers: [],
+        question: "What is the most common surname Wales?",
+        correct_answer: "Jones",
+        id: 4,
+        asked: false,
+      }
+    ],
+    geography:[
+      {        
+        category: "Geography",
+        question: "Which city is the capital of the United States of America?",
+        correct_answer: "Washington D.C",
+        answers: [],
+        id: 1,
+        asked: false,
+      },
+      {
+        category: "Geography",
+        question: "What is the capital of the American state of Arizona?",
+        correct_answer: "Phoenix",
+        answers: [],
+        id: 2,
+        asked: false,
+      }
+    ],
+    history:[],
+    vehicles: [],
+  }
+
+
