@@ -58,7 +58,6 @@ export class Categories extends Component {
   }
 
   render() {
-    // if(this.props.category === '') {
     return (
       <div className='categories-container'>
         <h1>Categories</h1>
@@ -98,16 +97,11 @@ export class Categories extends Component {
           onClick={()=> {this.handleClick('cartoons')}}
           >Cartoons and Animations
         </button>
-
-        
       </div>
     );
   }
 }
-        // <NavLink className='category-seleted-btn' to='/triviagame'>Get Question</NavLink>
 
-
-        // <NavLink className='daily-trivia-btn' to='/categories'>Trivia of the Day</NavLink>
 export const mapStateToProps = state => ({
   questions: state.questions,
   category: state.category

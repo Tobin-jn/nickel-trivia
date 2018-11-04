@@ -3,6 +3,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 import { Categories, mapStateToProps, mapDispatchToProps } from "../index";
+import { mockState } from './mocks';
 
 describe("Categories", () => {
   let wrapper;
@@ -39,11 +40,37 @@ describe("Categories", () => {
 
 describe('mapStateToProps', () => {
   it("should return a questions array in the props object", () => {
-
+    const expected = {
+      geography:[
+        {        
+          category: "Geography",
+          question: "Which city is the capital of the United States of America?",
+          correct_answer: "Washington D.C",
+          answers: [],
+          id: 1,
+          asked: false,
+        },
+        {
+          category: "Geography",
+          question: "What is the capital of the American state of Arizona?",
+          correct_answer: "Phoenix",
+          answers: [],
+          id: 2,
+          asked: false,
+        }
+      ]
+    }
+      
+    const mappedProps = mapStateToProps(mockState)
+    expect(mappedProps.questions).toEqual(expected)
   })
 
-  it("should return a category in the props object", () => {
 
+  it("should return a category in the props object", () => {
+    const expected = 'animals'
+      
+    const mappedProps = mapStateToProps(mockState)
+    expect(mappedProps.category).toEqual(expected)
   })
 })
 
@@ -72,22 +99,22 @@ describe('mapDispatchToProps', () => {
 
 
 
-  describe('mapStateToProps', () => {
-    it('should return an object with the todos array', () => {
-      // Setup
-      const mockState = {
-        todos: [{text: 'Learn Redux!', id: 0}],
-        filter: 'SHOW_ALL'
-      }
-      const expected = {
-        todos: [{text: 'Learn Redux!', id: 0}]
-      }
+//   describe('mapStateToProps', () => {
+//     it('should return an object with the todos array', () => {
+//       // Setup
+//       const mockState = {
+//         todos: [{text: 'Learn Redux!', id: 0}],
+//         filter: 'SHOW_ALL'
+//       }
+//       const expected = {
+//         todos: [{text: 'Learn Redux!', id: 0}]
+//       }
 
-      // Execution
-      const mappedProps = mapStateToProps(mockState)
+//       // Execution
+//       const mappedProps = mapStateToProps(mockState)
 
-      // Expectation
-      expect(mappedProps).toEqual(expected)
-    })
-  })
-})
+//       // Expectation
+//       expect(mappedProps).toEqual(expected)
+//     })
+//   })
+// })
