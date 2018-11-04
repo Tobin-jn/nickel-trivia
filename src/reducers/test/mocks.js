@@ -100,4 +100,31 @@ export const mockUpdatedQuestions = {
     vehicles: [],
   }
 
+export const mockToggle = { 
+  animals:[],
+  cartoons:[],
+  generalKnowledge:[],
+  geography:[
+      {        
+        category: "Geography",
+        question: "Which city is the capital of the United States of America?",
+        correct_answer: "Washington D.C",
+        answers: [],
+        id: 1,
+        asked: false,
+      },
+      {
+        category: "Geography",
+        question: "What is the capital of the American state of Arizona?",
+        correct_answer: "Phoenix",
+        answers: [],
+        id: 2,
+        asked: true,
+      }
+    ],
+  history:[],
+  vehicles: [],
+}
+
+
 

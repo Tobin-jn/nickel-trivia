@@ -1,7 +1,7 @@
 /* eslint-disable */
 
 import { questionsReducer } from "../questionsReducer";
-import { mockState, mockUpdatedQuestions, mockGeneralQuestion } from './mocks';
+import { mockState, mockQuestion, mockToggle, mockUpdatedQuestions, mockGeneralQuestion } from './mocks';
 
 
 describe('questionsReducer', () => {
@@ -34,18 +34,18 @@ describe('questionsReducer', () => {
     expect(result).toEqual(expected)
   })
 
-  // it('should toggle asked for an asked question in state', () => {
-  //   const action = {
-  //     type: 'TOGGLE_ASKED',
-  //     category: ,
-  //     question:
-  //   }
+  it('should toggle asked for an asked question in state', () => {
+    const action = {
+      type: 'TOGGLE_ASKED',
+      category: 'geography',
+      question: mockQuestion
+    }
 
-  //   const expected = ''
+    const expected = mockToggle
 
-  //   const result = questionsReducer(mockState, action)
+    const result = questionsReducer(mockState.questions, action)
 
-  //   expect(result).toEqual(expected)
-  // })
+    expect(result).toEqual(expected)
+  })
 })
 
