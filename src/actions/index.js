@@ -25,3 +25,7 @@ export const clearCurrentQuestion = () => ({
 export const addQuestionCount = () => ({
   type: "ADD_QUESTION_COUNT",
 })
+
+export const addPoints = () => ({
+  type: "ADD_POINTS",
+})
