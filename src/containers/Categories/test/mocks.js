@@ -25,3 +25,31 @@ export const mockState = {
     questionCount: 2
   },
 }
+
+export const mockQuestions = [
+    {        
+      category: "Geography",
+      question: "Which city is the capital of the United States of America?",
+      correct_answer: "Washington D.C",
+      answers: [],
+      id: 1,
+      asked: false,
+    },
+    {
+      category: "Geography",
+      question: "What is the capital of the American state of Arizona?",
+      correct_answer: "Phoenix",
+      answers: [],
+      id: 2,
+      asked: false,
+    }
+  ]
+
+export const mockQuestion = {        
+    category: "Geography",
+    question: "Which city is the capital of the United States of America?",
+    correct_answer: "Washington D.C",
+    answers: [],
+    id: 1,
+    asked: false,
+  }

@@ -3,7 +3,14 @@
 import React from "react";
 import { shallow } from "enzyme";
 import { Categories, mapStateToProps, mapDispatchToProps } from "../index";
-import { mockState } from './mocks';
+import { mockState, mockQuestion, mockQuestions } from './mocks';
+import { 
+  updateCategory, 
+  updateQuestions, 
+  updateCurrentQuestion, 
+  addQuestionCount,
+  toggleAsked,
+} from '../../../actions'
 
 describe("Categories", () => {
   let wrapper;
@@ -75,46 +82,51 @@ describe('mapStateToProps', () => {
 })
 
 describe('mapDispatchToProps', () => {
-  it('should call dispatch with updateCategory action when handleCategory is called', () => {
+  const mockDispatch = jest.fn()
 
+  it('should call dispatch with updateCategory action when handleCategory is called', () => {
+    const actionToDispatch = updateCategory('animals')
+
+    const mappedProps = mapDispatchToProps(mockDispatch)
+    mappedProps.handleCategory('animals')
+
+    expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch)
   })
 
   it('should call dispatch with updateQuestions action when updateQuestions is called', () => {
+    const actionToDispatch = updateQuestions('geography', mockQuestions)
 
+    const mappedProps = mapDispatchToProps(mockDispatch)
+    mappedProps.updateQuestions('geography', mockQuestions)
+
+    expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch)
   })
 
   it('should call dispatch with updateCurrentQuestion action when generateNewQuestion is called', () => {
+    const actionToDispatch = updateCurrentQuestion(mockQuestion)
 
+    const mappedProps = mapDispatchToProps(mockDispatch)
+    mappedProps.generateNewQuestion(mockQuestion)
+
+    expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch)
   })
 
   it('should call dispatch with addQuestionCount action when addQuestionCount is called', () => {
+    const actionToDispatch = addQuestionCount()
 
+    const mappedProps = mapDispatchToProps(mockDispatch)
+    mappedProps.addQuestionCount()
+
+    expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch)
   })
 
   it('should call dispatch with toggleAsked action when toggleAsked is called', () => {
+    const actionToDispatch = toggleAsked('geography', mockQuestion)
 
+    const mappedProps = mapDispatchToProps(mockDispatch)
+    mappedProps.toggleAsked('geography', mockQuestion)
+
+    expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch)
   })
 })
 
-
-
-
-//   describe('mapStateToProps', () => {
-//     it('should return an object with the todos array', () => {
-//       // Setup
-//       const mockState = {
-//         todos: [{text: 'Learn Redux!', id: 0}],
-//         filter: 'SHOW_ALL'
-//       }
-//       const expected = {
-//         todos: [{text: 'Learn Redux!', id: 0}]
-//       }
-
-//       // Execution
-//       const mappedProps = mapStateToProps(mockState)
-
-//       // Expectation
-//       expect(mappedProps).toEqual(expected)
-//     })
-//   })
-// })
