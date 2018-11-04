@@ -44,6 +44,7 @@ export class DailyQuestion extends Component {
     const newQuestion = questions[randomInt]
     console.log(newQuestion)
     this.props.generateNewQuestion(category, newQuestion)
+    this.props.toggleAsked(category, newQuestion)
     this.props.updateQuestions(category, questions)
   }
 
@@ -72,6 +73,7 @@ export const mapStateToProps = state => ({
 export const mapDispatchToProps = dispatch => ({
   updateQuestions: (category, questions) => dispatch(updateQuestions(category, questions)),
   generateNewQuestion: (category, question) => dispatch(updateCurrentQuestion(category, question))
+  toggleAsked: (category, question) => dispatch(toggleAsked(category, question))
 });
 
 export default connect(

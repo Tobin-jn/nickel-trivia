@@ -18,7 +18,7 @@ export class Categories extends Component {
   handleClick = (category) => {
     this.props.handleCategory(category)
     this.getTriviaQuestions(category)
-    this.props.addQuestion()
+    this.props.addQuestionCount()
   }
 
   getTriviaQuestions = async (category) => {
@@ -30,7 +30,7 @@ export class Categories extends Component {
     try {
       const triviaQuestions = await getQuestions(category)
 
-      this.props.handleFetchQuestions(category, triviaQuestions)
+      this.props.updateQuestions(category, triviaQuestions)
       this.generateQuestion(category, triviaQuestions)
     } 
     catch(error) {
@@ -52,6 +52,8 @@ export class Categories extends Component {
     const newQuestion = questions[randomInt]
     console.log(newQuestion)
     this.props.generateNewQuestion(newQuestion)
+    this.props.toggleAsked(category, newQuestion)
+    this.props.updateQuestions(category, questions)
   }
 
   render() {
@@ -112,10 +114,13 @@ export const mapStateToProps = state => ({
 
 export const mapDispatchToProps = dispatch => ({
   handleCategory: (category) => dispatch(updateCategory(category)),
-  handleFetchQuestions: (category, questions) => dispatch(updateQuestions(category, questions)),
+  updateQuestions: (category, questions) => dispatch(updateQuestions(category, questions)),
   generateNewQuestion: (question) => dispatch(updateCurrentQuestion(question)),
-  addQuestion: () => dispatch(addQuestionCount())
+  addQuestionCount: () => dispatch(addQuestionCount())
+  toggleAsked: (category, question) => dispatch(toggleAsked(category, question))
 });
+
+
 
 export default connect(
   mapStateToProps,
