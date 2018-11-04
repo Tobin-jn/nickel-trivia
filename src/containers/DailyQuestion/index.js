@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import './DailyQuestion.css';
 import Question from '../Question'
-import { updateQuestions, updateCurrentQuestion } from '../../actions'
+import { updateQuestions, updateCurrentQuestion, toggleAsked, } from '../../actions'
 import { getQuestions } from '../../apiCalls/apiCalls'
 import { NavLink } from 'react-router-dom'
 
@@ -22,7 +22,7 @@ export class DailyQuestion extends Component {
     try {
       const triviaQuestions = await getQuestions('generalKnowledge')
 
-      this.props.handleFetchQuestions('generalKnowledge', triviaQuestions)
+      this.props.updateQuestions('generalKnowledge', triviaQuestions)
       this.generateQuestion('generalKnowledge', triviaQuestions)
     } 
     catch(error) {
@@ -44,6 +44,8 @@ export class DailyQuestion extends Component {
     const newQuestion = questions[randomInt]
     console.log(newQuestion)
     this.props.generateNewQuestion(newQuestion)
+    this.props.toggleAsked(category, newQuestion)
+    this.props.updateQuestions(category, questions)
   }
 
   render() {
@@ -69,8 +71,12 @@ export const mapStateToProps = state => ({
 });
 
 export const mapDispatchToProps = dispatch => ({
-  handleFetchQuestions: (category, questions) => dispatch(updateQuestions(category, questions)),
-  generateNewQuestion: (question) => dispatch(updateCurrentQuestion(question))
+  updateQuestions: (category, questions) => 
+    dispatch(updateQuestions(category, questions)),
+  generateNewQuestion: (category, question) => 
+    dispatch(updateCurrentQuestion(category, question)),
+  toggleAsked: (category, question) => 
+    dispatch(toggleAsked(category, question)),
 });
 
 export default connect(

@@ -7,13 +7,7 @@ import Categories from '../Categories'
 import { NavLink } from 'react-router-dom';
 import { clearCurrentQuestion } from '../../actions'
 
-
-
 export class TriviaGame extends Component{
-
-  // componentDidMount() {
-  //   this.props.clearCurrentQuestion()
-  // }
 
   render() {
     console.log(this.props.gameCount)
@@ -35,7 +29,7 @@ export class TriviaGame extends Component{
           <Question />
           <div className="score">
             <h1 className="score-text">Score:</h1>
-            <h4 className="score-number">20cents</h4>
+            <h4 className="score-number">{this.props.score}</h4>
           </div> 
         </div>
       );

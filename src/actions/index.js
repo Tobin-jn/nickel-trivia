@@ -13,10 +13,6 @@ export const clearCategory = () => ({
   type: "CLEAR_CATEGORY",
 })
 
-export const updateCurrentQuestion = (question) => ({
-  type: "UPDATE_CURRENT_QUESTION",
-  question
-})
 
 export const clearCurrentQuestion = () => ({
   type: "CLEAR_CURRENT_QUESTION",
@@ -24,4 +20,19 @@ export const clearCurrentQuestion = () => ({
 
 export const addQuestionCount = () => ({
   type: "ADD_QUESTION_COUNT",
+})
+
+export const addPoints = () => ({
+  type: "ADD_POINTS",
+})
+
+export const updateCurrentQuestion = (question) => ({
+  type: "UPDATE_CURRENT_QUESTION",
+  question
+})
+
+export const toggleAsked = (category, question) => ({
+  type: "TOGGLE_ASKED",
+  category,
+  question
 })
