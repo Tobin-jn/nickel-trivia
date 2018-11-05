@@ -1,14 +1,12 @@
-/* eslint-disable */
+import React from 'react';
+import { shallow } from 'enzyme';
+import Home from '../index'
 
-import React from "react";
-import { shallow } from "enzyme";
-import App from '../index';
-
-describe("App", () => {
+describe('Home', () => {
   let wrapper;
 
   beforeEach(() => {
-    wrapper = shallow(<App />);
+    wrapper = shallow(<Home />);
   });
 
   it("should exist", () => {

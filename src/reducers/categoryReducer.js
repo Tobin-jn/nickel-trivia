@@ -3,7 +3,8 @@ export const categoryReducer = (state = '', action) => {
     case 'UPDATE_CATEGORY':
       return action.category;
     case "CLEAR_CATEGORY":
-      return state
+      state.category = ''
+      return state.category
     default:
       return state;
   }
