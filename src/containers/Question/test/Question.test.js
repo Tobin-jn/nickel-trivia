@@ -12,6 +12,7 @@ describe('Question', () => {
       category={'geogrpahy'}
       questions={mockQuestions}
       currentQuestion={mockQuestion}
+      addPoints={jest.fn()}
       />)
   })
 
@@ -23,17 +24,47 @@ describe('Question', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
-  // describe('checkAnswer', () => {
+  describe('checkAnswer', () => {
+    it('should setState if the answer is correct', () => {
+      wrapper.setState({ answerMessage: '' })
 
-  // })
+      wrapper.instance().checkAnswer(0)
+      expect(wrapper.state().answerMessage).toEqual('Correct Answer!!')
+    })
 
-  // it('should render an error if there is not a currentQuestion', () => {
+    it('should setState if the answer is incorrect', () => {
+      wrapper.setState({ answerMessage: '' })
 
-  // })
+      wrapper.instance().checkAnswer(1)
+      expect(wrapper.state().answerMessage).toEqual(`Sorry, the correct answer was ${mockQuestion.correct_answer}` )
+    })
+  })
 
-  // it('should render 4 answers if there is a currentQuestion', () => {
+  it('should render a question and 4 answers if there is a currentQuestion', () => {
+    expect(wrapper.find('.question').length).toEqual(1)
+    expect(wrapper.find('.answer-choice').length).toEqual(4)
+    
+  })
 
-  // })
+  it('should render an error if there is not a currentQuestion', () => {
+    wrapper = shallow(<Question 
+      category={'geogrpahy'}
+      questions={mockQuestions}
+      currentQuestion={{}}
+      addPoints={jest.fn()}
+      />)
+
+    expect(wrapper.find('.error-question-message')).toBeDefined()
+  })
+
+  it('should call checkAnswer if first answer is clicked', () => {
+  const spy = spyOn(wrapper.instance(), "checkAnswer");
+    // wrapper.instance().checkAnswer = jest.fn()
+
+    wrapper.find('.choice-a').simulate('click')
+    expect(spy).toHaveBeenCalled();
+    // expect(wrapper.instance().checkAnswer).toHaveBeenCalled()
+  })
 })
 
 describe('mapStateToProps', () => {

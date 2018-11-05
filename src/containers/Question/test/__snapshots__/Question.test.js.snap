@@ -4,10 +4,16 @@ exports[`Question should match snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Question
+    addPoints={[MockFunction]}
     category="geogrpahy"
     currentQuestion={
       Object {
-        "answers": Array [],
+        "answers": Array [
+          "Washington D.C",
+          "Boston",
+          "NYC",
+          "LA",
+        ],
         "asked": false,
         "category": "Geography",
         "correct_answer": "Washington D.C",
@@ -71,28 +77,36 @@ ShallowWrapper {
           >
             <p
               className="answer-choice choice-a"
-            />
+            >
+              Washington D.C
+            </p>
           </div>
           <div
             onClick={[Function]}
           >
             <p
               className="answer-choice choice-b"
-            />
+            >
+              Boston
+            </p>
           </div>
           <div
             onClick={[Function]}
           >
             <p
               className="answer-choice choice-c"
-            />
+            >
+              NYC
+            </p>
           </div>
           <div
             onClick={[Function]}
           >
             <p
               className="answer-choice choice-d"
-            />
+            >
+              LA
+            </p>
           </div>
         </div>,
         <div
@@ -169,28 +183,36 @@ ShallowWrapper {
             >
               <p
                 className="answer-choice choice-a"
-              />
+              >
+                Washington D.C
+              </p>
             </div>,
             <div
               onClick={[Function]}
             >
               <p
                 className="answer-choice choice-b"
-              />
+              >
+                Boston
+              </p>
             </div>,
             <div
               onClick={[Function]}
             >
               <p
                 className="answer-choice choice-c"
-              />
+              >
+                NYC
+              </p>
             </div>,
             <div
               onClick={[Function]}
             >
               <p
                 className="answer-choice choice-d"
-              />
+              >
+                LA
+              </p>
             </div>,
           ],
           "className": "answer-container",
@@ -204,7 +226,9 @@ ShallowWrapper {
             "props": Object {
               "children": <p
                 className="answer-choice choice-a"
-              />,
+              >
+                Washington D.C
+              </p>,
               "onClick": [Function],
             },
             "ref": null,
@@ -213,11 +237,11 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": undefined,
+                "children": "Washington D.C",
                 "className": "answer-choice choice-a",
               },
               "ref": null,
-              "rendered": null,
+              "rendered": "Washington D.C",
               "type": "p",
             },
             "type": "div",
@@ -229,7 +253,9 @@ ShallowWrapper {
             "props": Object {
               "children": <p
                 className="answer-choice choice-b"
-              />,
+              >
+                Boston
+              </p>,
               "onClick": [Function],
             },
             "ref": null,
@@ -238,11 +264,11 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": undefined,
+                "children": "Boston",
                 "className": "answer-choice choice-b",
               },
               "ref": null,
-              "rendered": null,
+              "rendered": "Boston",
               "type": "p",
             },
             "type": "div",
@@ -254,7 +280,9 @@ ShallowWrapper {
             "props": Object {
               "children": <p
                 className="answer-choice choice-c"
-              />,
+              >
+                NYC
+              </p>,
               "onClick": [Function],
             },
             "ref": null,
@@ -263,11 +291,11 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": undefined,
+                "children": "NYC",
                 "className": "answer-choice choice-c",
               },
               "ref": null,
-              "rendered": null,
+              "rendered": "NYC",
               "type": "p",
             },
             "type": "div",
@@ -279,7 +307,9 @@ ShallowWrapper {
             "props": Object {
               "children": <p
                 className="answer-choice choice-d"
-              />,
+              >
+                LA
+              </p>,
               "onClick": [Function],
             },
             "ref": null,
@@ -288,11 +318,11 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": undefined,
+                "children": "LA",
                 "className": "answer-choice choice-d",
               },
               "ref": null,
-              "rendered": null,
+              "rendered": "LA",
               "type": "p",
             },
             "type": "div",
@@ -355,28 +385,36 @@ ShallowWrapper {
             >
               <p
                 className="answer-choice choice-a"
-              />
+              >
+                Washington D.C
+              </p>
             </div>
             <div
               onClick={[Function]}
             >
               <p
                 className="answer-choice choice-b"
-              />
+              >
+                Boston
+              </p>
             </div>
             <div
               onClick={[Function]}
             >
               <p
                 className="answer-choice choice-c"
-              />
+              >
+                NYC
+              </p>
             </div>
             <div
               onClick={[Function]}
             >
               <p
                 className="answer-choice choice-d"
-              />
+              >
+                LA
+              </p>
             </div>
           </div>,
           <div
@@ -453,28 +491,36 @@ ShallowWrapper {
               >
                 <p
                   className="answer-choice choice-a"
-                />
+                >
+                  Washington D.C
+                </p>
               </div>,
               <div
                 onClick={[Function]}
               >
                 <p
                   className="answer-choice choice-b"
-                />
+                >
+                  Boston
+                </p>
               </div>,
               <div
                 onClick={[Function]}
               >
                 <p
                   className="answer-choice choice-c"
-                />
+                >
+                  NYC
+                </p>
               </div>,
               <div
                 onClick={[Function]}
               >
                 <p
                   className="answer-choice choice-d"
-                />
+                >
+                  LA
+                </p>
               </div>,
             ],
             "className": "answer-container",
@@ -488,7 +534,9 @@ ShallowWrapper {
               "props": Object {
                 "children": <p
                   className="answer-choice choice-a"
-                />,
+                >
+                  Washington D.C
+                </p>,
                 "onClick": [Function],
               },
               "ref": null,
@@ -497,11 +545,11 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": undefined,
+                  "children": "Washington D.C",
                   "className": "answer-choice choice-a",
                 },
                 "ref": null,
-                "rendered": null,
+                "rendered": "Washington D.C",
                 "type": "p",
               },
               "type": "div",
@@ -513,7 +561,9 @@ ShallowWrapper {
               "props": Object {
                 "children": <p
                   className="answer-choice choice-b"
-                />,
+                >
+                  Boston
+                </p>,
                 "onClick": [Function],
               },
               "ref": null,
@@ -522,11 +572,11 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": undefined,
+                  "children": "Boston",
                   "className": "answer-choice choice-b",
                 },
                 "ref": null,
-                "rendered": null,
+                "rendered": "Boston",
                 "type": "p",
               },
               "type": "div",
@@ -538,7 +588,9 @@ ShallowWrapper {
               "props": Object {
                 "children": <p
                   className="answer-choice choice-c"
-                />,
+                >
+                  NYC
+                </p>,
                 "onClick": [Function],
               },
               "ref": null,
@@ -547,11 +599,11 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": undefined,
+                  "children": "NYC",
                   "className": "answer-choice choice-c",
                 },
                 "ref": null,
-                "rendered": null,
+                "rendered": "NYC",
                 "type": "p",
               },
               "type": "div",
@@ -563,7 +615,9 @@ ShallowWrapper {
               "props": Object {
                 "children": <p
                   className="answer-choice choice-d"
-                />,
+                >
+                  LA
+                </p>,
                 "onClick": [Function],
               },
               "ref": null,
@@ -572,11 +626,11 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": undefined,
+                  "children": "LA",
                   "className": "answer-choice choice-d",
                 },
                 "ref": null,
-                "rendered": null,
+                "rendered": "LA",
                 "type": "p",
               },
               "type": "div",

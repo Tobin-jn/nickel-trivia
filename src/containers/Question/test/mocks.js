@@ -57,7 +57,7 @@ export const mockQuestion = {
     category: "Geography",
     question: "Which city is the capital of the United States of America?",
     correct_answer: "Washington D.C",
-    answers: [],
+    answers: ['Washington D.C', 'Boston', 'NYC', 'LA'],
     id: 1,
     asked: false,
   }
