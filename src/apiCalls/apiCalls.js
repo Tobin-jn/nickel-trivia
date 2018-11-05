@@ -11,7 +11,8 @@ export const getQuestions =  async (currentCategory) => {
     const response = await fetch(url)
     const data = await response.json()
     return category.cleanQuestions(data)
+
   } catch(error) {
-    return 'No questions'
+    return 'Status error'
   }
 }

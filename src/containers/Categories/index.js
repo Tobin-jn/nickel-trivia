@@ -7,6 +7,7 @@ import {
   updateCurrentQuestion, 
   addQuestionCount,
   toggleAsked,
+  hasErrored,
 } from '../../actions'
 import './Categories.css';
 import { getQuestions } from '../../apiCalls/apiCalls'
@@ -29,13 +30,13 @@ export class Categories extends Component {
     }
 
     try {
-      const triviaQuestions = await getQuestions(category)
+      const triviaQuestions = await getQuestions('generalKnowledge')
 
-      this.props.updateQuestions(category, triviaQuestions)
-      this.generateQuestion(category, triviaQuestions)
+      this.props.updateQuestions('generalKnowledge', triviaQuestions)
+      this.generateQuestion('generalKnowledge', triviaQuestions)
     } 
     catch(error) {
-      console.log('we have a problem...')
+      this.props.hasErrored(true)
     }
   }
 
@@ -58,47 +59,57 @@ export class Categories extends Component {
   }
 
   render() {
-    return (
-      <div className='categories-container'>
-        <h1>Categories</h1>
-        <button 
-          className="category"
-          name='generalKnowledge'
-          onClick={()=> {this.handleClick('generalKnowledge')}}
-          >General Knowledge
-        </button>
-        <button 
-          className="category"
-          name='geography'
-          onClick={()=> {this.handleClick('geography')}}
-          >Geography
-        </button>
-        <button 
-          className="category"
-          name='history'
-          onClick={()=> {this.handleClick('history')}}
-          >History
-        </button>
-        <button 
-          className="category"
-          name='animals'
-          onClick={()=> {this.handleClick('animals')}}
-          >Animals
-        </button>
-        <button 
-          className="category"
-          name='vehicles'
-          onClick={()=> {this.handleClick('vehicles')}}
-          >Vehicles
-        </button>
-        <button 
-          className="category"
-          name='cartoons'
-          onClick={()=> {this.handleClick('cartoons')}}
-          >Cartoons and Animations
-        </button>
-      </div>
-    );
+    // if(this.props.isLoading){
+    //   return (
+    //     <p>its coming</p>
+    //   )
+    // } else if (this.props.hasErrored) {
+    //   return (
+    //     <p>We have an error</p>
+    //   )
+    // } else {
+      return (
+        <div className='categories-container'>
+          <h1>Categories</h1>
+          <button 
+            className="category"
+            name='generalKnowledge'
+            onClick={()=> {this.handleClick('generalKnowledge')}}
+            >General Knowledge
+          </button>
+          <button 
+            className="category"
+            name='geography'
+            onClick={()=> {this.handleClick('geography')}}
+            >Geography
+          </button>
+          <button 
+            className="category"
+            name='history'
+            onClick={()=> {this.handleClick('history')}}
+            >History
+          </button>
+          <button 
+            className="category"
+            name='animals'
+            onClick={()=> {this.handleClick('animals')}}
+            >Animals
+          </button>
+          <button 
+            className="category"
+            name='vehicles'
+            onClick={()=> {this.handleClick('vehicles')}}
+            >Vehicles
+          </button>
+          <button 
+            className="category"
+            name='cartoons'
+            onClick={()=> {this.handleClick('cartoons')}}
+            >Cartoons and Animations
+          </button>
+        </div>
+      );
+    
   }
 }
 
@@ -118,6 +129,8 @@ export const mapDispatchToProps = dispatch => ({
     dispatch(addQuestionCount()),
   toggleAsked: (category, question) => 
     dispatch(toggleAsked(category, question)),
+  hasErrored: () =>
+    dispatch(hasErrored()),
 });
 
 
