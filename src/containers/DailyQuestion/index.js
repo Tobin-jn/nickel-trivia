@@ -40,7 +40,7 @@ export class DailyQuestion extends Component {
   render() {
     const { currentQuestion } = this.props
     return (
-      <div className='daily-question-container'>
+      <div className='daily-container'>
         <img className='jar-logo' src={ require('../../images/NickelTriviaJar.png') } alt="Trivia Jar Logo"/>
         <h1 className='daily-header'>Question of the Day</h1>
         <Question />
@@ -66,7 +66,7 @@ export const mapDispatchToProps = dispatch => ({
     dispatch(updateCurrentQuestion(category, question)),
   toggleAsked: (category, question) => 
     dispatch(toggleAsked(category, question)),
-    hasErrored: () =>
+  hasErrored: () =>
       dispatch(hasErrored()),
 });
 

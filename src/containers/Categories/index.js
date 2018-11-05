@@ -66,42 +66,44 @@ export class Categories extends Component {
       return (
         <div className='categories-container'>
           <h1>Categories</h1>
-          <button 
-            className="category"
-            name='generalKnowledge'
-            onClick={()=> {this.handleClick('generalKnowledge')}}
-            >General Knowledge
-          </button>
-          <button 
-            className="category"
-            name='geography'
-            onClick={()=> {this.handleClick('geography')}}
-            >Geography
-          </button>
-          <button 
-            className="category"
-            name='history'
-            onClick={()=> {this.handleClick('history')}}
-            >History
-          </button>
-          <button 
-            className="category"
-            name='animals'
-            onClick={()=> {this.handleClick('animals')}}
-            >Animals
-          </button>
-          <button 
-            className="category"
-            name='vehicles'
-            onClick={()=> {this.handleClick('vehicles')}}
-            >Vehicles
-          </button>
-          <button 
-            className="category"
-            name='cartoons'
-            onClick={()=> {this.handleClick('cartoons')}}
-            >Cartoons and Animations
-          </button>
+          <div className="categories">
+            <button 
+              className="category"
+              name='generalKnowledge'
+              onClick={()=> {this.handleClick('generalKnowledge')}}
+              >General Store
+            </button>
+            <button 
+              className="category"
+              name='geography'
+              onClick={()=> {this.handleClick('geography')}}
+              >Where in the World
+            </button>
+            <button 
+              className="category"
+              name='history'
+              onClick={()=> {this.handleClick('history')}}
+              >When I was a kid...
+            </button>
+            <button 
+              className="category"
+              name='animals'
+              onClick={()=> {this.handleClick('animals')}}
+              >Lions, Tigers, and Bears
+            </button>
+            <button 
+              className="category"
+              name='vehicles'
+              onClick={()=> {this.handleClick('vehicles')}}
+              >Planes, Trains and Automobiles
+            </button>
+            <button 
+              className="category"
+              name='cartoons'
+              onClick={()=> {this.handleClick('cartoons')}}
+              >Your Grandkid's Favorite Movie
+            </button>
+          </div>
         </div>
       );
     
