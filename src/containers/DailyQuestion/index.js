@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import './DailyQuestion.css';
 import Question from '../Question'
-import { updateQuestions, updateCurrentQuestion, toggleAsked, } from '../../actions'
+import { updateQuestions, updateCurrentQuestion, toggleAsked, hasErrored } from '../../actions'
 import { getQuestions } from '../../apiCalls/apiCalls'
 import { NavLink } from 'react-router-dom'
 
@@ -26,7 +26,7 @@ export class DailyQuestion extends Component {
       this.generateQuestion('generalKnowledge', triviaQuestions)
     } 
     catch(error) {
-      console.log('we have a problem...')
+      this.props.hasErrored(true)
     }
   }
 
@@ -77,6 +77,8 @@ export const mapDispatchToProps = dispatch => ({
     dispatch(updateCurrentQuestion(category, question)),
   toggleAsked: (category, question) => 
     dispatch(toggleAsked(category, question)),
+    hasErrored: () =>
+      dispatch(hasErrored()),
 });
 
 export default connect(

@@ -7,6 +7,7 @@ import {
   updateCurrentQuestion, 
   addQuestionCount,
   toggleAsked,
+  hasErrored,
 } from '../../actions'
 import './Categories.css';
 import { getQuestions } from '../../apiCalls/apiCalls'
@@ -29,13 +30,13 @@ export class Categories extends Component {
     }
 
     try {
-      const triviaQuestions = await getQuestions(category)
+      const triviaQuestions = await getQuestions('generalKnowledge')
 
-      this.props.updateQuestions(category, triviaQuestions)
-      this.generateQuestion(category, triviaQuestions)
+      this.props.updateQuestions('generalKnowledge', triviaQuestions)
+      this.generateQuestion('generalKnowledge', triviaQuestions)
     } 
     catch(error) {
-      console.log('we have a problem...')
+      this.props.hasErrored(true)
     }
   }
 
@@ -58,6 +59,14 @@ export class Categories extends Component {
   }
 
   render() {
+
+    //    if(this.props.isLoading){
+    //   return
+    //     <p>its coming</p>
+    // } else if ( this.props.hasErrored) {
+    //   return
+    //     <p>We have an error</p>
+    // } else {
     return (
       <div className='categories-container'>
         <h1>Categories</h1>
@@ -118,6 +127,8 @@ export const mapDispatchToProps = dispatch => ({
     dispatch(addQuestionCount()),
   toggleAsked: (category, question) => 
     dispatch(toggleAsked(category, question)),
+  hasErrored: () =>
+    dispatch(hasErrored()),
 });
 
 
