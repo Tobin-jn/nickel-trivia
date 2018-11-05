@@ -27,11 +27,24 @@ describe("DailyQuestion", () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  describe('getTriviaQuestions', () => {})
+  describe('getTriviaQuestions', () => {
+    it('should call getQuestions with the correct params', () => {})
+    it('should call updateQuestions with the correct params', () => {})
+    it('should call generateQuestion with the correct params', () => {})
+    it('should call nextQuestion with the correct params', () => {})
+    it('should call hasErrored if there is an error', () => {})
+  })
 
-  describe('checkState', () => {})
+  describe('checkState', () => {
+    it('should return true if there are questions in the array', () => {})
+    it('should return false if there are not questions in the array', () => {})
+  })
 
-  describe('generateQuestion', () => {})
+  describe('nextQuestion', () => {
+    it('should call generateNewQuestion with the correct params', () => {})
+    it('should call toggleAsked with the correct params', () => {})
+    it('should call updateQuestions with the correct params', () => {})
+  })
 });
 
 describe('mapStateToProps', () => {
@@ -112,4 +125,6 @@ describe('mapDispatchToProps', () => {
 
     expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch)
   })
+
+  it('should call dispatch with hasErrored action when toggleAsked is called', () => {}
 })

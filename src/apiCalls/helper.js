@@ -48,21 +48,3 @@ export const generateQuestion = (category, questions) => {
   const randomInt = Math.round(Math.random() * (length - 0));
   return questions[randomInt]
 }
-
-// const addProperties = (array) => {
-//   let counter = 1
-//   const withId = data.results.map( question => {
-//     let updatedQuestion = {...question, id: counter, asked: false}
-//     counter++
-//     return updatedQuestion
-//   })
-// return withId
-// }
-
-
-// general https://opentdb.com/api.php?amount=50&category=9&difficulty=easy&type=multiple      9     50
-// geography https://opentdb.com/api.php?amount=50&category=22&difficulty=easy&type=multiple   22    50
-// history https://opentdb.com/api.php?amount=40&category=23&difficulty=easy&type=multiple     23    40
-// cartoons https://opentdb.com/api.php?amount=28&category=32&difficulty=easy&type=multiple    32    18
-// animals https://opentdb.com/api.php?amount=9&category=27&difficulty=easy&type=multiple      27    9    
-// vehicles https://opentdb.com/api.php?amount=17&category=28&difficulty=easy&type=multiple    26    17

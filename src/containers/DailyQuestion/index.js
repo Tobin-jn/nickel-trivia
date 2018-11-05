@@ -66,7 +66,7 @@ export const mapDispatchToProps = dispatch => ({
     dispatch(updateCurrentQuestion(category, question)),
   toggleAsked: (category, question) => 
     dispatch(toggleAsked(category, question)),
-    hasErrored: () =>
+  hasErrored: () =>
       dispatch(hasErrored()),
 });
 
