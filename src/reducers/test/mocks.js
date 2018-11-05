@@ -103,7 +103,16 @@ export const mockUpdatedQuestions = {
 export const mockToggle = { 
   animals:[],
   cartoons:[],
-  generalKnowledge:[],
+  generalKnowledge:[
+    {
+      category: "General Knowledge",
+      answers: [],
+      question: "What is the most common surname Wales?",
+      correct_answer: "Jones",
+      id: 4,
+      asked: false,
+    }
+  ],
   geography:[
       {        
         category: "Geography",
