@@ -1,0 +1,12 @@
+.categories-container {
+
+}
+
+.categories {
+  display: flex;
+  flex-direction: column;
+}
+
+.category {
+  font-size: 1.5em;
+}

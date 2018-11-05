@@ -1,4 +1,4 @@
-.daily-question-container {
+.daily-container {
   height: 100vh;
   background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)), url(../../images/blanket.jpg) center center no-repeat;
   background-size: cover;

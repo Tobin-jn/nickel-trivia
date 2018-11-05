@@ -11,23 +11,31 @@ export class TriviaGame extends Component{
   render() {
     if (this.props.gameCount === 0) {
       return (
-        <div>
-          <h1>Game!</h1>
-          <Categories />
-          <div className="start-game">
-            <h1 className="start-game-text">Choose a category and lets start a Game!</h1>
+        <div className='game'>
+          <h1 className='game-header'>Game!</h1>
+          <div className="game-wrapper">
+            <Categories />
+            <div className="start-game">
+              <h1 className="start-game-text">Choose a category and lets start a Game!</h1>
+            </div>
           </div>
         </div>
       );
     } else {
       return (
-        <div>
-          <h1>Game!</h1>
-          <Categories />
-          <Question />
-          <div className="score">
-            <h1 className="score-text">Score:</h1>
-            <h4 className="score-number">{this.props.score}</h4>
+        <div className='game'>
+          <div className="header-container">
+            <div className="score-team-two"></div>
+            <h1 className='game-header'>Game!</h1>
+            <div className="score">
+              <h1 className="score-text">Score:</h1>
+              <h4 className="score-number">{this.props.score} Cents</h4>
+            </div>
+          </div>
+
+          <div className="game-wrapper">
+            <Categories />
+            <Question />
           </div> 
         </div>
       );
