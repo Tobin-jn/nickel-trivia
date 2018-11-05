@@ -61,7 +61,6 @@ export const mapStateToProps = state => ({
 });
 
 export const mapDispatchToProps = dispatch => ({
-  // saveUserData: (username, id) => dispatch(saveUserData(username, id)),
   addPoints: () => dispatch(addPoints())
 });
 
