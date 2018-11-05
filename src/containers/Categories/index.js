@@ -59,55 +59,57 @@ export class Categories extends Component {
   }
 
   render() {
-
-    //    if(this.props.isLoading){
-    //   return
+    // if(this.props.isLoading){
+    //   return (
     //     <p>its coming</p>
-    // } else if ( this.props.hasErrored) {
-    //   return
+    //   )
+    // } else if (this.props.hasErrored) {
+    //   return (
     //     <p>We have an error</p>
+    //   )
     // } else {
-    return (
-      <div className='categories-container'>
-        <h1>Categories</h1>
-        <button 
-          className="category"
-          name='generalKnowledge'
-          onClick={()=> {this.handleClick('generalKnowledge')}}
-          >General Knowledge
-        </button>
-        <button 
-          className="category"
-          name='geography'
-          onClick={()=> {this.handleClick('geography')}}
-          >Geography
-        </button>
-        <button 
-          className="category"
-          name='history'
-          onClick={()=> {this.handleClick('history')}}
-          >History
-        </button>
-        <button 
-          className="category"
-          name='animals'
-          onClick={()=> {this.handleClick('animals')}}
-          >Animals
-        </button>
-        <button 
-          className="category"
-          name='vehicles'
-          onClick={()=> {this.handleClick('vehicles')}}
-          >Vehicles
-        </button>
-        <button 
-          className="category"
-          name='cartoons'
-          onClick={()=> {this.handleClick('cartoons')}}
-          >Cartoons and Animations
-        </button>
-      </div>
-    );
+      return (
+        <div className='categories-container'>
+          <h1>Categories</h1>
+          <button 
+            className="category"
+            name='generalKnowledge'
+            onClick={()=> {this.handleClick('generalKnowledge')}}
+            >General Knowledge
+          </button>
+          <button 
+            className="category"
+            name='geography'
+            onClick={()=> {this.handleClick('geography')}}
+            >Geography
+          </button>
+          <button 
+            className="category"
+            name='history'
+            onClick={()=> {this.handleClick('history')}}
+            >History
+          </button>
+          <button 
+            className="category"
+            name='animals'
+            onClick={()=> {this.handleClick('animals')}}
+            >Animals
+          </button>
+          <button 
+            className="category"
+            name='vehicles'
+            onClick={()=> {this.handleClick('vehicles')}}
+            >Vehicles
+          </button>
+          <button 
+            className="category"
+            name='cartoons'
+            onClick={()=> {this.handleClick('cartoons')}}
+            >Cartoons and Animations
+          </button>
+        </div>
+      );
+    
   }
 }
 
