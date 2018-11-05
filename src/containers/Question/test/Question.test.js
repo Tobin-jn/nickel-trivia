@@ -2,12 +2,17 @@ import React from 'react'
 import { shallow } from 'enzyme'
 import { mockState, mockQuestion, mockQuestions } from './mocks';
 import { addPoints } from '../../../actions'
+import { Question, mapStateToProps, mapDispatchToProps } from '../index'
 
 describe('Question', () => {
   let wrapper
 
   beforeEach(() => {
-    wrapper = shallow(<Question />)
+    wrapper = shallow(<Question 
+      category={'geogrpahy'}
+      questions={mockQuestions}
+      currentQuestion={mockQuestion}
+      />)
   })
 
   it('should exist', () => {
@@ -18,17 +23,17 @@ describe('Question', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
-  describe('checkAnswer', () => {
+  // describe('checkAnswer', () => {
 
-  })
+  // })
 
-  it('should render an error if there is not a currentQuestion', () => {
+  // it('should render an error if there is not a currentQuestion', () => {
 
-  })
+  // })
 
-  it('should render 4 answers if there is a currentQuestion', () => {
+  // it('should render 4 answers if there is a currentQuestion', () => {
 
-  })
+  // })
 })
 
 describe('mapStateToProps', () => {
