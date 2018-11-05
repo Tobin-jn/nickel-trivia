@@ -5,25 +5,22 @@ import './DailyQuestion.css';
 import Question from '../Question'
 import { updateQuestions, updateCurrentQuestion, toggleAsked, hasErrored } from '../../actions'
 import { getQuestions } from '../../apiCalls/apiCalls'
+import { generateQuestion } from '../../apiCalls/helper'
 import { NavLink } from 'react-router-dom'
 
 export class DailyQuestion extends Component {
 
   componentDidMount() {
-    this.getTriviaQuestions()
+    this.getTriviaQuestions('generalKnowledge')
   }
 
-  getTriviaQuestions = async () => {
-    if(!this.checkState('generalKnowledge')) {
-      this.generateQuestion('generalKnowledge', this.props.questions['generalKnowledge'])
-      return
-    }
-
+  getTriviaQuestions = async (category) => {
     try {
-      const triviaQuestions = await getQuestions('generalKnowledge')
+      const triviaQuestions = await getQuestions(category)
 
-      this.props.updateQuestions('generalKnowledge', triviaQuestions)
-      this.generateQuestion('generalKnowledge', triviaQuestions)
+      this.props.updateQuestions(category, triviaQuestions)
+      const newQuestion = generateQuestion(category, triviaQuestions)
+      this.nextQuestion(newQuestion, category, triviaQuestions)
     } 
     catch(error) {
       this.props.hasErrored(true)
@@ -31,18 +28,10 @@ export class DailyQuestion extends Component {
   }
 
   checkState = (category) => {
-    if (this.props.questions[category].length === 0) {
-      return true
-    } else {
-      return false
-    }
+    return this.props.questions[category].length === 0 ? true : false
   }
 
-  generateQuestion = (category, questions) => {
-    const length = questions.length
-    const randomInt = Math.round(Math.random() * (length - 0));
-    const newQuestion = questions[randomInt]
-    console.log(newQuestion)
+  nextQuestion = (newQuestion, category, questions) => {
     this.props.generateNewQuestion(newQuestion)
     this.props.toggleAsked(category, newQuestion)
     this.props.updateQuestions(category, questions)
