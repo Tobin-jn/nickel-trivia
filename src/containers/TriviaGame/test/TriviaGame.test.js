@@ -4,6 +4,7 @@ import React from "react";
 import { shallow } from "enzyme";
 import { TriviaGame, mapStateToProps, mapDispatchToProps } from "../index";
 import { mockState, mockQuestion } from './mocks';
+import Question from '../../Question'
 
 describe("TriviaGame", () => {
   let wrapper;
@@ -11,7 +12,7 @@ describe("TriviaGame", () => {
   beforeEach(() => {
     wrapper = shallow(<TriviaGame 
       currentQuestion={mockQuestion}
-      gameCount={1}
+      gameCount={0}
       score={5}
     />);
   });
@@ -23,6 +24,21 @@ describe("TriviaGame", () => {
   it("should match snapshot", () => {
     expect(wrapper).toMatchSnapshot();
   });
+
+  it('should render a message if gameCount is 0', () => {
+    expect(wrapper.find('.start-game-text')).toBeDefined()
+    expect(wrapper.find(Question).length).toEqual(0)
+  })
+
+  it('should render a question if gameCount is greater than 0', () => {
+    wrapper = shallow(<TriviaGame 
+      currentQuestion={mockQuestion}
+      gameCount={2}
+      score={5}
+    />);
+    expect(wrapper.find(Question).length).toEqual(1)
+    expect(wrapper.find('.start-game-text').length).toEqual(0)
+  })
 });
 
 describe('mapStateToProps', () => {

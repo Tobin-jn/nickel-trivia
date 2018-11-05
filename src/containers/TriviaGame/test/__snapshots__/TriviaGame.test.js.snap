@@ -14,7 +14,7 @@ ShallowWrapper {
         "question": "Which city is the capital of the United States of America?",
       }
     }
-    gameCount={1}
+    gameCount={0}
     score={5}
   />,
   Symbol(enzyme.__renderer__): Object {
@@ -35,20 +35,14 @@ ShallowWrapper {
           Game!
         </h1>,
         <Connect(Categories) />,
-        <Connect(Question) />,
         <div
-          className="score"
+          className="start-game"
         >
           <h1
-            className="score-text"
+            className="start-game-text"
           >
-            Score:
+            Choose a category and lets start a Game!
           </h1>
-          <h4
-            className="score-number"
-          >
-            5
-          </h4>
         </div>,
       ],
     },
@@ -77,58 +71,28 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "class",
-        "props": Object {},
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": Array [
-            <h1
-              className="score-text"
-            >
-              Score:
-            </h1>,
-            <h4
-              className="score-number"
-            >
-              5
-            </h4>,
-          ],
-          "className": "score",
+          "children": <h1
+            className="start-game-text"
+          >
+            Choose a category and lets start a Game!
+          </h1>,
+          "className": "start-game",
         },
         "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "Score:",
-              "className": "score-text",
-            },
-            "ref": null,
-            "rendered": "Score:",
-            "type": "h1",
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Choose a category and lets start a Game!",
+            "className": "start-game-text",
           },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": 5,
-              "className": "score-number",
-            },
-            "ref": null,
-            "rendered": 5,
-            "type": "h4",
-          },
-        ],
+          "ref": null,
+          "rendered": "Choose a category and lets start a Game!",
+          "type": "h1",
+        },
         "type": "div",
       },
     ],
@@ -145,20 +109,14 @@ ShallowWrapper {
             Game!
           </h1>,
           <Connect(Categories) />,
-          <Connect(Question) />,
           <div
-            className="score"
+            className="start-game"
           >
             <h1
-              className="score-text"
+              className="start-game-text"
             >
-              Score:
+              Choose a category and lets start a Game!
             </h1>
-            <h4
-              className="score-number"
-            >
-              5
-            </h4>
           </div>,
         ],
       },
@@ -187,58 +145,28 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "class",
-          "props": Object {},
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": Array [
-              <h1
-                className="score-text"
-              >
-                Score:
-              </h1>,
-              <h4
-                className="score-number"
-              >
-                5
-              </h4>,
-            ],
-            "className": "score",
+            "children": <h1
+              className="start-game-text"
+            >
+              Choose a category and lets start a Game!
+            </h1>,
+            "className": "start-game",
           },
           "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "Score:",
-                "className": "score-text",
-              },
-              "ref": null,
-              "rendered": "Score:",
-              "type": "h1",
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Choose a category and lets start a Game!",
+              "className": "start-game-text",
             },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": 5,
-                "className": "score-number",
-              },
-              "ref": null,
-              "rendered": 5,
-              "type": "h4",
-            },
-          ],
+            "ref": null,
+            "rendered": "Choose a category and lets start a Game!",
+            "type": "h1",
+          },
           "type": "div",
         },
       ],
