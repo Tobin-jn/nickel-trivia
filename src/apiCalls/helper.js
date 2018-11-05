@@ -43,6 +43,12 @@ export const cleanQuestions = (questions) => {
   })
 }
 
+export const generateQuestion = (category, questions) => {
+  const length = questions.length
+  const randomInt = Math.round(Math.random() * (length - 0));
+  return questions[randomInt]
+}
+
 // const addProperties = (array) => {
 //   let counter = 1
 //   const withId = data.results.map( question => {
