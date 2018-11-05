@@ -27,4 +27,14 @@
 .score {
   display: flex;
   flex-direction: column;
+  margin: 20px;
+}
+
+.score-text {
+text-align: center;
+padding: 10px;
+}
+
+.score-number {
+text-align: center;
 }

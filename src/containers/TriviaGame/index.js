@@ -28,7 +28,7 @@ export class TriviaGame extends Component{
             <div className="score-team-two"></div>
             <h1 className='game-header'>Game!</h1>
             <div className="score">
-              <h1 className="score-text">Score:</h1>
+              <h1 className="score-text">Score</h1>
               <h4 className="score-number">{this.props.score} Cents</h4>
             </div>
           </div>
