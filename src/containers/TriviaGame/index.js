@@ -12,13 +12,27 @@ export class TriviaGame extends Component{
     if (this.props.gameCount === 0) {
       return (
         <div className='game'>
-          <h2>Choose a Category</h2>
-          <h1 className='game-header'>Nickel Trivia</h1>
+
+          <div className='header-container'>
+            <h2 className='choose-text'>Choose a Category</h2>
+            <h1 className='game-header'>Nickel Trivia</h1>
+            <img className='nickel-pic' src={ require('../../images/nickel.png')} alt="nickel"/>
+            <div className="score">
+              <h1 className="score-text">Score</h1>
+              <h4 className="score-number">{this.props.score} &cent;</h4>
+            </div>
+          </div>
+
           <div className="game-wrapper">
             <Categories />
-            <div className="start-game">
-              <h1 className="start-game-text">Choose a category and lets start a Game!</h1>
+
+            <div className='question-container'>
+              <div className='question-container-after'></div>
+              <img className='jar-logo-game' src={ require('../../images/NickelJar.png') } alt="Trivia Jar Logo"/>
+              <h3 className="question">Choose a category and lets start a Game!</h3>
             </div>
+
+
           </div>
         </div>
       );

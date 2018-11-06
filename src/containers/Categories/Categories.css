@@ -1,37 +1,27 @@
-.categories-container {
-
-}
-
 .categories {
   display: flex;
   flex-direction: column;
 }
-/*
-.category {
-  font-size: 1.5em;
-  height: 80px;
-}*/
 
-.category  {
+.category {
     border: black thin solid;
-    font-family: inherit;
+    font-family: 'Chelsea Market', cursive;
     font-size: 1.6em;
-    color: black;
+    color: #651a23;
     background: #f6e297;
     cursor: pointer;
     padding: 5px 30px;
     display: inline-block;
-    margin: 3px 10px;
+    margin: 3px 0px 0px 10px;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: 700;
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
-    height: 95px;
-
+    height: 98px;
 }
 
-.category :hover {
-  color: #0e83cd;
+.category:hover {
+  color: #ba2343;
   background: #fff;
 }

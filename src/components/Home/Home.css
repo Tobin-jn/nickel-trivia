@@ -39,7 +39,7 @@ html, body {
 
 .btn {
   border: black thin solid;
-  font-family: inherit;
+  font-family: 'Chelsea Market', cursive;
   font-size: 2em;
   color: black;
   background: #dfc040;

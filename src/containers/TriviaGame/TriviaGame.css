@@ -14,6 +14,8 @@
 .choose-text {
   font-size: 2em;
   margin: 66px 0px 0px -15px;
+  font-family: 'Chelsea Market', cursive;
+  color: #0d2d1d;
 }
 
 .game-header {
@@ -29,11 +31,15 @@
   grid-template-columns: 30% 70%;
 }
 
+.jar-logo-game {
+  height: 235px;
+}
 
 .score {
   display: flex;
   flex-direction: row;
   margin: 10px;
+  font-family: 'Chelsea Market', cursive;
 }
 
 .nickel-pic {
@@ -45,9 +51,8 @@
 
 .score-text {
   text-align: center;
-  margin: 30px 40px 0px 0px;
+  margin: 30px 25px 0px 0px;
   z-index: 10;
-
 }
 
 .score-number {
@@ -55,5 +60,4 @@
   font-size: 2.3em;
   z-index: 10;
   margin-top: 30px;
-  margin-right: -19px;
 }

@@ -1,6 +1,6 @@
 export const questionReducer = (state = {
     answers: [ '', '', '', ''],
-    question: 'question',
+    question: 'Loading...',
     category:'General Knowledge'
   }, action) => {
   switch(action.type) {
