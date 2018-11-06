@@ -15,11 +15,11 @@
 .category  {
     border: black thin solid;
     font-family: inherit;
-    font-size: 1.1em;
+    font-size: 1.6em;
     color: black;
-    background: #dfc040;
+    background: #f6e297;
     cursor: pointer;
-    padding: 18px 80px;
+    padding: 5px 30px;
     display: inline-block;
     margin: 3px 10px;
     text-transform: uppercase;
