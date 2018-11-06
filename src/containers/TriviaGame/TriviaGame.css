@@ -60,3 +60,75 @@
   z-index: 10;
   margin-top: 30px;
 }
+
+
+@media screen and (max-width: 1150px) {
+  .category {
+    font-size: 1.1em;
+  }
+
+  .choose-text {
+    font-size: 1.7em;
+  }
+
+  .game-header {
+    font-size: 4em;
+  }
+
+  .question-container {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .choose-text {
+    visibility: hidden;
+  }
+
+  .game-header {
+    font-size: 4em;
+    position: absolute;
+    left: 20px;
+  }
+
+  .score {
+    position: absolute;
+    left: 400px;
+  }
+
+  .nickel-pic {
+    top: 10px;
+  }
+
+  .categories {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 200px;
+  }
+
+  .question-container {
+    top: 205px;
+    width: 100%;
+    left: -200px;
+  }
+
+  .game-wrapper {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .answer-container {
+    top: 205px;
+    width: 100%;
+    left: -200px;
+    position: relative;
+  }
+
+  .answer-choice {
+    font-size: 1em;
+  }
+
+}
+
+
+
