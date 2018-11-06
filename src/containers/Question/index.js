@@ -14,10 +14,11 @@ export class Question extends Component {
 
   checkAnswer = (index) => {
     const { currentQuestion, addPoints } = this.props
-
+    let answerAlert
     if(currentQuestion.answers[index] === currentQuestion.correct_answer){
       this.setState({ answerMessage: 'Correct Answer!!' })
       addPoints()
+
     } else {
       this.setState({ answerMessage: `Sorry, the correct answer was ${currentQuestion.correct_answer}` })
     }
@@ -50,7 +51,10 @@ export class Question extends Component {
             <div onClick={()=>{this.checkAnswer(3)}} ><p className="answer-choice choice-d">{currentQuestion.answers[3]}</p></div>
           </div>
           <div className="answer-response">
+            
             <p>{this.state.answerMessage}</p>
+            <img className='nickel-logo-answer' src={ require('../../images/nickel.png') } alt="Nickel Jar Logo" />
+
           </div>
         </div>
       );
