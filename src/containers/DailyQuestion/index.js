@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import PropTypes from "prop-types";
-import { connect } from "react-redux";
-import './DailyQuestion.css';
+import React, { Component } from 'react'
+import PropTypes from "prop-types"
+import { connect } from "react-redux"
+import './DailyQuestion.css'
 import Question from '../Question'
 import { updateQuestions, updateCurrentQuestion, toggleAsked, hasErrored } from '../../actions'
 import { getQuestions } from '../../apiCalls/apiCalls'
@@ -15,6 +15,7 @@ export class DailyQuestion extends Component {
   }
 
   getTriviaQuestions = async (category) => {
+    this.props.hasErrored(false)
     try {
       const triviaQuestions = await getQuestions(category)
 
@@ -67,8 +68,8 @@ export const mapDispatchToProps = dispatch => ({
     dispatch(updateCurrentQuestion(category, question)),
   toggleAsked: (category, question) => 
     dispatch(toggleAsked(category, question)),
-  hasErrored: () =>
-      dispatch(hasErrored()),
+  hasErrored: (bool) =>
+      dispatch(hasErrored(bool)),
 });
 
 export default connect(

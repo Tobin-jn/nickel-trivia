@@ -24,10 +24,6 @@ export const updateCurrentQuestion = (question) => ({
   question
 })
 
-// export const clearCurrentQuestion = () => ({
-//   type: "CLEAR_CURRENT_QUESTION",
-// }) 
-
 export const addQuestionCount = () => ({
   type: "ADD_QUESTION_COUNT",
 })

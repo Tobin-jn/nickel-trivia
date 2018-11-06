@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import PropTypes from "prop-types";
-import { connect } from "react-redux";
+import React, { Component } from 'react'
+import PropTypes from "prop-types"
+import { connect } from "react-redux"
 import { 
   updateCategory, 
   updateQuestions, 
@@ -13,11 +13,12 @@ import './Categories.css';
 import { getQuestions } from '../../apiCalls/apiCalls'
 import { generateQuestion } from '../../apiCalls/helper'
 import DailyQuestion from '../DailyQuestion'
-import { Route, NavLink, Redirect } from 'react-router-dom';
+import { Route, NavLink, Redirect } from 'react-router-dom'
 
 export class Categories extends Component {
 
   handleClick = (category) => {
+    this.props.hasErrored(false)
     this.props.handleCategory(category)
     this.getTriviaQuestions(category)
     this.props.addQuestionCount()
@@ -53,15 +54,6 @@ export class Categories extends Component {
   }
 
   render() {
-    // if(this.props.isLoading){
-    //   return (
-    //     <p>its coming</p>
-    //   )
-    // } else if (this.props.hasErrored) {
-    //   return (
-    //     <p>We have an error</p>
-    //   )
-    // } else {
       return (
         <div className='categories-container'>
 
@@ -125,8 +117,8 @@ export const mapDispatchToProps = dispatch => ({
     dispatch(addQuestionCount()),
   toggleAsked: (category, question) => 
     dispatch(toggleAsked(category, question)),
-  hasErrored: () =>
-    dispatch(hasErrored()),
+  hasErrored: (bool) =>
+    dispatch(hasErrored(bool)),
 });
 
 

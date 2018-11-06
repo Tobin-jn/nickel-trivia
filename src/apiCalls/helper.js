@@ -28,16 +28,26 @@ export const cleanQuestions = (questions) => {
   return questions.results.map( question => {
     const answers = [...question.incorrect_answers, question.correct_answer]
     const shuffled = shuffleAnswers(answers)
+    const cleanedShuffled = cleanAnswers(shuffled)
+    const cleanedQuestion = cleanQuestion(question.question)
     counter++
     return  {
       category: question.category,
-      question: question.question,
-      answers: shuffled,
+      question: cleanedQuestion,
+      answers: cleanedShuffled,
       correct_answer: question.correct_answer,
       id: counter,
       asked: false,
     }
   })
+}
+
+const cleanAnswers = (answers) => {
+  return answers.map( answer => answer.replace(/&quot;/g,'"').replace(/&#039;/g,"'"))
+}
+
+const cleanQuestion = (question) => {
+  return question.replace(/&quot;/g,'"').replace(/&#039;/g,"'")
 }
 
 export const generateQuestion = (category, questions) => {
