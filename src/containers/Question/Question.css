@@ -70,3 +70,47 @@
   background-color: #ba2343;
   margin-right: 10px;
 }
+
+.answer-response {
+  width: 475px;
+  height: 300px;
+  position: absolute;
+  top: 250px;
+  left: 450px;
+  background-color: #f4dc68;
+  border-radius: 2% 6% 5% 4% / 1% 1% 2% 4%;
+  border: 3px solid #293d31;
+  box-shadow: 7px 14px 19px 9px rgba(0,0,0,0.5)
+}
+
+.daily-answer-response {
+ left: 300px;
+}
+
+.answer-text {
+  font-size: 1.8em;
+  text-align: center;
+  margin-top: 30px;
+  font-family: 'Chelsea Market', cursive;
+  padding: 10px;
+}
+.correct {
+  font-size: 1.6em;
+
+}
+
+.nickel-logo-answer {
+  width: 100px;
+  position: relative;
+  left: 200px;
+}
+
+.answer-response-hidden {
+  visibility: hidden;
+}
+
+
+
+
+
+

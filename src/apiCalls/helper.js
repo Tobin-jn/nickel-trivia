@@ -43,11 +43,39 @@ export const cleanQuestions = (questions) => {
 }
 
 const cleanAnswers = (answers) => {
-  return answers.map( answer => answer.replace(/&quot;/g,'"').replace(/&#039;/g,"'"))
+  return answers.map( answer => {
+    return answer.replace(/&quot;/g,'"')
+            .replace(/&#039;/g,"'")
+            .replace(/&amp;/g, '&')
+            .replace(/&aldquo;/g, '"')
+            .replace(/&ardquo;/g, '"')
+            .replace(/&hellip;/g, '...')
+            .replace(/&hellip;/g, "'")
+            .replace(/&shy;/g, "-")
+  })
 }
 
+
+var encodedStr = 'hello &amp; world';
+
+var parser = new DOMParser;
+var dom = parser.parseFromString(
+    '<!doctype html><body>' + encodedStr,
+    'text/html');
+var decodedString = dom.body.textContent;
+
+console.log(decodedString);
+
+
 const cleanQuestion = (question) => {
-  return question.replace(/&quot;/g,'"').replace(/&#039;/g,"'")
+  return question.replace(/&quot;/g,'"')
+          .replace(/&#039;/g,"'")
+          .replace(/&amp;/g, '&')
+          .replace(/&aldquo;/g, '"')
+          .replace(/&ardquo;/g, '"')
+          .replace(/&hellip;/g, '...')
+          .replace(/&hellip;/g, "'")
+          .replace(/&shy;/g, "-")
 }
 
 export const generateQuestion = (category, questions) => {

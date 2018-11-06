@@ -8,23 +8,57 @@ export class Question extends Component {
   constructor() {
     super()
     this.state = {
-      answerMessage: ''
+      answerMessage: '',
+      correct: 'no answer'
     }
   }
 
-  checkAnswer = (index) => {
+  checkAnswer = async (index) => {
     const { currentQuestion, addPoints } = this.props
-
+    let answerAlert
     if(currentQuestion.answers[index] === currentQuestion.correct_answer){
-      this.setState({ answerMessage: 'Correct Answer!!' })
+      this.setState({ correct: 'correct' })
       addPoints()
     } else {
-      this.setState({ answerMessage: `Sorry, the correct answer was ${currentQuestion.correct_answer}` })
+      this.setState({ correct: 'incorrect' })
     }
+    await setTimeout(this.removeAlert, 3500)
+  }
+
+  removeAlert = () => {
+    this.setState({ correct: 'no answer' })
   }
 
   render() {
     const { currentQuestion } = this.props
+    let answerAlert;
+
+    if(this.state.correct === 'correct' && window.location.pathname === '/triviagame'){
+      answerAlert = 
+        <div className='answer-response'>
+          <p className='answer-text' ><span className='correct' >Correct Answer!!</span> Choose a category for your next question.</p>
+          <img className='nickel-logo-answer' src={ require('../../images/nickel.png') } alt="Nickel Jar Logo" />
+        </div>
+    } else if (this.state.correct === 'incorrect' && window.location.pathname === '/triviagame'){
+      answerAlert = 
+        <div className="answer-response">
+          <p className='answer-text' >Sorry, the correct answer was {currentQuestion.correct_answer}. Choose a category for your next question.</p>
+        </div>
+    } else if (this.state.correct === 'correct' && window.location.pathname === '/dailyquestion'){
+      answerAlert = 
+        <div className='answer-response daily-answer-response'>
+          <p className='answer-text' ><span className='correct' >Correct Answer!!</span> Start a game with your grandkids!</p>
+          <img className='nickel-logo-answer' src={ require('../../images/nickel.png') } alt="Nickel Jar Logo" />
+        </div>
+    } else if(this.state.correct === 'incorrect' && window.location.pathname === '/dailyquestion'){
+      answerAlert = 
+        <div className="answer-response daily-answer-response">
+          <p className='answer-text' >Sorry, the correct answer was {currentQuestion.correct_answer}. Play a game with your grandkids!</p>
+        </div>
+    } else {
+      answerAlert = <div className="daily-answer-response answer-response-hidden"></div>
+    }
+
 
     if(!currentQuestion.question){
       return (
@@ -49,9 +83,7 @@ export class Question extends Component {
             <div onClick={()=>{this.checkAnswer(2)}} ><p className="answer-choice choice-c">{currentQuestion.answers[2]}</p></div>
             <div onClick={()=>{this.checkAnswer(3)}} ><p className="answer-choice choice-d">{currentQuestion.answers[3]}</p></div>
           </div>
-          <div className="answer-response">
-            <p>{this.state.answerMessage}</p>
-          </div>
+          {answerAlert}
         </div>
       );
     }

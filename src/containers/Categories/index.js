@@ -29,7 +29,7 @@ export class Categories extends Component {
       const newQuestion = generateQuestion(category, this.props.questions[category])
       this.nextQuestion(newQuestion, category, this.props.questions[category])
       return
-    }
+    } 
 
     try {
       const triviaQuestions = await getQuestions(category)
@@ -48,9 +48,11 @@ export class Categories extends Component {
   }
 
   nextQuestion = (newQuestion, category, questions) => {
-    this.props.generateNewQuestion(newQuestion)
-    this.props.toggleAsked(category, newQuestion)
-    this.props.updateQuestions(category, questions)
+    if (questions) {
+      this.props.generateNewQuestion(newQuestion)
+      this.props.toggleAsked(category, newQuestion)
+      this.props.updateQuestions(category, questions)
+    } 
   }
 
   render() {
