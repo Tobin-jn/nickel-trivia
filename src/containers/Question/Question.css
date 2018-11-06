@@ -14,8 +14,8 @@
 }
       
 .question  {
-  margin: auto;
   color: #f76700;
+  margin: auto;
 }
 
 .answer-container {
@@ -52,7 +52,6 @@
 .choice-a {
   background-color: #a9488c;
   margin-left: 10px;
-
 }
 
 .choice-b {
@@ -63,7 +62,6 @@
 .choice-c {
   background-color: #00d1e1;
   margin-left: 10px;
-
 }
 
 .choice-d {
