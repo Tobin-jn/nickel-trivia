@@ -8,24 +8,66 @@ export class Question extends Component {
   constructor() {
     super()
     this.state = {
-      answerMessage: ''
+      answerMessage: '',
+      correct: 'no answer'
     }
   }
 
-  checkAnswer = (index) => {
+  checkAnswer = async (index) => {
     const { currentQuestion, addPoints } = this.props
     let answerAlert
     if(currentQuestion.answers[index] === currentQuestion.correct_answer){
-      this.setState({ answerMessage: 'Correct Answer!!' })
+      this.setState({ correct: 'correct' })
       addPoints()
-
     } else {
-      this.setState({ answerMessage: `Sorry, the correct answer was ${currentQuestion.correct_answer}` })
+      this.setState({ correct: 'incorrect' })
     }
+    await setTimeout(this.removeAlert, 3000)
   }
+
+  removeAlert = () => {
+    this.setState({ correct: 'no answer' })
+  }
+
+
+  // handleFingerPrint = async () => {
+  //   await this.setState({thumbprint: 'active-thumbprint'});
+  //   await setTimeout(this.printConnect, 500);
+  //   await setTimeout(this.printHandshake, 2500);
+  //   await setTimeout(this.printWelcome, 5000);
+  //   await setTimeout(this.printBriefing, 6500);
+  //   await setTimeout(this.props.setReady, 6500);
+  // }
+
+  // printConnect = async () => {
+  //   await this.setState({securing: 'print-securing'});
+  // }
+
+  // printHandshake = async () => {
+  //   await this.setState({handshake: 'print-handshake'});
+  // }
+
+
 
   render() {
     const { currentQuestion } = this.props
+    let answerAlert;
+
+    if(this.state.correct === 'correct' ){
+      answerAlert = 
+        <div className='answer-response'>
+          <p className='answer-text' ><span className='correct' >Correct Answer!!</span> Choose a category for your next question.</p>
+          <img className='nickel-logo-answer' src={ require('../../images/nickel.png') } alt="Nickel Jar Logo" />
+        </div>
+    } else if (this.state.correct === 'incorrect'){
+      answerAlert = 
+        <div className="answer-response">
+          <p className='answer-text' >Sorry, the correct answer was {currentQuestion.correct_answer}. Choose a category for your next question.</p>
+        </div>
+    } else {
+      answerAlert = <div className="answer-response answer-response-hidden"></div>
+    }
+
 
     if(!currentQuestion.question){
       return (
@@ -50,12 +92,7 @@ export class Question extends Component {
             <div onClick={()=>{this.checkAnswer(2)}} ><p className="answer-choice choice-c">{currentQuestion.answers[2]}</p></div>
             <div onClick={()=>{this.checkAnswer(3)}} ><p className="answer-choice choice-d">{currentQuestion.answers[3]}</p></div>
           </div>
-          <div className="answer-response">
-            
-            <p>{this.state.answerMessage}</p>
-            <img className='nickel-logo-answer' src={ require('../../images/nickel.png') } alt="Nickel Jar Logo" />
-
-          </div>
+          {answerAlert}
         </div>
       );
     }
