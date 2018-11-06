@@ -10,22 +10,26 @@ html, body {
 }
 
 .title {
-  /*text-align: center;*/
-  color: #d24572;
+  color: #e76f1c;
   font-family: 'Spicy Rice', cursive;
-  position: absolute;
-  top: 60px;
-  left: 25%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+  top: 75px;
+  z-index: 10;
 }
 
 .trivia-text {
-  font-size: 3em;
+  font-size: 4em;
 }
 
 .nickel-logo {
-  position: absolute;
-  top: 150px;
-  left: 38%;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  margin: auto;
+  top: 50px;
   width: 300px;
 }
 
@@ -34,15 +38,15 @@ html, body {
   flex-direction: row;
   justify-content: center;
   position: relative;
-  top: 500px;
+  top: 60px;
 }
 
 .btn {
   border: black thin solid;
-  font-family: inherit;
+  font-family: 'Chelsea Market', cursive;
   font-size: 2em;
-  color: black;
-  background: #dfc040;
+  color: #651a23;
+  background: #f6e297;
   cursor: pointer;
   padding: 25px 80px;
   display: inline-block;
@@ -59,5 +63,3 @@ html, body {
   color: #0e83cd;
   background: #fff;
 }
-
-

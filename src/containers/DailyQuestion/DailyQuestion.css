@@ -4,22 +4,46 @@
   background-size: cover;
 }
 
+.header-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
 .daily-header {
   text-align: center;
-  color: #d24572;
+  color: #e76f1c;
   font-family: 'Spicy Rice', cursive;
-  margin-top: 30px;
-  font-size: 4em;
+  margin-top: 10px;
+  font-size: 5em;
 }
 
 .jar-logo {
-  width: 150px;
-  top: 20px;
-  left: 20px;
-  position: absolute;
+  z-index: 10;
+  height: 120px;
+  margin: 5px;
 }
 
+.play-game-btn {
+  border: black 1px solid;
+  font-family: inherit;
+  font-size: 0.8em;
+  color: #b63e8f;
+  background: #f6e297;
+  cursor: pointer;
+  padding: 15px 7px;
+  text-transform: uppercase;
+  font-weight: 700;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  width: 129px;
+  height: 75px;
+  margin-top: 25px;
+  border-radius: 10% 6% 5% 4% / 9% 6% 7% 2%;
+}
 
-/*.play-game-btn {
-
-}*/
+@media screen and (max-width: 950px) {
+  .daily-header {
+    font-size: 3.5em;
+  }
+}

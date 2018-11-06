@@ -1,16 +1,28 @@
 .game {
-  height: 100vh;
   background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)), url(../../images/blanket.jpg) center center no-repeat;
   background-size: cover;
+  height: 100vh;
+}
 
+.header-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.choose-text {
+  font-size: 2em;
+  margin: 66px 0px 0px -15px;
+  font-family: 'Chelsea Market', cursive;
+  color: #0d2d1d;
 }
 
 .game-header {
   text-align: center;
-  color: #d24572;
+  color: #e76f1c;
   font-family: 'Spicy Rice', cursive;
-  margin-top: 30px;
-  font-size: 4em;
+  margin-top: 10px;
+  font-size: 5em;
 }
 
 .game-wrapper {
@@ -18,23 +30,105 @@
   grid-template-columns: 30% 70%;
 }
 
-.header-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+.jar-logo-game {
+  height: 235px;
 }
 
 .score {
   display: flex;
-  flex-direction: column;
-  margin: 20px;
+  flex-direction: row;
+  font-family: 'Chelsea Market', cursive;
+  margin: 10px;
+}
+
+.nickel-pic {
+  width: 84px;
+  position: absolute;
+  top: 20px;
+  left: 89%;
 }
 
 .score-text {
-text-align: center;
-padding: 10px;
+  text-align: center;
+  margin: 30px 25px 0px 0px;
+  z-index: 10;
 }
 
 .score-number {
-text-align: center;
+  text-align: center;
+  font-size: 2.3em;
+  z-index: 10;
+  margin-top: 30px;
 }
+
+
+@media screen and (max-width: 1150px) {
+  .category {
+    font-size: 1.1em;
+  }
+
+  .choose-text {
+    font-size: 1.7em;
+  }
+
+  .game-header {
+    font-size: 4em;
+  }
+
+  .question-container {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .choose-text {
+    visibility: hidden;
+  }
+
+  .game-header {
+    font-size: 4em;
+    position: absolute;
+    left: 20px;
+  }
+
+  .score {
+    position: absolute;
+    left: 400px;
+  }
+
+  .nickel-pic {
+    top: 10px;
+  }
+
+  .categories {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 200px;
+  }
+
+  .question-container {
+    top: 205px;
+    width: 100%;
+    left: -200px;
+  }
+
+  .game-wrapper {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .answer-container {
+    top: 205px;
+    width: 100%;
+    left: -200px;
+    position: relative;
+  }
+
+  .answer-choice {
+    font-size: 1em;
+  }
+
+}
+
+
+

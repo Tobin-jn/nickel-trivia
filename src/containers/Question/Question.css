@@ -1,18 +1,21 @@
 .question-container {
-  padding: 4rem 8rem;
-  display: inline-block;
-  border: 3px solid #333333;
+  padding: 2rem 4rem;
+  display: flex;
+  border: 3px solid #293d31;
   font-size: 2.5rem;
+  font-family: 'Chelsea Market', cursive;
   border-radius: 2% 6% 5% 4% / 1% 1% 2% 4%;
-  background: #ffffff;
+  background: #fffdf7;
   position: relative;
-  margin: 20px;
+  margin: 0px 10px 5px 10px;
   text-align: center;
-
+  height: 230px;
+  overflow-y: scroll;
 }
       
 .question  {
-
+  color: #f76700;
+  margin: auto;
 }
 
 .answer-container {
@@ -21,29 +24,47 @@
 }
 
 .answer-choice {
+  display: flex;
+  justify-content: center;
   text-align: center;
-  font-size: 2em;
-  border: solid black;
-  height: 100px;
-  padding: 20px;
+  font-size: 1.8em;
+  border: solid black 2px;
+  height: 121px;
+  padding: 25px 20px 0px;
+  font-family: 'Chelsea Market', cursive;
+  color: #ffffff;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  overflow-y: scroll;
+  border-radius: 10% 6% 5% 4% / 9% 6% 7% 2%;
+  margin: 2px;
+}
+
+.answer-choice:hover {
+  color: #0e83cd;
+  background: #fff;
 }
 
 .choice-a {
-  background-color: red;
-  margin-left: 20px;
+  background-color: #a9488c;
+  margin-left: 10px;
 }
 
 .choice-b {
-  background-color: green;
-    margin-right: 20px;
+  background-color: #9dd29a;
+  margin-right: 10px;
 }
 
 .choice-c {
-  background-color: blue;
-    margin-left: 20px;
+  background-color: #00d1e1;
+  margin-left: 10px;
 }
 
 .choice-d {
-  background-color: yellow;
-    margin-right: 20px;
+  background-color: #ba2343;
+  margin-right: 10px;
 }

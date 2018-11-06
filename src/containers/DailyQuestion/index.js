@@ -41,15 +41,18 @@ export class DailyQuestion extends Component {
     const { currentQuestion } = this.props
     return (
       <div className='daily-container'>
-        <img className='jar-logo' src={ require('../../images/NickelTriviaJar.png') } alt="Trivia Jar Logo"/>
-        <h1 className='daily-header'>Question of the Day</h1>
+        <div className="header-wrapper">
+          <img className='jar-logo' src={ require('../../images/NickelJar.png') } alt="Trivia Jar Logo"/>
+          <h1 className='daily-header'>Question of the Day</h1>
+          <NavLink  to='/triviagame'>
+            <button className='play-game-btn btn'>Play a game with Grandkids!</button>
+          </NavLink>
+        </div>
         <Question />
-        <NavLink  to='/triviagame'>
-          <button className='play-game-btn btn'>Play a game with Grandkids!</button>
-        </NavLink>
       </div>
     );
   }
+          // <img className='jar-logo' src={ require('../../images/NickelJar.png') } alt="Trivia Jar Logo"/>
 
 }
 

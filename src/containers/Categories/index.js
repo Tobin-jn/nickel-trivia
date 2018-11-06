@@ -65,7 +65,7 @@ export class Categories extends Component {
     // } else {
       return (
         <div className='categories-container'>
-          <h1>Categories</h1>
+
           <div className="categories">
             <button 
               className="category"
@@ -89,13 +89,13 @@ export class Categories extends Component {
               className="category"
               name='animals'
               onClick={()=> {this.handleClick('animals')}}
-              >Lions, Tigers, and Bears
+              >Lions, Tigers, & Bears
             </button>
             <button 
               className="category"
               name='vehicles'
               onClick={()=> {this.handleClick('vehicles')}}
-              >Planes, Trains and Automobiles
+              >Planes, Trains & Automobiles
             </button>
             <button 
               className="category"
