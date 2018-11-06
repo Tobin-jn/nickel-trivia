@@ -25,12 +25,13 @@ export class TriviaGame extends Component{
     } else {
       return (
         <div className='game'>
-          <div className="header-container">
-            <h2>Choose a Category</h2>
+          <div className='header-container'>
+            <h2 className='choose-text'>Choose a Category</h2>
             <h1 className='game-header'>Nickel Trivia</h1>
+            <img className='nickel-pic' src={ require('../../images/nickel.png')} alt="nickel"/>
             <div className="score">
               <h1 className="score-text">Score</h1>
-              <h4 className="score-number">{this.props.score} Cents</h4>
+              <h4 className="score-number">{this.props.score} &cent;</h4>
             </div>
           </div>
 
