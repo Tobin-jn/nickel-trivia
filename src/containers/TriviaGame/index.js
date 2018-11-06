@@ -27,11 +27,8 @@ export class TriviaGame extends Component{
               <h3 className="question">Choose a category and lets start a Game!</h3>
             </div>
 
-
           </div>
         </div>
-              // <img className='jar-logo-game' src={ require('../../images/NickelJar.png') } alt="Trivia Jar Logo"/>
-            // <img className='nickel-pic' src={ require('../../images/nickel.png')} alt="nickel"/>
       );
     } else {
       return (
@@ -39,7 +36,6 @@ export class TriviaGame extends Component{
           <div className='header-container'>
             <h2 className='choose-text'>Choose a Category</h2>
             <h1 className='game-header'>Nickel Trivia</h1>
-            <img className='nickel-pic' src={ require('../../images/nickel.png')} alt="nickel"/>
             <div className="score">
               <h1 className="score-text">Score</h1>
               <h4 className="score-number">{this.props.score} &cent;</h4>
