@@ -41,3 +41,9 @@
   margin-top: 25px;
   border-radius: 10% 6% 5% 4% / 9% 6% 7% 2%;
 }
+
+@media screen and (max-width: 950px) {
+  .daily-header {
+    font-size: 3.5em;
+  }
+}
