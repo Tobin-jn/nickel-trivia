@@ -7,7 +7,7 @@
   border-radius: 2% 6% 5% 4% / 1% 1% 2% 4%;
   background: #fffdf7;
   position: relative;
-  margin: 0px 10px 10px 10px;
+  margin: 0px 10px 5px 10px;
   text-align: center;
   height: 230px;
   overflow-y: scroll;
@@ -40,7 +40,7 @@
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   overflow-y: scroll;
-  border-radius: 2% 6% 5% 4% / 1% 1% 2% 4%;
+  border-radius: 10% 6% 5% 4% / 9% 6% 7% 2%;
   margin: 2px;
 }
 
