@@ -2,12 +2,11 @@
 
 import { errorReducer } from "../errorReducer";
 
-describe('questionReducer', () => {
+describe('errorReducer', () => {
   it('should return the initial state', () => {
     const expected = false
-    }
-
-    const result = questionReducer(undefined, {})
+    
+    const result = errorReducer(undefined, {})
     expect(result).toEqual(expected)
   })
 })
