@@ -35,13 +35,13 @@ describe("DailyQuestion", () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  describe('getTriviaQuestions', () => {
-    it('should call getQuestions with the correct params', () => {})
-    it('should call updateQuestions with the correct params', () => {})
-    it('should call generateQuestion with the correct params', () => {})
-    it('should call nextQuestion with the correct params', () => {})
-    it('should call hasErrored if there is an error', () => {})
-  })
+  // describe('getTriviaQuestions', () => {
+  //   it('should call getQuestions with the correct params', () => {})
+  //   it('should call updateQuestions with the correct params', () => {})
+  //   it('should call generateQuestion with the correct params', () => {})
+  //   it('should call nextQuestion with the correct params', () => {})
+  //   it('should call hasErrored if there is an error', () => {})
+  // })
 
   describe('checkState', () => {
     it('should return false if there are questions in the array', () => {
@@ -64,24 +64,24 @@ describe("DailyQuestion", () => {
     })
   })
 
-  describe('nextQuestion', () => {
-    it('should call generateNewQuestion with the correct params', () => {
-      wrapper.instance().nextQuestion()
+//   describe('nextQuestion', () => {
+//     it('should call generateNewQuestion with the correct params', () => {
+//       wrapper.instance().nextQuestion()
 
-      expect(wrapper.props().generateNewQuestion).toHaveBeenCalled()
-    })
+//       expect(wrapper.props().generateNewQuestion).toHaveBeenCalled()
+//     })
 
-    // it('should call toggleAsked with the correct params', () => {
-    //   wrapper.instance().nextQuestion()
+//     it('should call toggleAsked with the correct params', () => {
+//       wrapper.instance().nextQuestion()
 
-    // })
+//     })
 
-    // it('should call updateQuestions with the correct params', () => {
-    //   wrapper.instance().nextQuestion()
+//     it('should call updateQuestions with the correct params', () => {
+//       wrapper.instance().nextQuestion()
 
-    // })
+//     })
 
-  })
+//   })
 });
 
 describe('mapStateToProps', () => {
@@ -163,5 +163,5 @@ describe('mapDispatchToProps', () => {
     expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch)
   })
 
-  it('should call dispatch with hasErrored action when toggleAsked is called', () => {})
+  // it('should call dispatch with hasErrored action when toggleAsked is called', () => {})
 })
