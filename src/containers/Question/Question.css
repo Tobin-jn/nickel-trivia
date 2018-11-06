@@ -28,7 +28,7 @@
   justify-content: center;
   text-align: center;
   font-size: 1.8em;
-  border: solid black 1px;
+  border: solid black 2px;
   height: 121px;
   padding: 25px 20px 0px;
   font-family: 'Chelsea Market', cursive;
@@ -40,6 +40,8 @@
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   overflow-y: scroll;
+  border-radius: 2% 6% 5% 4% / 1% 1% 2% 4%;
+  margin: 2px;
 }
 
 .answer-choice:hover {
