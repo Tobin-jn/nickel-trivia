@@ -29,9 +29,13 @@ export class Question extends Component {
     if(!currentQuestion.question){
       return (
         <div className="eror-question">
-          <h1 className="error-question-message">Oops, choose another category</h1>
+          <h1 className="error-question-message">Oops... no more questions, choose another category.</h1>
         </div>
       )
+    } else if (this.props.hasErrored) {
+        return (
+          <h1 className="error-question-message">Game Error</h1>
+        )
     } else {
       return (
         <div>

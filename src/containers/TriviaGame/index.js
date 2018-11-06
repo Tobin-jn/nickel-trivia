@@ -36,10 +36,7 @@ export class TriviaGame extends Component{
           <div className='header-container'>
             <h2 className='choose-text'>Choose a Category</h2>
             <h1 className='game-header'>Nickel Trivia</h1>
-            <div className="score">
-              <h1 className="score-text">Score</h1>
-              <h4 className="score-number">{this.props.score} &cent;</h4>
-            </div>
+            <h2 className="score-text">Score {this.props.score} &cent;</h2>
           </div>
 
           <div className="game-wrapper">
