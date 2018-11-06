@@ -1,9 +1,9 @@
 /* eslint-disable */
 
 import React from "react";
-import { shallow } from "enzyme";
+import { shallow, mount } from "enzyme";
 import { Categories, mapStateToProps, mapDispatchToProps } from "../index";
-import { mockState, mockQuestion, mockQuestions } from './mocks';
+import * as Mocks from './mocks';
 import { 
   updateCategory, 
   updateQuestions, 
@@ -16,7 +16,16 @@ describe("Categories", () => {
   let wrapper;
 
   beforeEach(() => {
-    wrapper = shallow(<Categories />);
+    wrapper = shallow(<Categories 
+      category='animals'
+      questions={Mocks.mockStateQuestions}
+      handleCategory={jest.fn()}
+      updateQuestions={jest.fn()}
+      generateNewQuestion={jest.fn()}
+      addQuestionCount={jest.fn()}
+      toggleAsked={jest.fn()}
+      hasErrored={jest.fn()}
+    />);
   });
 
   it("should exist", () => {
@@ -28,31 +37,99 @@ describe("Categories", () => {
   });
 
   describe('handleClick', () => {
-    it('should call handleCategory with the correct params', () => {})
-    it('should call getTriviaQuestions with the correct params', () => {})
-    it('should call addQuestionCount with the correct params', () => {})
+    beforeEach(() => {
+      wrapper = mount(<Categories
+        category='animals'
+        questions={Mocks.mockStateNoQuestions}
+        handleCategory={jest.fn()}
+        updateQuestions={jest.fn()}
+        generateNewQuestion={jest.fn()}
+        addQuestionCount={jest.fn()}
+        toggleAsked={jest.fn()}
+        hasErrored={jest.fn()}
+      />);
+    })
+    it('should call handleCategory with the correct params', () => {
+      wrapper.instance().handleClick('geography')
+
+      expect(wrapper.props().handleCategory).toHaveBeenCalledWith('geography')
+    })
+
+    it('should call getTriviaQuestions with the correct params', () => {
+      wrapper.instance().getTriviaQuestions = jest.fn()
+
+      wrapper.instance().handleClick('geography')
+      
+      expect(wrapper.instance().getTriviaQuestions).toHaveBeenCalledWith('geography')
+    })
+
+    it('should call addQuestionCount with the correct params', () => {
+      wrapper.instance().handleClick('geography')
+
+      expect(wrapper.props().addQuestionCount).toHaveBeenCalledWith()
+    })
 
   })
 
-  describe('getTriviaQuestions', () => {
-    it('should call generateQuestion with the correct params if checkstate returns false', () => {})
-    it('should call nextQuestion with the correct params if checkstate returns false', () => {})
-    it('should call getQuestions with the correct params', () => {})
-    it('should call updateQuestions with the correct params', () => {})
-    it('should call generateQuestion with the correct params', () => {})
-    it('should call nextQuestion with the correct params', () => {})
-    it('should call hasErrored if there is an error', () => {})
-  })
+  // describe('getTriviaQuestions', () => {
+  //   it('should call generateQuestion with the correct params if checkstate returns false', () => {})
+  //   it('should call nextQuestion with the correct params if checkstate returns false', () => {})
+  //   it('should call getQuestions with the correct params', () => {})
+  //   it('should call updateQuestions with the correct params', () => {})
+  //   it('should call generateQuestion with the correct params', () => {})
+  //   it('should call nextQuestion with the correct params', () => {})
+  //   it('should call hasErrored if there is an error', () => {})
+  // })
 
   describe('checkState', () => {
-    it('should return true if there are questions in the array', () => {})
-    it('should return false if there are not questions in the array', () => {})
+    it('should return false if there are questions in the array', () => {
+      expect(wrapper.instance().checkState('geography')).toEqual(false)
+    })
+
+    it('should return true if there are not questions in the array', () => {
+      wrapper = shallow(<Categories
+        category='animals'
+        questions={Mocks.mockStateNoQuestions}
+        handleCategory={jest.fn()}
+        updateQuestions={jest.fn()}
+        generateNewQuestion={jest.fn()}
+        addQuestionCount={jest.fn()}
+        toggleAsked={jest.fn()}
+        hasErrored={jest.fn()}
+      />);
+
+      expect(wrapper.instance().checkState('geography')).toEqual(true)
+    })
   })
 
   describe('nextQuestion', () => {
-    it('should call generateNewQuestion with the correct params', () => {})
-    it('should call toggleAsked with the correct params', () => {})
-    it('should call updateQuestions with the correct params', () => {})
+    beforeEach(() => {
+      wrapper = mount(<Categories
+        category='animals'
+        questions={Mocks.mockStateNoQuestions}
+        handleCategory={jest.fn()}
+        updateQuestions={jest.fn()}
+        generateNewQuestion={jest.fn()}
+        addQuestionCount={jest.fn()}
+        toggleAsked={jest.fn()}
+        hasErrored={jest.fn()}
+      />);
+    })
+    it('should call generateNewQuestion with the correct params', () => {
+      wrapper.instance().nextQuestion(Mocks.mockQuestion, 'geography', Mocks.mockQuestions)
+
+      expect(wrapper.props().generateNewQuestion).toHaveBeenCalledWith(Mocks.mockQuestion)
+    })
+    it('should call toggleAsked with the correct params', () => {
+      wrapper.instance().nextQuestion(Mocks.mockQuestion, 'geography', Mocks.mockQuestions)
+
+      expect(wrapper.props().toggleAsked).toHaveBeenCalledWith('geography', Mocks.mockQuestion)
+    })
+    it('should call updateQuestions with the correct params', () => {
+      wrapper.instance().nextQuestion(Mocks.mockQuestion, 'geography', Mocks.mockQuestions)
+
+      expect(wrapper.props().updateQuestions).toHaveBeenCalledWith('geography', Mocks.mockQuestions)
+    })
   })
 
 });
@@ -80,7 +157,7 @@ describe('mapStateToProps', () => {
       ]
     }
       
-    const mappedProps = mapStateToProps(mockState)
+    const mappedProps = mapStateToProps(Mocks.mockState)
     expect(mappedProps.questions).toEqual(expected)
   })
 
@@ -88,7 +165,7 @@ describe('mapStateToProps', () => {
   it("should return a category in the props object", () => {
     const expected = 'animals'
       
-    const mappedProps = mapStateToProps(mockState)
+    const mappedProps = mapStateToProps(Mocks.mockState)
     expect(mappedProps.category).toEqual(expected)
   })
 })
@@ -106,19 +183,19 @@ describe('mapDispatchToProps', () => {
   })
 
   it('should call dispatch with updateQuestions action when updateQuestions is called', () => {
-    const actionToDispatch = updateQuestions('geography', mockQuestions)
+    const actionToDispatch = updateQuestions('geography', Mocks.mockQuestions)
 
     const mappedProps = mapDispatchToProps(mockDispatch)
-    mappedProps.updateQuestions('geography', mockQuestions)
+    mappedProps.updateQuestions('geography', Mocks.mockQuestions)
 
     expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch)
   })
 
   it('should call dispatch with updateCurrentQuestion action when generateNewQuestion is called', () => {
-    const actionToDispatch = updateCurrentQuestion(mockQuestion)
+    const actionToDispatch = updateCurrentQuestion(Mocks.mockQuestion)
 
     const mappedProps = mapDispatchToProps(mockDispatch)
-    mappedProps.generateNewQuestion(mockQuestion)
+    mappedProps.generateNewQuestion(Mocks.mockQuestion)
 
     expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch)
   })
@@ -133,10 +210,10 @@ describe('mapDispatchToProps', () => {
   })
 
   it('should call dispatch with toggleAsked action when toggleAsked is called', () => {
-    const actionToDispatch = toggleAsked('geography', mockQuestion)
+    const actionToDispatch = toggleAsked('geography', Mocks.mockQuestion)
 
     const mappedProps = mapDispatchToProps(mockDispatch)
-    mappedProps.toggleAsked('geography', mockQuestion)
+    mappedProps.toggleAsked('geography', Mocks.mockQuestion)
 
     expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch)
   })
