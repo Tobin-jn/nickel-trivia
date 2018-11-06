@@ -15,7 +15,6 @@ import { generateQuestion } from '../../apiCalls/helper'
 import DailyQuestion from '../DailyQuestion'
 import { Route, NavLink, Redirect } from 'react-router-dom';
 
-
 export class Categories extends Component {
 
   handleClick = (category) => {

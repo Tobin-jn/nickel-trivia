@@ -3,7 +3,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 import { DailyQuestion, mapStateToProps, mapDispatchToProps } from "../index";
-import { mockState, mockQuestion, mockQuestions } from './mocks';
+import * as Mocks from './mocks';
 import { 
   updateCategory, 
   updateQuestions, 
@@ -16,7 +16,15 @@ describe("DailyQuestion", () => {
   let wrapper;
 
   beforeEach(() => {
-    wrapper = shallow(<DailyQuestion />);
+    wrapper = shallow(<DailyQuestion
+      category='animals'
+      questions={Mocks.mockStateQuestions}
+      currentQuestion={Mocks.mockQuestion}
+      updateQuestions={jest.fn()}
+      generateNewQuestion={jest.fn()}
+      toggleAsked={jest.fn()}
+      hasErrored={jest.fn()}
+    />);
   });
 
   it("should exist", () => {
@@ -27,31 +35,60 @@ describe("DailyQuestion", () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  describe('getTriviaQuestions', () => {
-    it('should call getQuestions with the correct params', () => {})
-    it('should call updateQuestions with the correct params', () => {})
-    it('should call generateQuestion with the correct params', () => {})
-    it('should call nextQuestion with the correct params', () => {})
-    it('should call hasErrored if there is an error', () => {})
-  })
+  // describe('getTriviaQuestions', () => {
+  //   it('should call getQuestions with the correct params', () => {})
+  //   it('should call updateQuestions with the correct params', () => {})
+  //   it('should call generateQuestion with the correct params', () => {})
+  //   it('should call nextQuestion with the correct params', () => {})
+  //   it('should call hasErrored if there is an error', () => {})
+  // })
 
   describe('checkState', () => {
-    it('should return true if there are questions in the array', () => {})
-    it('should return false if there are not questions in the array', () => {})
+    it('should return false if there are questions in the array', () => {
+      
+      expect(wrapper.instance().checkState('geography')).toEqual(false)
+    })
+
+    it('should return true if there are not questions in the array', () => {
+      wrapper = shallow(<DailyQuestion
+        category='animals'
+        questions={Mocks.mockStateNoQuestions}
+        currentQuestion={Mocks.mockQuestion}
+        updateQuestions={jest.fn()}
+        generateNewQuestion={jest.fn()}
+        toggleAsked={jest.fn()}
+        hasErrored={jest.fn()}
+      />);
+
+      expect(wrapper.instance().checkState('geography')).toEqual(true)
+    })
   })
 
-  describe('nextQuestion', () => {
-    it('should call generateNewQuestion with the correct params', () => {})
-    it('should call toggleAsked with the correct params', () => {})
-    it('should call updateQuestions with the correct params', () => {})
-  })
+//   describe('nextQuestion', () => {
+//     it('should call generateNewQuestion with the correct params', () => {
+//       wrapper.instance().nextQuestion()
+
+//       expect(wrapper.props().generateNewQuestion).toHaveBeenCalled()
+//     })
+
+//     it('should call toggleAsked with the correct params', () => {
+//       wrapper.instance().nextQuestion()
+
+//     })
+
+//     it('should call updateQuestions with the correct params', () => {
+//       wrapper.instance().nextQuestion()
+
+//     })
+
+//   })
 });
 
 describe('mapStateToProps', () => {
   it("should return a category in the props object", () => {
     const expected = 'animals'
       
-    const mappedProps = mapStateToProps(mockState)
+    const mappedProps = mapStateToProps(Mocks.mockState)
     expect(mappedProps.category).toEqual(expected)
   })
 
@@ -77,7 +114,7 @@ describe('mapStateToProps', () => {
       ]
     }
       
-    const mappedProps = mapStateToProps(mockState)
+    const mappedProps = mapStateToProps(Mocks.mockState)
     expect(mappedProps.questions).toEqual(expected)
   })
 
@@ -91,7 +128,7 @@ describe('mapStateToProps', () => {
       asked: false,
     }
 
-  const mappedProps = mapStateToProps(mockState)
+  const mappedProps = mapStateToProps(Mocks.mockState)
   expect(mappedProps.currentQuestion).toEqual(expected)
   })
 })
@@ -100,31 +137,31 @@ describe('mapDispatchToProps', () => {
   const mockDispatch = jest.fn()
   
   it('should call dispatch with updateQuestions action when updateQuestions is called', () => {
-    const actionToDispatch = updateQuestions('geography', mockQuestions)
+    const actionToDispatch = updateQuestions('geography', Mocks.mockQuestions)
 
     const mappedProps = mapDispatchToProps(mockDispatch)
-    mappedProps.updateQuestions('geography', mockQuestions)
+    mappedProps.updateQuestions('geography', Mocks.mockQuestions)
 
     expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch)
   })
 
   it('should call dispatch with updateCurrentQuestion action when generateNewQuestion is called', () => {
-    const actionToDispatch = updateCurrentQuestion(mockQuestion)
+    const actionToDispatch = updateCurrentQuestion(Mocks.mockQuestion)
 
     const mappedProps = mapDispatchToProps(mockDispatch)
-    mappedProps.generateNewQuestion(mockQuestion)
+    mappedProps.generateNewQuestion(Mocks.mockQuestion)
 
     expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch)
   })
 
   it('should call dispatch with toggleAsked action when toggleAsked is called', () => {
-    const actionToDispatch = toggleAsked('geography', mockQuestion)
+    const actionToDispatch = toggleAsked('geography', Mocks.mockQuestion)
 
     const mappedProps = mapDispatchToProps(mockDispatch)
-    mappedProps.toggleAsked('geography', mockQuestion)
+    mappedProps.toggleAsked('geography', Mocks.mockQuestion)
 
     expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch)
   })
 
-  it('should call dispatch with hasErrored action when toggleAsked is called', () => {}
+  // it('should call dispatch with hasErrored action when toggleAsked is called', () => {})
 })

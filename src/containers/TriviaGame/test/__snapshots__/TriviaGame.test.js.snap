@@ -31,20 +31,64 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <h1>
-          Game!
-        </h1>,
-        <Connect(Categories) />,
         <div
-          className="start-game"
+          className="header-container"
         >
-          <h1
-            className="start-game-text"
+          <h2
+            className="choose-text"
           >
-            Choose a category and lets start a Game!
+            Choose a Category
+          </h2>
+          <h1
+            className="game-header"
+          >
+            Nickel Trivia
           </h1>
+          <img
+            alt="nickel"
+            className="nickel-pic"
+            src="nickel.png"
+          />
+          <div
+            className="score"
+          >
+            <h1
+              className="score-text"
+            >
+              Score
+            </h1>
+            <h4
+              className="score-number"
+            >
+              5
+               ¢
+            </h4>
+          </div>
+        </div>,
+        <div
+          className="game-wrapper"
+        >
+          <Connect(Categories) />
+          <div
+            className="question-container"
+          >
+            <div
+              className="question-container-after"
+            />
+            <img
+              alt="Trivia Jar Logo"
+              className="jar-logo-game"
+              src="NickelJar.png"
+            />
+            <h3
+              className="question"
+            >
+              Choose a category and lets start a Game!
+            </h3>
+          </div>
         </div>,
       ],
+      "className": "game",
     },
     "ref": null,
     "rendered": Array [
@@ -53,46 +97,239 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "Game!",
+          "children": Array [
+            <h2
+              className="choose-text"
+            >
+              Choose a Category
+            </h2>,
+            <h1
+              className="game-header"
+            >
+              Nickel Trivia
+            </h1>,
+            <img
+              alt="nickel"
+              className="nickel-pic"
+              src="nickel.png"
+            />,
+            <div
+              className="score"
+            >
+              <h1
+                className="score-text"
+              >
+                Score
+              </h1>
+              <h4
+                className="score-number"
+              >
+                5
+                 ¢
+              </h4>
+            </div>,
+          ],
+          "className": "header-container",
         },
         "ref": null,
-        "rendered": "Game!",
-        "type": "h1",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {},
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Choose a Category",
+              "className": "choose-text",
+            },
+            "ref": null,
+            "rendered": "Choose a Category",
+            "type": "h2",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Nickel Trivia",
+              "className": "game-header",
+            },
+            "ref": null,
+            "rendered": "Nickel Trivia",
+            "type": "h1",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "alt": "nickel",
+              "className": "nickel-pic",
+              "src": "nickel.png",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "img",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <h1
+                  className="score-text"
+                >
+                  Score
+                </h1>,
+                <h4
+                  className="score-number"
+                >
+                  5
+                   ¢
+                </h4>,
+              ],
+              "className": "score",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Score",
+                  "className": "score-text",
+                },
+                "ref": null,
+                "rendered": "Score",
+                "type": "h1",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    5,
+                    " ¢",
+                  ],
+                  "className": "score-number",
+                },
+                "ref": null,
+                "rendered": Array [
+                  5,
+                  " ¢",
+                ],
+                "type": "h4",
+              },
+            ],
+            "type": "div",
+          },
+        ],
+        "type": "div",
       },
       Object {
         "instance": null,
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": <h1
-            className="start-game-text"
-          >
-            Choose a category and lets start a Game!
-          </h1>,
-          "className": "start-game",
+          "children": Array [
+            <Connect(Categories) />,
+            <div
+              className="question-container"
+            >
+              <div
+                className="question-container-after"
+              />
+              <img
+                alt="Trivia Jar Logo"
+                className="jar-logo-game"
+                src="NickelJar.png"
+              />
+              <h3
+                className="question"
+              >
+                Choose a category and lets start a Game!
+              </h3>
+            </div>,
+          ],
+          "className": "game-wrapper",
         },
         "ref": null,
-        "rendered": Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "Choose a category and lets start a Game!",
-            "className": "start-game-text",
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {},
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
           },
-          "ref": null,
-          "rendered": "Choose a category and lets start a Game!",
-          "type": "h1",
-        },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <div
+                  className="question-container-after"
+                />,
+                <img
+                  alt="Trivia Jar Logo"
+                  className="jar-logo-game"
+                  src="NickelJar.png"
+                />,
+                <h3
+                  className="question"
+                >
+                  Choose a category and lets start a Game!
+                </h3>,
+              ],
+              "className": "question-container",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "className": "question-container-after",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "alt": "Trivia Jar Logo",
+                  "className": "jar-logo-game",
+                  "src": "NickelJar.png",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "img",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Choose a category and lets start a Game!",
+                  "className": "question",
+                },
+                "ref": null,
+                "rendered": "Choose a category and lets start a Game!",
+                "type": "h3",
+              },
+            ],
+            "type": "div",
+          },
+        ],
         "type": "div",
       },
     ],
@@ -105,20 +342,64 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <h1>
-            Game!
-          </h1>,
-          <Connect(Categories) />,
           <div
-            className="start-game"
+            className="header-container"
           >
-            <h1
-              className="start-game-text"
+            <h2
+              className="choose-text"
             >
-              Choose a category and lets start a Game!
+              Choose a Category
+            </h2>
+            <h1
+              className="game-header"
+            >
+              Nickel Trivia
             </h1>
+            <img
+              alt="nickel"
+              className="nickel-pic"
+              src="nickel.png"
+            />
+            <div
+              className="score"
+            >
+              <h1
+                className="score-text"
+              >
+                Score
+              </h1>
+              <h4
+                className="score-number"
+              >
+                5
+                 ¢
+              </h4>
+            </div>
+          </div>,
+          <div
+            className="game-wrapper"
+          >
+            <Connect(Categories) />
+            <div
+              className="question-container"
+            >
+              <div
+                className="question-container-after"
+              />
+              <img
+                alt="Trivia Jar Logo"
+                className="jar-logo-game"
+                src="NickelJar.png"
+              />
+              <h3
+                className="question"
+              >
+                Choose a category and lets start a Game!
+              </h3>
+            </div>
           </div>,
         ],
+        "className": "game",
       },
       "ref": null,
       "rendered": Array [
@@ -127,46 +408,239 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "Game!",
+            "children": Array [
+              <h2
+                className="choose-text"
+              >
+                Choose a Category
+              </h2>,
+              <h1
+                className="game-header"
+              >
+                Nickel Trivia
+              </h1>,
+              <img
+                alt="nickel"
+                className="nickel-pic"
+                src="nickel.png"
+              />,
+              <div
+                className="score"
+              >
+                <h1
+                  className="score-text"
+                >
+                  Score
+                </h1>
+                <h4
+                  className="score-number"
+                >
+                  5
+                   ¢
+                </h4>
+              </div>,
+            ],
+            "className": "header-container",
           },
           "ref": null,
-          "rendered": "Game!",
-          "type": "h1",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {},
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Choose a Category",
+                "className": "choose-text",
+              },
+              "ref": null,
+              "rendered": "Choose a Category",
+              "type": "h2",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Nickel Trivia",
+                "className": "game-header",
+              },
+              "ref": null,
+              "rendered": "Nickel Trivia",
+              "type": "h1",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "alt": "nickel",
+                "className": "nickel-pic",
+                "src": "nickel.png",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "img",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <h1
+                    className="score-text"
+                  >
+                    Score
+                  </h1>,
+                  <h4
+                    className="score-number"
+                  >
+                    5
+                     ¢
+                  </h4>,
+                ],
+                "className": "score",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Score",
+                    "className": "score-text",
+                  },
+                  "ref": null,
+                  "rendered": "Score",
+                  "type": "h1",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      5,
+                      " ¢",
+                    ],
+                    "className": "score-number",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    5,
+                    " ¢",
+                  ],
+                  "type": "h4",
+                },
+              ],
+              "type": "div",
+            },
+          ],
+          "type": "div",
         },
         Object {
           "instance": null,
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": <h1
-              className="start-game-text"
-            >
-              Choose a category and lets start a Game!
-            </h1>,
-            "className": "start-game",
+            "children": Array [
+              <Connect(Categories) />,
+              <div
+                className="question-container"
+              >
+                <div
+                  className="question-container-after"
+                />
+                <img
+                  alt="Trivia Jar Logo"
+                  className="jar-logo-game"
+                  src="NickelJar.png"
+                />
+                <h3
+                  className="question"
+                >
+                  Choose a category and lets start a Game!
+                </h3>
+              </div>,
+            ],
+            "className": "game-wrapper",
           },
           "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "Choose a category and lets start a Game!",
-              "className": "start-game-text",
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {},
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
             },
-            "ref": null,
-            "rendered": "Choose a category and lets start a Game!",
-            "type": "h1",
-          },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <div
+                    className="question-container-after"
+                  />,
+                  <img
+                    alt="Trivia Jar Logo"
+                    className="jar-logo-game"
+                    src="NickelJar.png"
+                  />,
+                  <h3
+                    className="question"
+                  >
+                    Choose a category and lets start a Game!
+                  </h3>,
+                ],
+                "className": "question-container",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "className": "question-container-after",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "alt": "Trivia Jar Logo",
+                    "className": "jar-logo-game",
+                    "src": "NickelJar.png",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "img",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Choose a category and lets start a Game!",
+                    "className": "question",
+                  },
+                  "ref": null,
+                  "rendered": "Choose a category and lets start a Game!",
+                  "type": "h3",
+                },
+              ],
+              "type": "div",
+            },
+          ],
           "type": "div",
         },
       ],

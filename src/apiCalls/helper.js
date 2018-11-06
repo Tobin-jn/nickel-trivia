@@ -1,14 +1,11 @@
-export const generalKnowledge = { amount: 50, category: 9}
-  
-export const geography = { amount: 50, category: 22}
-
-export const history = { amount: 40, category: 23}
-  
-export const cartoons = { amount: 18, category: 32 }
-
-export const animals = { amount: 9, category: 27}
-
-export const vehicles = { amount: 17, category: 28}
+export const categories = {
+  generalKnowledge: { amount: 50, category: 9},
+  geography: { amount: 50, category: 22},
+  history: { amount: 40, category: 23},
+  cartoons: { amount: 18, category: 32 },
+  animals: { amount: 9, category: 27},
+  vehicles: { amount: 17, category: 28}
+}
 
 
 const shuffleAnswers = (questionChoices) => {

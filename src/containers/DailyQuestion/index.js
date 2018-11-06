@@ -52,8 +52,6 @@ export class DailyQuestion extends Component {
       </div>
     );
   }
-          // <img className='jar-logo' src={ require('../../images/NickelJar.png') } alt="Trivia Jar Logo"/>
-
 }
 
 export const mapStateToProps = state => ({

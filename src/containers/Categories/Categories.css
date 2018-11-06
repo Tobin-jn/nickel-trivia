@@ -20,6 +20,7 @@
   transition: all 0.3s;
   height: 98px;
   border-radius: 26% 6% 5% 4% / 9% 6% 7% 2%;
+  box-shadow: 1px 7px 15px 5px rgba(0,0,0,0.5);
 }
 
 .category:hover {

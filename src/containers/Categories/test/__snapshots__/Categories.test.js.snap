@@ -3,7 +3,37 @@
 exports[`Categories should match snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Categories />,
+  Symbol(enzyme.__unrendered__): <Categories
+    addQuestionCount={[MockFunction]}
+    category="animals"
+    generateNewQuestion={[MockFunction]}
+    handleCategory={[MockFunction]}
+    hasErrored={[MockFunction]}
+    questions={
+      Object {
+        "geography": Array [
+          Object {
+            "answers": Array [],
+            "asked": false,
+            "category": "Geography",
+            "correct_answer": "Washington D.C",
+            "id": 1,
+            "question": "Which city is the capital of the United States of America?",
+          },
+          Object {
+            "answers": Array [],
+            "asked": false,
+            "category": "Geography",
+            "correct_answer": "Phoenix",
+            "id": 2,
+            "question": "What is the capital of the American state of Arizona?",
+          },
+        ],
+      }
+    }
+    toggleAsked={[MockFunction]}
+    updateQuestions={[MockFunction]}
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -17,209 +47,105 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": Array [
-        <h1>
-          Categories
-        </h1>,
+      "children": <div
+        className="categories"
+      >
         <button
           className="category"
           name="generalKnowledge"
           onClick={[Function]}
         >
-          General Knowledge
-        </button>,
+          General Store
+        </button>
         <button
           className="category"
           name="geography"
           onClick={[Function]}
         >
-          Geography
-        </button>,
+          Where in the World
+        </button>
         <button
           className="category"
           name="history"
           onClick={[Function]}
         >
-          History
-        </button>,
+          When I was a kid...
+        </button>
         <button
           className="category"
           name="animals"
           onClick={[Function]}
         >
-          Animals
-        </button>,
+          Lions, Tigers, & Bears
+        </button>
         <button
           className="category"
           name="vehicles"
           onClick={[Function]}
         >
-          Vehicles
-        </button>,
+          Planes, Trains & Automobiles
+        </button>
         <button
           className="category"
           name="cartoons"
           onClick={[Function]}
         >
-          Cartoons and Animations
-        </button>,
-      ],
+          Your Grandkid's Favorite Movie
+        </button>
+      </div>,
       "className": "categories-container",
     },
     "ref": null,
-    "rendered": Array [
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "Categories",
-        },
-        "ref": null,
-        "rendered": "Categories",
-        "type": "h1",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "General Knowledge",
-          "className": "category",
-          "name": "generalKnowledge",
-          "onClick": [Function],
-        },
-        "ref": null,
-        "rendered": "General Knowledge",
-        "type": "button",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "Geography",
-          "className": "category",
-          "name": "geography",
-          "onClick": [Function],
-        },
-        "ref": null,
-        "rendered": "Geography",
-        "type": "button",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "History",
-          "className": "category",
-          "name": "history",
-          "onClick": [Function],
-        },
-        "ref": null,
-        "rendered": "History",
-        "type": "button",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "Animals",
-          "className": "category",
-          "name": "animals",
-          "onClick": [Function],
-        },
-        "ref": null,
-        "rendered": "Animals",
-        "type": "button",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "Vehicles",
-          "className": "category",
-          "name": "vehicles",
-          "onClick": [Function],
-        },
-        "ref": null,
-        "rendered": "Vehicles",
-        "type": "button",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "Cartoons and Animations",
-          "className": "category",
-          "name": "cartoons",
-          "onClick": [Function],
-        },
-        "ref": null,
-        "rendered": "Cartoons and Animations",
-        "type": "button",
-      },
-    ],
-    "type": "div",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
+    "rendered": Object {
       "instance": null,
       "key": undefined,
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <h1>
-            Categories
-          </h1>,
           <button
             className="category"
             name="generalKnowledge"
             onClick={[Function]}
           >
-            General Knowledge
+            General Store
           </button>,
           <button
             className="category"
             name="geography"
             onClick={[Function]}
           >
-            Geography
+            Where in the World
           </button>,
           <button
             className="category"
             name="history"
             onClick={[Function]}
           >
-            History
+            When I was a kid...
           </button>,
           <button
             className="category"
             name="animals"
             onClick={[Function]}
           >
-            Animals
+            Lions, Tigers, & Bears
           </button>,
           <button
             className="category"
             name="vehicles"
             onClick={[Function]}
           >
-            Vehicles
+            Planes, Trains & Automobiles
           </button>,
           <button
             className="category"
             name="cartoons"
             onClick={[Function]}
           >
-            Cartoons and Animations
+            Your Grandkid's Favorite Movie
           </button>,
         ],
-        "className": "categories-container",
+        "className": "categories",
       },
       "ref": null,
       "rendered": Array [
@@ -228,24 +154,13 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "Categories",
-          },
-          "ref": null,
-          "rendered": "Categories",
-          "type": "h1",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "General Knowledge",
+            "children": "General Store",
             "className": "category",
             "name": "generalKnowledge",
             "onClick": [Function],
           },
           "ref": null,
-          "rendered": "General Knowledge",
+          "rendered": "General Store",
           "type": "button",
         },
         Object {
@@ -253,13 +168,13 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "Geography",
+            "children": "Where in the World",
             "className": "category",
             "name": "geography",
             "onClick": [Function],
           },
           "ref": null,
-          "rendered": "Geography",
+          "rendered": "Where in the World",
           "type": "button",
         },
         Object {
@@ -267,13 +182,13 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "History",
+            "children": "When I was a kid...",
             "className": "category",
             "name": "history",
             "onClick": [Function],
           },
           "ref": null,
-          "rendered": "History",
+          "rendered": "When I was a kid...",
           "type": "button",
         },
         Object {
@@ -281,13 +196,13 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "Animals",
+            "children": "Lions, Tigers, & Bears",
             "className": "category",
             "name": "animals",
             "onClick": [Function],
           },
           "ref": null,
-          "rendered": "Animals",
+          "rendered": "Lions, Tigers, & Bears",
           "type": "button",
         },
         Object {
@@ -295,13 +210,13 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "Vehicles",
+            "children": "Planes, Trains & Automobiles",
             "className": "category",
             "name": "vehicles",
             "onClick": [Function],
           },
           "ref": null,
-          "rendered": "Vehicles",
+          "rendered": "Planes, Trains & Automobiles",
           "type": "button",
         },
         Object {
@@ -309,16 +224,215 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "Cartoons and Animations",
+            "children": "Your Grandkid's Favorite Movie",
             "className": "category",
             "name": "cartoons",
             "onClick": [Function],
           },
           "ref": null,
-          "rendered": "Cartoons and Animations",
+          "rendered": "Your Grandkid's Favorite Movie",
           "type": "button",
         },
       ],
+      "type": "div",
+    },
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <div
+          className="categories"
+        >
+          <button
+            className="category"
+            name="generalKnowledge"
+            onClick={[Function]}
+          >
+            General Store
+          </button>
+          <button
+            className="category"
+            name="geography"
+            onClick={[Function]}
+          >
+            Where in the World
+          </button>
+          <button
+            className="category"
+            name="history"
+            onClick={[Function]}
+          >
+            When I was a kid...
+          </button>
+          <button
+            className="category"
+            name="animals"
+            onClick={[Function]}
+          >
+            Lions, Tigers, & Bears
+          </button>
+          <button
+            className="category"
+            name="vehicles"
+            onClick={[Function]}
+          >
+            Planes, Trains & Automobiles
+          </button>
+          <button
+            className="category"
+            name="cartoons"
+            onClick={[Function]}
+          >
+            Your Grandkid's Favorite Movie
+          </button>
+        </div>,
+        "className": "categories-container",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <button
+              className="category"
+              name="generalKnowledge"
+              onClick={[Function]}
+            >
+              General Store
+            </button>,
+            <button
+              className="category"
+              name="geography"
+              onClick={[Function]}
+            >
+              Where in the World
+            </button>,
+            <button
+              className="category"
+              name="history"
+              onClick={[Function]}
+            >
+              When I was a kid...
+            </button>,
+            <button
+              className="category"
+              name="animals"
+              onClick={[Function]}
+            >
+              Lions, Tigers, & Bears
+            </button>,
+            <button
+              className="category"
+              name="vehicles"
+              onClick={[Function]}
+            >
+              Planes, Trains & Automobiles
+            </button>,
+            <button
+              className="category"
+              name="cartoons"
+              onClick={[Function]}
+            >
+              Your Grandkid's Favorite Movie
+            </button>,
+          ],
+          "className": "categories",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "General Store",
+              "className": "category",
+              "name": "generalKnowledge",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "General Store",
+            "type": "button",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Where in the World",
+              "className": "category",
+              "name": "geography",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "Where in the World",
+            "type": "button",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "When I was a kid...",
+              "className": "category",
+              "name": "history",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "When I was a kid...",
+            "type": "button",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Lions, Tigers, & Bears",
+              "className": "category",
+              "name": "animals",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "Lions, Tigers, & Bears",
+            "type": "button",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Planes, Trains & Automobiles",
+              "className": "category",
+              "name": "vehicles",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "Planes, Trains & Automobiles",
+            "type": "button",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Your Grandkid's Favorite Movie",
+              "className": "category",
+              "name": "cartoons",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "Your Grandkid's Favorite Movie",
+            "type": "button",
+          },
+        ],
+        "type": "div",
+      },
       "type": "div",
     },
   ],
