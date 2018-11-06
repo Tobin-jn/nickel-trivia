@@ -83,6 +83,10 @@
   box-shadow: 7px 14px 19px 9px rgba(0,0,0,0.5)
 }
 
+.daily-answer-response {
+ left: 300px;
+}
+
 .answer-text {
   font-size: 1.8em;
   text-align: center;

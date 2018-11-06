@@ -22,50 +22,41 @@ export class Question extends Component {
     } else {
       this.setState({ correct: 'incorrect' })
     }
-    await setTimeout(this.removeAlert, 3000)
+    await setTimeout(this.removeAlert, 3500)
   }
 
   removeAlert = () => {
     this.setState({ correct: 'no answer' })
   }
 
-
-  // handleFingerPrint = async () => {
-  //   await this.setState({thumbprint: 'active-thumbprint'});
-  //   await setTimeout(this.printConnect, 500);
-  //   await setTimeout(this.printHandshake, 2500);
-  //   await setTimeout(this.printWelcome, 5000);
-  //   await setTimeout(this.printBriefing, 6500);
-  //   await setTimeout(this.props.setReady, 6500);
-  // }
-
-  // printConnect = async () => {
-  //   await this.setState({securing: 'print-securing'});
-  // }
-
-  // printHandshake = async () => {
-  //   await this.setState({handshake: 'print-handshake'});
-  // }
-
-
-
   render() {
     const { currentQuestion } = this.props
     let answerAlert;
 
-    if(this.state.correct === 'correct' ){
+    if(this.state.correct === 'correct' && window.location.pathname === '/triviagame'){
       answerAlert = 
         <div className='answer-response'>
           <p className='answer-text' ><span className='correct' >Correct Answer!!</span> Choose a category for your next question.</p>
           <img className='nickel-logo-answer' src={ require('../../images/nickel.png') } alt="Nickel Jar Logo" />
         </div>
-    } else if (this.state.correct === 'incorrect'){
+    } else if (this.state.correct === 'incorrect' && window.location.pathname === '/triviagame'){
       answerAlert = 
         <div className="answer-response">
           <p className='answer-text' >Sorry, the correct answer was {currentQuestion.correct_answer}. Choose a category for your next question.</p>
         </div>
+    } else if (this.state.correct === 'correct' && window.location.pathname === '/dailyquestion'){
+      answerAlert = 
+        <div className='answer-response daily-answer-response'>
+          <p className='answer-text' ><span className='correct' >Correct Answer!!</span> Start a game with your grandkids!</p>
+          <img className='nickel-logo-answer' src={ require('../../images/nickel.png') } alt="Nickel Jar Logo" />
+        </div>
+    } else if(this.state.correct === 'incorrect' && window.location.pathname === '/dailyquestion'){
+      answerAlert = 
+        <div className="answer-response daily-answer-response">
+          <p className='answer-text' >Sorry, the correct answer was {currentQuestion.correct_answer}. Play a game with your grandkids!</p>
+        </div>
     } else {
-      answerAlert = <div className="answer-response answer-response-hidden"></div>
+      answerAlert = <div className="daily-answer-response answer-response-hidden"></div>
     }
 
 
