@@ -65,7 +65,7 @@ export class Categories extends Component {
     // } else {
       return (
         <div className='categories-container'>
-          <h1>Categories</h1>
+
           <div className="categories">
             <button 
               className="category"

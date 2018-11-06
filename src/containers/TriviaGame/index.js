@@ -12,7 +12,8 @@ export class TriviaGame extends Component{
     if (this.props.gameCount === 0) {
       return (
         <div className='game'>
-          <h1 className='game-header'>Game!</h1>
+          <h2>Choose a Category</h2>
+          <h1 className='game-header'>Nickel Trivia</h1>
           <div className="game-wrapper">
             <Categories />
             <div className="start-game">
@@ -25,8 +26,8 @@ export class TriviaGame extends Component{
       return (
         <div className='game'>
           <div className="header-container">
-            <div className="score-team-two"></div>
-            <h1 className='game-header'>Game!</h1>
+            <h2>Choose a Category</h2>
+            <h1 className='game-header'>Nickel Trivia</h1>
             <div className="score">
               <h1 className="score-text">Score</h1>
               <h4 className="score-number">{this.props.score} Cents</h4>

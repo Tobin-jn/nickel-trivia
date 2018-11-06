@@ -6,8 +6,32 @@
   display: flex;
   flex-direction: column;
 }
-
+/*
 .category {
   font-size: 1.5em;
   height: 80px;
+}*/
+
+.category  {
+    border: black thin solid;
+    font-family: inherit;
+    font-size: 1.1em;
+    color: black;
+    background: #dfc040;
+    cursor: pointer;
+    padding: 18px 80px;
+    display: inline-block;
+    margin: 3px 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    height: 95px;
+
+}
+
+.category :hover {
+  color: #0e83cd;
+  background: #fff;
 }
