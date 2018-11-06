@@ -11,6 +11,7 @@
   text-align: center;
   height: 230px;
   overflow-y: scroll;
+  box-shadow: 1px 7px 15px 5px rgba(0,0,0,0.5);
 }
       
 .question  {
@@ -42,6 +43,7 @@
   overflow-y: scroll;
   border-radius: 10% 6% 5% 4% / 9% 6% 7% 2%;
   margin: 2px;
+  box-shadow: 1px 7px 15px 5px rgba(0,0,0,0.5);
 }
 
 .answer-choice:hover {

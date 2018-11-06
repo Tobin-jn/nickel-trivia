@@ -12,7 +12,7 @@
 
 .choose-text {
   font-size: 2em;
-  margin: 66px 0px 0px -15px;
+  margin-top: 50px;
   font-family: 'Chelsea Market', cursive;
   color: #0d2d1d;
 }
@@ -37,7 +37,6 @@
 .score {
   display: flex;
   flex-direction: row;
-  font-family: 'Chelsea Market', cursive;
   margin: 10px;
 }
 
@@ -49,18 +48,12 @@
 }
 
 .score-text {
+  font-family: 'Chelsea Market', cursive;
+  font-size: 2em;
   text-align: center;
-  margin: 30px 25px 0px 0px;
+  margin-top: 50px;
   z-index: 10;
 }
-
-.score-number {
-  text-align: center;
-  font-size: 2.3em;
-  z-index: 10;
-  margin-top: 30px;
-}
-
 
 @media screen and (max-width: 1150px) {
   .category {
