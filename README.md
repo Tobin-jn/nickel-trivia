@@ -55,4 +55,3 @@ Run with ```npm test``` from the root directory
 ### Contributors
 
 * Tobin Nelson: [Github Profile](https://github.com/Tobin-jn)
-
