@@ -61,37 +61,37 @@ export class Categories extends Component {
 
           <div className="categories">
             <button 
-              className="category"
+              className="category generalKnowledge"
               name='generalKnowledge'
               onClick={()=> {this.handleClick('generalKnowledge')}}
               >General Store
             </button>
             <button 
-              className="category"
+              className="category geography"
               name='geography'
               onClick={()=> {this.handleClick('geography')}}
               >Where in the World
             </button>
             <button 
-              className="category"
+              className="category history"
               name='history'
               onClick={()=> {this.handleClick('history')}}
               >When I was a kid...
             </button>
             <button 
-              className="category"
+              className="category animals"
               name='animals'
               onClick={()=> {this.handleClick('animals')}}
               >Lions, Tigers, & Bears
             </button>
             <button 
-              className="category"
+              className="category vehicles"
               name='vehicles'
               onClick={()=> {this.handleClick('vehicles')}}
               >Planes, Trains & Automobiles
             </button>
             <button 
-              className="category"
+              className="category cartoons"
               name='cartoons'
               onClick={()=> {this.handleClick('cartoons')}}
               >Your Grandkid's Favorite Movie

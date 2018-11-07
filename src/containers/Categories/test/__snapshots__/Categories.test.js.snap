@@ -51,42 +51,42 @@ ShallowWrapper {
         className="categories"
       >
         <button
-          className="category"
+          className="category generalKnowledge"
           name="generalKnowledge"
           onClick={[Function]}
         >
           General Store
         </button>
         <button
-          className="category"
+          className="category geography"
           name="geography"
           onClick={[Function]}
         >
           Where in the World
         </button>
         <button
-          className="category"
+          className="category history"
           name="history"
           onClick={[Function]}
         >
           When I was a kid...
         </button>
         <button
-          className="category"
+          className="category animals"
           name="animals"
           onClick={[Function]}
         >
           Lions, Tigers, & Bears
         </button>
         <button
-          className="category"
+          className="category vehicles"
           name="vehicles"
           onClick={[Function]}
         >
           Planes, Trains & Automobiles
         </button>
         <button
-          className="category"
+          className="category cartoons"
           name="cartoons"
           onClick={[Function]}
         >
@@ -103,42 +103,42 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <button
-            className="category"
+            className="category generalKnowledge"
             name="generalKnowledge"
             onClick={[Function]}
           >
             General Store
           </button>,
           <button
-            className="category"
+            className="category geography"
             name="geography"
             onClick={[Function]}
           >
             Where in the World
           </button>,
           <button
-            className="category"
+            className="category history"
             name="history"
             onClick={[Function]}
           >
             When I was a kid...
           </button>,
           <button
-            className="category"
+            className="category animals"
             name="animals"
             onClick={[Function]}
           >
             Lions, Tigers, & Bears
           </button>,
           <button
-            className="category"
+            className="category vehicles"
             name="vehicles"
             onClick={[Function]}
           >
             Planes, Trains & Automobiles
           </button>,
           <button
-            className="category"
+            className="category cartoons"
             name="cartoons"
             onClick={[Function]}
           >
@@ -155,7 +155,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": "General Store",
-            "className": "category",
+            "className": "category generalKnowledge",
             "name": "generalKnowledge",
             "onClick": [Function],
           },
@@ -169,7 +169,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": "Where in the World",
-            "className": "category",
+            "className": "category geography",
             "name": "geography",
             "onClick": [Function],
           },
@@ -183,7 +183,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": "When I was a kid...",
-            "className": "category",
+            "className": "category history",
             "name": "history",
             "onClick": [Function],
           },
@@ -197,7 +197,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": "Lions, Tigers, & Bears",
-            "className": "category",
+            "className": "category animals",
             "name": "animals",
             "onClick": [Function],
           },
@@ -211,7 +211,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": "Planes, Trains & Automobiles",
-            "className": "category",
+            "className": "category vehicles",
             "name": "vehicles",
             "onClick": [Function],
           },
@@ -225,7 +225,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": "Your Grandkid's Favorite Movie",
-            "className": "category",
+            "className": "category cartoons",
             "name": "cartoons",
             "onClick": [Function],
           },
@@ -248,42 +248,42 @@ ShallowWrapper {
           className="categories"
         >
           <button
-            className="category"
+            className="category generalKnowledge"
             name="generalKnowledge"
             onClick={[Function]}
           >
             General Store
           </button>
           <button
-            className="category"
+            className="category geography"
             name="geography"
             onClick={[Function]}
           >
             Where in the World
           </button>
           <button
-            className="category"
+            className="category history"
             name="history"
             onClick={[Function]}
           >
             When I was a kid...
           </button>
           <button
-            className="category"
+            className="category animals"
             name="animals"
             onClick={[Function]}
           >
             Lions, Tigers, & Bears
           </button>
           <button
-            className="category"
+            className="category vehicles"
             name="vehicles"
             onClick={[Function]}
           >
             Planes, Trains & Automobiles
           </button>
           <button
-            className="category"
+            className="category cartoons"
             name="cartoons"
             onClick={[Function]}
           >
@@ -300,42 +300,42 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <button
-              className="category"
+              className="category generalKnowledge"
               name="generalKnowledge"
               onClick={[Function]}
             >
               General Store
             </button>,
             <button
-              className="category"
+              className="category geography"
               name="geography"
               onClick={[Function]}
             >
               Where in the World
             </button>,
             <button
-              className="category"
+              className="category history"
               name="history"
               onClick={[Function]}
             >
               When I was a kid...
             </button>,
             <button
-              className="category"
+              className="category animals"
               name="animals"
               onClick={[Function]}
             >
               Lions, Tigers, & Bears
             </button>,
             <button
-              className="category"
+              className="category vehicles"
               name="vehicles"
               onClick={[Function]}
             >
               Planes, Trains & Automobiles
             </button>,
             <button
-              className="category"
+              className="category cartoons"
               name="cartoons"
               onClick={[Function]}
             >
@@ -352,7 +352,7 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": "General Store",
-              "className": "category",
+              "className": "category generalKnowledge",
               "name": "generalKnowledge",
               "onClick": [Function],
             },
@@ -366,7 +366,7 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": "Where in the World",
-              "className": "category",
+              "className": "category geography",
               "name": "geography",
               "onClick": [Function],
             },
@@ -380,7 +380,7 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": "When I was a kid...",
-              "className": "category",
+              "className": "category history",
               "name": "history",
               "onClick": [Function],
             },
@@ -394,7 +394,7 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": "Lions, Tigers, & Bears",
-              "className": "category",
+              "className": "category animals",
               "name": "animals",
               "onClick": [Function],
             },
@@ -408,7 +408,7 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": "Planes, Trains & Automobiles",
-              "className": "category",
+              "className": "category vehicles",
               "name": "vehicles",
               "onClick": [Function],
             },
@@ -422,7 +422,7 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": "Your Grandkid's Favorite Movie",
-              "className": "category",
+              "className": "category cartoons",
               "name": "cartoons",
               "onClick": [Function],
             },

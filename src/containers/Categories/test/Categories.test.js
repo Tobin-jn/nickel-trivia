@@ -40,6 +40,54 @@ describe("Categories", () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it('should call handleClick with generalKnowledge', () => {
+    wrapper.instance().handleClick = jest.fn()
+
+    wrapper.find('.generalKnowledge').simulate('click')
+
+    expect(wrapper.instance().handleClick).toHaveBeenCalledWith('generalKnowledge')
+  })
+
+  it('should call handleClick with geography', () => {
+    wrapper.instance().handleClick = jest.fn()
+
+    wrapper.find('.geography').simulate('click')
+
+    expect(wrapper.instance().handleClick).toHaveBeenCalledWith('geography')
+  })
+
+  it('should call handleClick with history', () => {
+    wrapper.instance().handleClick = jest.fn()
+
+    wrapper.find('.history').simulate('click')
+
+    expect(wrapper.instance().handleClick).toHaveBeenCalledWith('history')
+  })
+
+  it('should call handleClick with animals', () => {
+    wrapper.instance().handleClick = jest.fn()
+
+    wrapper.find('.animals').simulate('click')
+
+    expect(wrapper.instance().handleClick).toHaveBeenCalledWith('animals')
+  })
+
+  it('should call handleClick with vehicles', () => {
+    wrapper.instance().handleClick = jest.fn()
+
+    wrapper.find('.vehicles').simulate('click')
+
+    expect(wrapper.instance().handleClick).toHaveBeenCalledWith('vehicles')
+  })
+
+  it('should call handleClick with cartoons', () => {
+    wrapper.instance().handleClick = jest.fn()
+
+    wrapper.find('.cartoons').simulate('click')
+
+    expect(wrapper.instance().handleClick).toHaveBeenCalledWith('cartoons')
+  })
+
   describe('handleClick', () => {
     beforeEach(() => {
       wrapper = mount(<Categories
