@@ -56,10 +56,6 @@
 }
 
 @media screen and (max-width: 1150px) {
-  .category {
-    font-size: 1.1em;
-  }
-
   .choose-text {
     font-size: 1.7em;
   }
@@ -73,6 +69,8 @@
   }
 }
 
+
+
 @media screen and (max-width: 800px) {
   .choose-text {
     visibility: hidden;
@@ -84,41 +82,40 @@
     left: 20px;
   }
 
-  .score {
-    position: absolute;
-    left: 400px;
+  .score-text {
+    font-size: 1.5em;
   }
 
   .nickel-pic {
     top: 10px;
   }
 
-  .categories {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    width: 200px;
-  }
-
-  .question-container {
-    top: 205px;
-    width: 100%;
-    left: -200px;
-  }
-
   .game-wrapper {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
   }
 
-  .answer-container {
-    top: 205px;
-    width: 100%;
-    left: -200px;
-    position: relative;
+  .categories-container {
+    display: grid;
   }
 
   .answer-choice {
     font-size: 1em;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .header-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .game-header {
+    font-size: 3em;
+    position: absolute;
   }
 
 }

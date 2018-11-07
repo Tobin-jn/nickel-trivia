@@ -47,3 +47,32 @@
     font-size: 3.5em;
   }
 }
+
+@media screen and (max-width: 725px) {
+  .header-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .daily-header {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+  }
+
+  .jar-logo {
+    visibility: hidden;
+  }
+
+  .play-game-btn {
+    margin-top: 0px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .daily-header {
+    font-size: 2.5em;
+  }
+}
+
