@@ -63,3 +63,56 @@ html, body {
   color: #0e83cd;
   background: #fff;
 }
+
+@media screen and (max-width: 1000px) {
+  .btn-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: auto;
+  }
+
+  .title {
+    color: #e76f1c;
+    font-family: 'Spicy Rice', cursive;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+    top: 75px;
+    z-index: 10;
+  }
+
+
+  .trivia-text {
+    font-size: 3em;
+  }
+  .btn {
+    width: 85%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+/*  .btn-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: auto;
+  }
+
+  .title {
+    color: #e76f1c;
+    font-family: 'Spicy Rice', cursive;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+    top: 75px;
+    z-index: 10;
+  }*/
+
+  .trivia-text {
+    font-size: 2em;
+  }
+
+}
