@@ -26,17 +26,17 @@ describe('Question', () => {
 
   describe('checkAnswer', () => {
     it('should setState if the answer is correct', () => {
-      wrapper.setState({ answerMessage: '' })
+      wrapper.setState({ correct: '' })
 
       wrapper.instance().checkAnswer(0)
-      expect(wrapper.state().answerMessage).toEqual('Correct Answer!!')
+      expect(wrapper.state().correct).toEqual('correct')
     })
 
     it('should setState if the answer is incorrect', () => {
-      wrapper.setState({ answerMessage: '' })
+      wrapper.setState({ correct: '' })
 
       wrapper.instance().checkAnswer(1)
-      expect(wrapper.state().answerMessage).toEqual(`Sorry, the correct answer was ${mockQuestion.correct_answer}` )
+      expect(wrapper.state().correct).toEqual('incorrect')
     })
   })
 

@@ -165,5 +165,12 @@ describe('mapDispatchToProps', () => {
     expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch)
   })
 
-  // it('should call dispatch with hasErrored action when toggleAsked is called', () => {})
+  it('should call dispatch with hasErrored action when hasErrored is called', () => {
+    const actionToDispatch = hasErrored(true)
+
+    const mappedProps = mapDispatchToProps(mockDispatch)
+    mappedProps.hasErrored(true)
+
+    expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch)
+  })
 })
