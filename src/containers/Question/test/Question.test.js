@@ -1,5 +1,5 @@
 import React from 'react'
-import { shallow } from 'enzyme'
+import { shallow, mount } from 'enzyme'
 import { mockState, mockQuestion, mockQuestions } from './mocks';
 import { addPoints } from '../../../actions'
 import { Question, mapStateToProps, mapDispatchToProps } from '../index'
@@ -40,6 +40,16 @@ describe('Question', () => {
     })
   })
 
+  describe('removeAlert', () => {
+    it('should setState when removeAlert is called', () => {
+      wrapper.setState({ correct: '' })
+
+      wrapper.instance().removeAlert()
+
+      expect(wrapper.state().correct).toEqual('no answer')
+    })
+  })
+
   it('should render a question and 4 answers if there is a currentQuestion', () => {
     expect(wrapper.find('.question').length).toEqual(1)
     expect(wrapper.find('.answer-choice').length).toEqual(4)
@@ -57,13 +67,53 @@ describe('Question', () => {
     expect(wrapper.find('.error-question-message')).toBeDefined()
   })
 
-  it('should call checkAnswer if first answer is clicked', () => {
-  const spy = spyOn(wrapper.instance(), "checkAnswer");
-    // wrapper.instance().checkAnswer = jest.fn()
+  describe('Answer clicks', () => {
+    let wrapper
 
-    wrapper.find('.choice-a').simulate('click')
-    expect(spy).toHaveBeenCalled();
-    // expect(wrapper.instance().checkAnswer).toHaveBeenCalled()
+    beforeEach(() => {
+      wrapper = mount(<Question 
+        category={'geogrpahy'}
+        questions={mockQuestions}
+        currentQuestion={mockQuestion}
+        addPoints={jest.fn()}
+        />)
+    })
+
+    it('should call checkAnswer if first answer is clicked', () => {
+    
+      wrapper.instance().checkAnswer = jest.fn()
+
+      wrapper.find('.choice-a').simulate('click')
+
+      expect(wrapper.instance().checkAnswer).toHaveBeenCalledWith(0)
+    })
+
+    it('should call checkAnswer if second answer is clicked', () => {
+    
+      wrapper.instance().checkAnswer = jest.fn()
+
+      wrapper.find('.choice-b').simulate('click')
+
+      expect(wrapper.instance().checkAnswer).toHaveBeenCalledWith(1)
+    })
+    
+    it('should call checkAnswer if third answer is clicked', () => {
+    
+      wrapper.instance().checkAnswer = jest.fn()
+
+      wrapper.find('.choice-c').simulate('click')
+
+      expect(wrapper.instance().checkAnswer).toHaveBeenCalledWith(2)
+    })
+
+    it('should call checkAnswer if fourth answer is clicked', () => {
+    
+      wrapper.instance().checkAnswer = jest.fn()
+
+      wrapper.find('.choice-d').simulate('click')
+
+      expect(wrapper.instance().checkAnswer).toHaveBeenCalledWith(3)
+    })
   })
 })
 
