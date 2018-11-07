@@ -214,14 +214,6 @@ describe("Categories", () => {
 
       expect(wrapper.instance().nextQuestion).toHaveBeenCalled()
     })
-    // it('should call hasErrored if there is an error', async () => {
-      // window.fetch = jest.fn().mockImplementation(() => Promise.reject(error))
-
-      // await wrapper.instance().getTriviaQuestions('geography')
-
-      // expect(wrapper.props().hasErrored).toHaveBeenCalledWith(true)
-
-    // })
   })
 
   describe('checkState', () => {

@@ -11,6 +11,8 @@ import {
   addQuestionCount,
   toggleAsked,
 } from '../../../actions'
+import * as Helper from '../../../apiCalls/helper'
+import * as Fetch from '../../../apiCalls/apiCalls'
 
 describe("DailyQuestion", () => {
   let wrapper;
@@ -35,13 +37,32 @@ describe("DailyQuestion", () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  // describe('getTriviaQuestions', () => {
-  //   it('should call getQuestions with the correct params', () => {})
-  //   it('should call updateQuestions with the correct params', () => {})
-  //   it('should call generateQuestion with the correct params', () => {})
-  //   it('should call nextQuestion with the correct params', () => {})
-  //   it('should call hasErrored if there is an error', () => {})
-  // })
+  describe('getTriviaQuestions', () => {
+
+    it('should call getQuestions with the correct params', () => {
+      Fetch.getQuestions = jest.fn().mockImplementation(() => ({}))
+
+      wrapper.instance().getTriviaQuestions('generalKnowledge')
+
+      expect(Fetch.getQuestions).toHaveBeenCalledWith('generalKnowledge')
+    })
+
+    it('should call Helper.generateQuestion', async () => {
+      Helper.generateQuestion = jest.fn()
+
+      await wrapper.instance().getTriviaQuestions('generalKnowledge')
+
+      expect(Helper.generateQuestion).toHaveBeenCalled()
+    })
+
+    it('should call nextQuestion with the correct params', async () => {
+      wrapper.instance().nextQuestion = jest.fn()
+
+      await wrapper.instance().getTriviaQuestions('geography')
+
+      expect(wrapper.instance().nextQuestion).toHaveBeenCalled()
+    })
+  })
 
   describe('checkState', () => {
     it('should return false if there are questions in the array', () => {
@@ -63,25 +84,6 @@ describe("DailyQuestion", () => {
       expect(wrapper.instance().checkState('geography')).toEqual(true)
     })
   })
-
-//   describe('nextQuestion', () => {
-//     it('should call generateNewQuestion with the correct params', () => {
-//       wrapper.instance().nextQuestion()
-
-//       expect(wrapper.props().generateNewQuestion).toHaveBeenCalled()
-//     })
-
-//     it('should call toggleAsked with the correct params', () => {
-//       wrapper.instance().nextQuestion()
-
-//     })
-
-//     it('should call updateQuestions with the correct params', () => {
-//       wrapper.instance().nextQuestion()
-
-//     })
-
-//   })
 });
 
 describe('mapStateToProps', () => {
