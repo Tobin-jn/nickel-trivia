@@ -20,7 +20,6 @@ Nickel Trivia is an app that came out of a challenge. Both an API and a target u
 
 #### Landing Page:
 
-![Landing Page](image.jpg)
 <img src='images%20/LandingPage.png' alt='LandingPage' width='700' >
 
 #### Trivia of the Day:
