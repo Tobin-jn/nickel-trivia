@@ -55,13 +55,8 @@ export const mapStateToProps = state => ({
   score: state.game.score
 });
 
-export const mapDispatchToProps = dispatch => ({
-
-});
-
 export default connect(
-  mapStateToProps,
-  mapDispatchToProps
+  mapStateToProps
 )(TriviaGame);
 
 TriviaGame.propTypes = {

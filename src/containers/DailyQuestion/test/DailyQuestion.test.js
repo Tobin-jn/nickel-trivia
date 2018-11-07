@@ -10,6 +10,7 @@ import {
   updateCurrentQuestion, 
   addQuestionCount,
   toggleAsked,
+  hasErrored,
 } from '../../../actions'
 import * as Helper from '../../../apiCalls/helper'
 import * as Fetch from '../../../apiCalls/apiCalls'

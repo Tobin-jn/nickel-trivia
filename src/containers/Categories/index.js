@@ -123,8 +123,6 @@ export const mapDispatchToProps = dispatch => ({
     dispatch(hasErrored(bool)),
 });
 
-
-
 export default connect(
   mapStateToProps,
   mapDispatchToProps
@@ -134,10 +132,5 @@ export default connect(
 // Categories.propTypes = {
 //   handleCategory: PropTypes.func.isRequired,
 // };
-
-
-
-
-
 
 
