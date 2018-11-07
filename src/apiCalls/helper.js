@@ -19,7 +19,6 @@ export const shuffleAnswers = (questionChoices) => {
       questionChoices[counter] = questionChoices[index];
       questionChoices[index] = element;
   }
-
   return questionChoices;
 }
 

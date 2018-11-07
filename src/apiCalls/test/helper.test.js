@@ -1,34 +1,15 @@
 import React from 'react'
-import * as helper from '../helper';
+import * as helper from '../helper'
 import * as Mocks from './mocks'
 
 
 describe('helper', () => {
-  describe('shuffleAnswers', () => {
-    it('should take in an array and shuffle the order of the elements', () => {
-
-    })
-  })
-
   describe('cleanQuestions', () => {
-    // beforeEach(() => {
-    //   helper.shuffleAnswers = jest.fn()
-    //   helper.cleanAnswers = jest.fn()
-    //   helper.cleanQuestion = jest.fn()
-    // })
+    it('should return a cleaned array when cleanQuestions is called', () => {
 
-    it('should call shuffleAnswer when cleanQuestions is called', () => {
-      
-      helper.cleanQuestions(Mocks.mockResults)
+      const result = helper.cleanQuestions(Mocks.mockResults)
 
-      expect(helper.shuffleAnswers).toHaveBeenCalled()
-
-    })
-    it('should call cleanAnswer when cleanQuestions is called', () => {
-
-    })
-    it('should call cleanQuestion when cleanQuestions is called', () => {
-
+      expect(result).toEqual(Mocks.mockCleaned)  
     })
   })
 
@@ -44,7 +25,7 @@ describe('helper', () => {
     })
   })
 
-  describe('cleanQuestions', () => {
+  describe('cleanQuestion', () => {
     it('should replace encoded characters with the correct character', () => {
       let mockQuestion = 'Who is the best&hellip;'
 
@@ -58,9 +39,20 @@ describe('helper', () => {
 
   describe('generateQuestion', () => {
     it('should return a single question from an array of questions', () => {
+      Math.random = jest.fn().mockImplementation(() => { return .5 })
 
+      const result = helper.generateQuestion('geography', Mocks.mockCleaned)
+
+      const expected =   {
+        category: "Geography",
+        question: "The body of the Egyptian Sphinx was based on which animal?",
+        answers: [ "animal", "animal", "animal", "animal", ],
+        correct_answer: "animal",
+        id: 3,
+        asked: false,
+      }
+
+      expect(result).toEqual(expected)
     })
-    
   })
-  
 })
