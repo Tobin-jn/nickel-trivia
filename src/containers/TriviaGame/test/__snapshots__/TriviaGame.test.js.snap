@@ -44,26 +44,13 @@ ShallowWrapper {
           >
             Nickel Trivia
           </h1>
-          <img
-            alt="nickel"
-            className="nickel-pic"
-            src="nickel.png"
-          />
-          <div
-            className="score"
+          <h2
+            className="score-text"
           >
-            <h1
-              className="score-text"
-            >
-              Score
-            </h1>
-            <h4
-              className="score-number"
-            >
-              5
-               ¢
-            </h4>
-          </div>
+            Score 
+            5
+             ¢
+          </h2>
         </div>,
         <div
           className="game-wrapper"
@@ -74,11 +61,6 @@ ShallowWrapper {
           >
             <div
               className="question-container-after"
-            />
-            <img
-              alt="Trivia Jar Logo"
-              className="jar-logo-game"
-              src="NickelJar.png"
             />
             <h3
               className="question"
@@ -108,26 +90,13 @@ ShallowWrapper {
             >
               Nickel Trivia
             </h1>,
-            <img
-              alt="nickel"
-              className="nickel-pic"
-              src="nickel.png"
-            />,
-            <div
-              className="score"
+            <h2
+              className="score-text"
             >
-              <h1
-                className="score-text"
-              >
-                Score
-              </h1>
-              <h4
-                className="score-number"
-              >
-                5
-                 ¢
-              </h4>
-            </div>,
+              Score 
+              5
+               ¢
+            </h2>,
           ],
           "className": "header-container",
         },
@@ -162,68 +131,20 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "alt": "nickel",
-              "className": "nickel-pic",
-              "src": "nickel.png",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": "img",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
               "children": Array [
-                <h1
-                  className="score-text"
-                >
-                  Score
-                </h1>,
-                <h4
-                  className="score-number"
-                >
-                  5
-                   ¢
-                </h4>,
+                "Score ",
+                5,
+                " ¢",
               ],
-              "className": "score",
+              "className": "score-text",
             },
             "ref": null,
             "rendered": Array [
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": "Score",
-                  "className": "score-text",
-                },
-                "ref": null,
-                "rendered": "Score",
-                "type": "h1",
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": Array [
-                    5,
-                    " ¢",
-                  ],
-                  "className": "score-number",
-                },
-                "ref": null,
-                "rendered": Array [
-                  5,
-                  " ¢",
-                ],
-                "type": "h4",
-              },
+              "Score ",
+              5,
+              " ¢",
             ],
-            "type": "div",
+            "type": "h2",
           },
         ],
         "type": "div",
@@ -240,11 +161,6 @@ ShallowWrapper {
             >
               <div
                 className="question-container-after"
-              />
-              <img
-                alt="Trivia Jar Logo"
-                className="jar-logo-game"
-                src="NickelJar.png"
               />
               <h3
                 className="question"
@@ -275,11 +191,6 @@ ShallowWrapper {
                 <div
                   className="question-container-after"
                 />,
-                <img
-                  alt="Trivia Jar Logo"
-                  className="jar-logo-game"
-                  src="NickelJar.png"
-                />,
                 <h3
                   className="question"
                 >
@@ -300,19 +211,6 @@ ShallowWrapper {
                 "ref": null,
                 "rendered": null,
                 "type": "div",
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "alt": "Trivia Jar Logo",
-                  "className": "jar-logo-game",
-                  "src": "NickelJar.png",
-                },
-                "ref": null,
-                "rendered": null,
-                "type": "img",
               },
               Object {
                 "instance": null,
@@ -355,26 +253,13 @@ ShallowWrapper {
             >
               Nickel Trivia
             </h1>
-            <img
-              alt="nickel"
-              className="nickel-pic"
-              src="nickel.png"
-            />
-            <div
-              className="score"
+            <h2
+              className="score-text"
             >
-              <h1
-                className="score-text"
-              >
-                Score
-              </h1>
-              <h4
-                className="score-number"
-              >
-                5
-                 ¢
-              </h4>
-            </div>
+              Score 
+              5
+               ¢
+            </h2>
           </div>,
           <div
             className="game-wrapper"
@@ -385,11 +270,6 @@ ShallowWrapper {
             >
               <div
                 className="question-container-after"
-              />
-              <img
-                alt="Trivia Jar Logo"
-                className="jar-logo-game"
-                src="NickelJar.png"
               />
               <h3
                 className="question"
@@ -419,26 +299,13 @@ ShallowWrapper {
               >
                 Nickel Trivia
               </h1>,
-              <img
-                alt="nickel"
-                className="nickel-pic"
-                src="nickel.png"
-              />,
-              <div
-                className="score"
+              <h2
+                className="score-text"
               >
-                <h1
-                  className="score-text"
-                >
-                  Score
-                </h1>
-                <h4
-                  className="score-number"
-                >
-                  5
-                   ¢
-                </h4>
-              </div>,
+                Score 
+                5
+                 ¢
+              </h2>,
             ],
             "className": "header-container",
           },
@@ -473,68 +340,20 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "alt": "nickel",
-                "className": "nickel-pic",
-                "src": "nickel.png",
-              },
-              "ref": null,
-              "rendered": null,
-              "type": "img",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
                 "children": Array [
-                  <h1
-                    className="score-text"
-                  >
-                    Score
-                  </h1>,
-                  <h4
-                    className="score-number"
-                  >
-                    5
-                     ¢
-                  </h4>,
+                  "Score ",
+                  5,
+                  " ¢",
                 ],
-                "className": "score",
+                "className": "score-text",
               },
               "ref": null,
               "rendered": Array [
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": "Score",
-                    "className": "score-text",
-                  },
-                  "ref": null,
-                  "rendered": "Score",
-                  "type": "h1",
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": Array [
-                      5,
-                      " ¢",
-                    ],
-                    "className": "score-number",
-                  },
-                  "ref": null,
-                  "rendered": Array [
-                    5,
-                    " ¢",
-                  ],
-                  "type": "h4",
-                },
+                "Score ",
+                5,
+                " ¢",
               ],
-              "type": "div",
+              "type": "h2",
             },
           ],
           "type": "div",
@@ -551,11 +370,6 @@ ShallowWrapper {
               >
                 <div
                   className="question-container-after"
-                />
-                <img
-                  alt="Trivia Jar Logo"
-                  className="jar-logo-game"
-                  src="NickelJar.png"
                 />
                 <h3
                   className="question"
@@ -586,11 +400,6 @@ ShallowWrapper {
                   <div
                     className="question-container-after"
                   />,
-                  <img
-                    alt="Trivia Jar Logo"
-                    className="jar-logo-game"
-                    src="NickelJar.png"
-                  />,
                   <h3
                     className="question"
                   >
@@ -611,19 +420,6 @@ ShallowWrapper {
                   "ref": null,
                   "rendered": null,
                   "type": "div",
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "alt": "Trivia Jar Logo",
-                    "className": "jar-logo-game",
-                    "src": "NickelJar.png",
-                  },
-                  "ref": null,
-                  "rendered": null,
-                  "type": "img",
                 },
                 Object {
                   "instance": null,

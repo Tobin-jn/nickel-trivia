@@ -35,7 +35,8 @@ export const mockState = {
   game: {
     questionCount: 1,
     score: 0,
-  }
+  },
+  hasErrored: false
 }
 
 export const mockQuestion = {

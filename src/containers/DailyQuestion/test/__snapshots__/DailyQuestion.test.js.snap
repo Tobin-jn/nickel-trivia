@@ -16,7 +16,21 @@ ShallowWrapper {
       }
     }
     generateNewQuestion={[MockFunction]}
-    hasErrored={[MockFunction]}
+    hasErrored={
+      [MockFunction] {
+        "calls": Array [
+          Array [
+            false,
+          ],
+        ],
+        "results": Array [
+          Object {
+            "isThrow": false,
+            "value": undefined,
+          },
+        ],
+      }
+    }
     questions={
       Object {
         "geography": Array [

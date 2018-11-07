@@ -8,7 +8,7 @@ export const categories = {
 }
 
 
-const shuffleAnswers = (questionChoices) => {
+export const shuffleAnswers = (questionChoices) => {
   let counter = questionChoices.length;
 
   while (counter > 0) {
@@ -42,7 +42,7 @@ export const cleanQuestions = (questions) => {
   })
 }
 
-const cleanAnswers = (answers) => {
+export const cleanAnswers = (answers) => {
   return answers.map( answer => {
     return answer.replace(/&quot;/g,'"')
             .replace(/&#039;/g,"'")
@@ -55,19 +55,7 @@ const cleanAnswers = (answers) => {
   })
 }
 
-
-var encodedStr = 'hello &amp; world';
-
-var parser = new DOMParser;
-var dom = parser.parseFromString(
-    '<!doctype html><body>' + encodedStr,
-    'text/html');
-var decodedString = dom.body.textContent;
-
-console.log(decodedString);
-
-
-const cleanQuestion = (question) => {
+export const cleanQuestion = (question) => {
   return question.replace(/&quot;/g,'"')
           .replace(/&#039;/g,"'")
           .replace(/&amp;/g, '&')

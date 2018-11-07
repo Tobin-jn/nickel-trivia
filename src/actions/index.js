@@ -3,9 +3,9 @@ export const updateCategory = category => ({
   category
 })
 
-export const clearCategory = () => ({
-  type: "CLEAR_CATEGORY",
-})
+// export const clearCategory = () => ({
+//   type: "CLEAR_CATEGORY",
+// })
 
 export const updateQuestions = (category, questions) => ({
   type: "UPDATE_QUESTIONS",
@@ -32,10 +32,10 @@ export const addPoints = () => ({
   type: "ADD_POINTS",
 })
 
-export const isLoading = (bool) => ({
-   type: 'IS_LOADING',
-   isLoading: bool
-})
+// export const isLoading = (bool) => ({
+//    type: 'IS_LOADING',
+//    isLoading: bool
+// })
   
 export const hasErrored = (bool) => ({
    type: 'HAS_ERRORED',

@@ -18,15 +18,15 @@ describe('actions', () => {
     expect(result).toEqual(expectedAction)
   })
 
-  it('should have a type of CLEAR_CATEGORY', () => {
-    const expectedAction = {
-      type: 'CLEAR_CATEGORY',
-    }
+  // it('should have a type of CLEAR_CATEGORY', () => {
+  //   const expectedAction = {
+  //     type: 'CLEAR_CATEGORY',
+  //   }
 
-    const result = actions.clearCategory()
+  //   const result = actions.clearCategory()
 
-    expect(result).toEqual(expectedAction)
-  })
+  //   expect(result).toEqual(expectedAction)
+  // })
 
   it('should have a type of UPDATE_QUESTIONS', () => {
     const expectedAction = {
@@ -89,6 +89,17 @@ describe('actions', () => {
     }
 
     const result = actions.addPoints()
+
+    expect(result).toEqual(expectedAction)
+  })
+
+  it('should have a type of HAS_ERRORED', () => {
+    const expectedAction = {
+      type: 'HAS_ERRORED',
+      hasErrored: true
+    }
+
+    const result = actions.hasErrored(true)
 
     expect(result).toEqual(expectedAction)
   })
