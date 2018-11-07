@@ -21,16 +21,18 @@ Nickel Trivia is an app that came out of a challenge. Both an API and a target u
 #### Landing Page:
 
 ![Landing Page](image.jpg)
+<img src='images%20/LandingPage.png' alt='LandingPage' width='700' >
 
 #### Trivia of the Day:
 
-![alt text](image.jpg)
+<img src='images%20/dailytrivia.png' alt='Trivia of the Day' width='700' >
 
 #### Trivia Game:
 
-![Trivia Game](image.jpg)
+<img src='images%20/TriviaGame.png' alt='Game' width='700' >
 
-#### Additional Assets:
+<img src='images%20/NickelTrivia.gif' alt='Nickel Trivia' width='700' >
+
 
 ### Setup
 #### Frontend
