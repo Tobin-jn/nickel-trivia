@@ -13,6 +13,7 @@ describe('Question', () => {
       questions={mockQuestions}
       currentQuestion={mockQuestion}
       addPoints={jest.fn()}
+      // location={{ pathname: "" }}
       />)
   })
 

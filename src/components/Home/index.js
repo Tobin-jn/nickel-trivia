@@ -4,7 +4,7 @@ import { clearCategory } from '../../actions';
 import { connect } from 'react-redux';
 import './Home.css'
 
-export class Home extends Component {
+class Home extends Component {
   render() {
     return(
       <div className='landing-page'>
@@ -22,3 +22,5 @@ export class Home extends Component {
     )
   }
 }
+
+export default Home
