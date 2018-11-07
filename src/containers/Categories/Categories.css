@@ -27,3 +27,31 @@
   color: #ba2343;
   background: #fff;
 }
+
+@media screen and (max-width: 1150px) {
+  .category {
+    font-size: 1.2em;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .category {
+    font-size: 1.4em;
+  }
+
+  .answer-choice {
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .category {
+    font-size: 1em;
+    height: 80px;
+  }
+
+  .answer-choice {
+    font-size: 1em;
+  }
+}
+

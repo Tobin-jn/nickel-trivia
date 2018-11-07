@@ -62,7 +62,7 @@ export class Question extends Component {
     if(!currentQuestion.question){
       return (
         <div className="eror-question">
-          <h1 className="error-question-message">Oops... no more questions, choose another category.</h1>
+          <h1 className="error-question-message">Oops... no more questions, please choose another category.</h1>
         </div>
       )
     } else if (this.props.hasErrored) {

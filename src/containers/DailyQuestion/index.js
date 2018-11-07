@@ -15,16 +15,18 @@ export class DailyQuestion extends Component {
   }
 
   getTriviaQuestions = async (category) => {
-    this.props.hasErrored(false)
+    const { updateQuestions, hasErrored } = this.props
+    hasErrored(false)
+    
     try {
       const triviaQuestions = await getQuestions(category)
 
-      this.props.updateQuestions(category, triviaQuestions)
+      updateQuestions(category, triviaQuestions)
       const newQuestion = generateQuestion(category, triviaQuestions)
       this.nextQuestion(newQuestion, category, triviaQuestions)
     } 
     catch(error) {
-      this.props.hasErrored(true)
+      hasErrored(true)
     }
   }
 

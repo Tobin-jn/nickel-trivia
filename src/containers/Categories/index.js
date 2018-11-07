@@ -16,28 +16,32 @@ import { generateQuestion } from '../../apiCalls/helper'
 export class Categories extends Component {
 
   handleClick = (category) => {
-    this.props.hasErrored(false)
-    this.props.handleCategory(category)
+    const { hasErrored, handleCategory, addQuestionCount } = this.props
+
+    hasErrored(false)
+    handleCategory(category)
     this.getTriviaQuestions(category)
-    this.props.addQuestionCount()
+    addQuestionCount()
   }
 
   getTriviaQuestions = async (category) => {
+    const { questions, updateQuestions, hasErrored } = this.props
+
     if(!this.checkState(category)) {
-      const newQuestion = generateQuestion(category, this.props.questions[category])
-      this.nextQuestion(newQuestion, category, this.props.questions[category])
+      const newQuestion = generateQuestion(category, questions[category])
+      this.nextQuestion(newQuestion, category, questions[category])
       return
     } 
 
     try {
       const triviaQuestions = await getQuestions(category)
 
-      this.props.updateQuestions(category, triviaQuestions)
+      updateQuestions(category, triviaQuestions)
       const newQuestion = generateQuestion(category, triviaQuestions)
       this.nextQuestion(newQuestion, category, triviaQuestions)
     } 
     catch(error) {
-      this.props.hasErrored(true)
+      hasErrored(true)
     }
   }
 
