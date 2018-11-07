@@ -33,13 +33,13 @@ export class DailyQuestion extends Component {
   }
 
   nextQuestion = (newQuestion, category, questions) => {
-    this.props.generateNewQuestion(newQuestion)
-    this.props.toggleAsked(category, newQuestion)
-    this.props.updateQuestions(category, questions)
+    const { generateNewQuestion, toggleAsked, updateQuestions } = this.props
+    generateNewQuestion(newQuestion)
+    toggleAsked(category, newQuestion)
+    updateQuestions(category, questions)
   }
 
   render() {
-    const { currentQuestion } = this.props
     return (
       <div className='daily-container'>
         <div className="header-wrapper">
@@ -78,5 +78,11 @@ export default connect(
 )(DailyQuestion);
 
 DailyQuestion.propTypes = {
-  // saveUserData: PropTypes.func.isRequired,
+  category: PropTypes.string.isRequired,
+  questions: PropTypes.object.isRequired,
+  currentQuestion: PropTypes.object.isRequired,
+  updateQuestions: PropTypes.func.isRequired,
+  generateNewQuestion: PropTypes.func.isRequired,
+  toggleAsked: PropTypes.func.isRequired,
+  hasErrored: PropTypes.func.isRequired,
 };

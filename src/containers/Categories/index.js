@@ -12,8 +12,6 @@ import {
 import './Categories.css';
 import { getQuestions } from '../../apiCalls/apiCalls'
 import { generateQuestion } from '../../apiCalls/helper'
-import DailyQuestion from '../DailyQuestion'
-import { Route, NavLink, Redirect } from 'react-router-dom'
 
 export class Categories extends Component {
 
@@ -48,10 +46,11 @@ export class Categories extends Component {
   }
 
   nextQuestion = (newQuestion, category, questions) => {
+    const { generateNewQuestion, toggleAsked, updateQuestions } = this.props
     if (questions) {
-      this.props.generateNewQuestion(newQuestion)
-      this.props.toggleAsked(category, newQuestion)
-      this.props.updateQuestions(category, questions)
+      generateNewQuestion(newQuestion)
+      toggleAsked(category, newQuestion)
+      updateQuestions(category, questions)
     } 
   }
 
@@ -129,8 +128,15 @@ export default connect(
 )(Categories);
 
 
-// Categories.propTypes = {
-//   handleCategory: PropTypes.func.isRequired,
-// };
+Categories.propTypes = {
+  category: PropTypes.string.isRequired,
+  questions: PropTypes.object.isRequired,
+  handleCategory: PropTypes.func.isRequired,
+  updateQuestions: PropTypes.func.isRequired,
+  generateNewQuestion: PropTypes.func.isRequired,
+  addQuestionCount: PropTypes.func.isRequired,
+  toggleAsked: PropTypes.func.isRequired,
+  hasErrored: PropTypes.func.isRequired,
+};
 
 

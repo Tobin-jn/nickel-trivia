@@ -76,7 +76,7 @@
   height: 300px;
   position: absolute;
   top: 250px;
-  left: 450px;
+  left: 50%;
   background-color: #f4dc68;
   border-radius: 2% 6% 5% 4% / 1% 1% 2% 4%;
   border: 3px solid #293d31;
@@ -84,7 +84,8 @@
 }
 
 .daily-answer-response {
- left: 300px;
+ left: 50%;
+ margin-left: -235px
 }
 
 .answer-text {
@@ -96,7 +97,6 @@
 }
 .correct {
   font-size: 1.6em;
-
 }
 
 .nickel-logo-answer {
@@ -108,9 +108,3 @@
 .answer-response-hidden {
   visibility: hidden;
 }
-
-
-
-
-
-

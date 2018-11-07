@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom';
-import { clearCategory } from '../../actions';
-import { connect } from 'react-redux';
 import './Home.css'
 
 class Home extends Component {

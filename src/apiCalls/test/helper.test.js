@@ -1,4 +1,3 @@
-import React from 'react'
 import * as helper from '../helper'
 import * as Mocks from './mocks'
 

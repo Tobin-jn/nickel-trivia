@@ -1,7 +1,6 @@
 import React from 'react';
 import { Redirect, Route, Switch } from 'react-router-dom';
 import Home from '../Home'
-import Categories from '../../containers/Categories';
 import TriviaGame from '../../containers/TriviaGame';
 import DailyQuestion from '../../containers/DailyQuestion';
 import './App.css';

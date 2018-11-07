@@ -4,7 +4,6 @@ import { connect } from "react-redux";
 import './TriviaGame.css';
 import Question from '../Question'
 import Categories from '../Categories'
-import { NavLink } from 'react-router-dom';
 
 export class TriviaGame extends Component{
 
@@ -60,5 +59,7 @@ export default connect(
 )(TriviaGame);
 
 TriviaGame.propTypes = {
-  // saveUserData: PropTypes.func.isRequired,
+  currentQuestion: PropTypes.object.isRequired,
+  gameCount: PropTypes.number.isRequired,
+  score: PropTypes.number.isRequired,
 };
