@@ -8,7 +8,7 @@ describe('questionReducer', () => {
   it('should return the initial state', () => {
     const expected = {
       answers: [ '', '', '', ''],
-      question: 'question',
+      question: 'Loading...',
       category:'General Knowledge'
     }
 
@@ -28,8 +28,5 @@ describe('questionReducer', () => {
 
     expect(result).toEqual(expected)
   })
-
-  // it('should clear out the current state to the default', () => {
-  // })
 })
 

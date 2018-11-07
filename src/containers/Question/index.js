@@ -15,7 +15,6 @@ export class Question extends Component {
 
   checkAnswer = async (index) => {
     const { currentQuestion, addPoints } = this.props
-    let answerAlert
     if(currentQuestion.answers[index] === currentQuestion.correct_answer){
       this.setState({ correct: 'correct' })
       addPoints()
@@ -106,6 +105,8 @@ export default connect(
   mapDispatchToProps
 )(Question);
 
-// Categories.propTypes = {
-//   handleCategory: PropTypes.func.isRequired,
-// };
+Question.propTypes = {
+  category: PropTypes.string.isRequired,
+  currentQuestion: PropTypes.object.isRequired,
+  addPoints: PropTypes.func.isRequired,
+};

@@ -43,14 +43,7 @@ describe("TriviaGame", () => {
 
 describe('mapStateToProps', () => {
   it("should return a currentQuestion object in the props object", () => {
-    const expected = {        
-      category: "Geography",
-      question: "Which city is the capital of the United States of America?",
-      correct_answer: "Washington D.C",
-      answers: [],
-      id: 1,
-      asked: false,
-    }
+    const expected = mockQuestion
 
     const mappedProps = mapStateToProps(mockState)
     expect(mappedProps.currentQuestion).toEqual(expected)
@@ -70,9 +63,3 @@ describe('mapStateToProps', () => {
     expect(mappedProps.score).toEqual(expected)
   })
 })
-
-// describe('mapDispatchToProps', () => {
-//   it('should call dispatch with...', () => {
-
-//   })
-// })

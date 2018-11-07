@@ -12,8 +12,6 @@ import {
 import './Categories.css';
 import { getQuestions } from '../../apiCalls/apiCalls'
 import { generateQuestion } from '../../apiCalls/helper'
-import DailyQuestion from '../DailyQuestion'
-import { Route, NavLink, Redirect } from 'react-router-dom'
 
 export class Categories extends Component {
 
@@ -48,10 +46,11 @@ export class Categories extends Component {
   }
 
   nextQuestion = (newQuestion, category, questions) => {
+    const { generateNewQuestion, toggleAsked, updateQuestions } = this.props
     if (questions) {
-      this.props.generateNewQuestion(newQuestion)
-      this.props.toggleAsked(category, newQuestion)
-      this.props.updateQuestions(category, questions)
+      generateNewQuestion(newQuestion)
+      toggleAsked(category, newQuestion)
+      updateQuestions(category, questions)
     } 
   }
 
@@ -61,37 +60,37 @@ export class Categories extends Component {
 
           <div className="categories">
             <button 
-              className="category"
+              className="category generalKnowledge"
               name='generalKnowledge'
               onClick={()=> {this.handleClick('generalKnowledge')}}
               >General Store
             </button>
             <button 
-              className="category"
+              className="category geography"
               name='geography'
               onClick={()=> {this.handleClick('geography')}}
               >Where in the World
             </button>
             <button 
-              className="category"
+              className="category history"
               name='history'
               onClick={()=> {this.handleClick('history')}}
               >When I was a kid...
             </button>
             <button 
-              className="category"
+              className="category animals"
               name='animals'
               onClick={()=> {this.handleClick('animals')}}
               >Lions, Tigers, & Bears
             </button>
             <button 
-              className="category"
+              className="category vehicles"
               name='vehicles'
               onClick={()=> {this.handleClick('vehicles')}}
               >Planes, Trains & Automobiles
             </button>
             <button 
-              className="category"
+              className="category cartoons"
               name='cartoons'
               onClick={()=> {this.handleClick('cartoons')}}
               >Your Grandkid's Favorite Movie
@@ -123,21 +122,21 @@ export const mapDispatchToProps = dispatch => ({
     dispatch(hasErrored(bool)),
 });
 
-
-
 export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(Categories);
 
 
-// Categories.propTypes = {
-//   handleCategory: PropTypes.func.isRequired,
-// };
-
-
-
-
-
+Categories.propTypes = {
+  category: PropTypes.string.isRequired,
+  questions: PropTypes.object.isRequired,
+  handleCategory: PropTypes.func.isRequired,
+  updateQuestions: PropTypes.func.isRequired,
+  generateNewQuestion: PropTypes.func.isRequired,
+  addQuestionCount: PropTypes.func.isRequired,
+  toggleAsked: PropTypes.func.isRequired,
+  hasErrored: PropTypes.func.isRequired,
+};
 
 

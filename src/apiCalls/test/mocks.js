@@ -1,27 +1,55 @@
-export const mockResults = [
+export const mockResults = { 
+  results: [
+    {
+      category: "Geography",
+      correct_answer: "city",
+      difficulty: "easy",
+      incorrect_answers: ["city", "city", "city"],
+      question: "Which city is the capital of the United States of America?",
+      type: "multiple",
+    },
+    {
+      category: "Geography",
+      correct_answer: "city",
+      difficulty: "easy",
+      incorrect_answers: ["city", "city", "city"],
+      question: "What is the capital of the American state of Arizona?",
+      type: "multiple",
+    },
+    {
+      category: "Geography",
+      correct_answer: "animal",
+      difficulty: "easy",
+      incorrect_answers: ["animal", "animal", "animal"],
+      question: "The body of the Egyptian Sphinx was based on which animal?",
+      type: "multiple",
+    }
+  ]
+}
+
+export const mockCleaned = [
   {
     category: "Geography",
-    correct_answer: "Washington D.C",
-    difficulty: "easy",
-    incorrect_answers: (3) ["Seattle", "Albany", "Los Angeles"],
     question: "Which city is the capital of the United States of America?",
-    type: "multiple",
+    answers: ["city",  "city", "city", "city"],
+    correct_answer: "city",
+    id: 1,
+    asked: false,
   },
   {
     category: "Geography",
-    correct_answer: "Phoenix",
-    difficulty: "easy",
-    incorrect_answers: (3) ["Montgomery", "Tallahassee", "Raleigh"],
     question: "What is the capital of the American state of Arizona?",
-    type: "multiple",
+    answers: ["city", "city", "city", "city"],
+    correct_answer: "city",
+    id: 2,
+    asked: false,
   },
   {
     category: "Geography",
-    correct_answer: "Lion",
-    difficulty: "easy",
-    incorrect_answers: (3) ["Bull", "Horse", "Dog"],
     question: "The body of the Egyptian Sphinx was based on which animal?",
-    type: "multiple",
+    answers: [ "animal", "animal", "animal", "animal", ],
+    correct_answer: "animal",
+    id: 3,
+    asked: false,
   }
 ]
-

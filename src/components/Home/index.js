@@ -1,15 +1,8 @@
 import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom';
-import { clearCategory } from '../../actions';
-import { connect } from 'react-redux';
 import './Home.css'
 
-export class Home extends Component {
-
-  // resetCategory = () => {
-  //   this.props.clearCategory()
-  // }
-
+class Home extends Component {
   render() {
     return(
       <div className='landing-page'>
@@ -27,18 +20,5 @@ export class Home extends Component {
     )
   }
 }
-
-// export const mapStateToProps = state => ({
-//   category: state.category
-// })
-
-// export const mapDispatchToProps = dispatch => ({
-//   clearCategory: () => dispatch(clearCategory())
-// })
-
-// export default connect(
-//   mapStateToProps,
-//   mapDispatchToProps
-// )(Home);
 
 export default Home
