@@ -10,6 +10,10 @@ Nickel Trivia is an app that came out of a challenge. Both an API and a target u
 
 * OpenTrivia DB API
 
+### Live App
+
+[Play Nickel Trivia!](https://tobin-jn.github.io/nickel-trivia/)
+
 ### Primary JavaScript Technologies Used
 
 * React.js
