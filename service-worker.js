@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/nickel-trivia/precache-manifest.e016a5cc18f5472097d54064dc20752e.js"
+  "/nickel-trivia/precache-manifest.d8858c93d8fb19e01df17616fb7ccb25.js"
 );
 
 workbox.clientsClaim();
