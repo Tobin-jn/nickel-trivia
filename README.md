@@ -1,5 +1,7 @@
 # Nickel Trivia
 
+### About
+
 Nickel Trivia is a Trivia Game built for grandparents to play with their grandchildren. This user friendly App takes advantage of the OpenTrivia Database to populate the game with fun, and accessible trivia questions for users. Participants are awarded virtual nickels as points to keep score. The Landing Page directs users to two paths, a Question of the Day and a Group Trivia Game. In its current iteration, the game would best be facilitated by a leader in a group. In future iterations, the App will have multi-player options allowing friends and families to compete amongst each other. 
 
 Nickel Trivia is an app that came out of a challenge. Both an API and a target user were drawn from a hat. This random pairing encouraged developers to pursue creative and unique approaches to create a product with the available resources that ultimately meets the end-users goals and draws in that target audience.
