@@ -6,21 +6,21 @@ Nickel Trivia is a Trivia Game built for grandparents to play with their grandch
 
 Nickel Trivia is an app that came out of a challenge. Both an API and a target user were drawn from a hat. This random pairing encouraged developers to pursue creative and unique approaches to create a product with the available resources that ultimately meets the end-users goals and draws in that target audience.
 
-### API's used
-
-* OpenTrivia DB API
-
 ### Live App
 
 [Play Nickel Trivia!](https://tobin-jn.github.io/nickel-trivia/)
 
-### Primary JavaScript Technologies Used
+### Tech Stack
 
-* React.js
+* React
 * Redux
 * React Router
 
-### Screenshots
+### API's used
+
+* OpenTrivia DB API
+
+## Screenshots
 
 #### Landing Page:
 
@@ -34,10 +34,12 @@ Nickel Trivia is an app that came out of a challenge. Both an API and a target u
 
 <img src='src/images/TriviaGame.png' alt='Game' width='700' >
 
+#### gif of Game
+
 <img src='src/images/NickelTrivia.gif' alt='Nickel Trivia' width='700' >
 
 
-### Setup
+## Setup
 #### Frontend
 
 Clone the repo
@@ -54,7 +56,7 @@ Run with ```npm test``` from the root directory
 
 ### Original Assignment
 
-[Binary Challenge](http://frontend.turing.io/projects/binary-challenge.html) from the Turing School of Software & Design
+[Binary Challenge](http://frontend.turing.io/projects/binary-challenge.html) from the [Turing School of Software & Design](http://turing.io)
 
 ### Contributors
 
